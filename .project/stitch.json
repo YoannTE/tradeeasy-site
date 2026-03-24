@@ -1,0 +1,24 @@
+{
+  "projectId": "17995867206676004021",
+  "projectName": "EasyTrade",
+  "designSystemId": "assets/2330162747010316967",
+  "screens": [
+    {
+      "name": "Homepage",
+      "screenId": "1c03708756f446d5a43372a305454d9e",
+      "status": "validated",
+      "sections": [
+        "hero",
+        "social proof",
+        "features",
+        "tradingview native",
+        "live performance",
+        "how it works",
+        "testimonials",
+        "pricing",
+        "cta",
+        "footer"
+      ]
+    }
+  ]
+}
