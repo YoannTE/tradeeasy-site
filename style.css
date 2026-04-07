@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0c0c0c;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    padding: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.cta {
+    padding: 12px 25px;
+    background: #27ae60;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.hero-img {
+    width: 45%;
+    border-radius: 8px;
+}
+
+/* FEATURES */
+.features {
+    padding: 60px;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature {
+    width: 250px;
+    padding: 20px;
+    background: #111;
+    border-radius: 6px;
+}
+
+/* PRICING */
+.pricing {
+    padding: 60px;
+    text-align: center;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 220px;
+    padding: 25px;
+    background: #111;
+    border-radius: 6px;
+}
+
+.price {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.small {
+    padding: 10px 20px;
+}
+
+/* FAQ */
+.faq {
+    padding: 60px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #111;
+    margin-top: 40px;
+}
