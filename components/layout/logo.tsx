@@ -5,19 +5,19 @@ interface LogoProps {
 }
 
 export function Logo({ size = "md" }: LogoProps) {
-  const iconScale = size === "sm" ? 0.7 : 0.85;
+  const iconHeight = size === "sm" ? 24 : 28;
   const textClass =
     size === "sm"
-      ? "text-xl font-black tracking-tight"
-      : "text-2xl font-black tracking-tight";
+      ? "text-2xl font-black tracking-tight"
+      : "text-3xl font-black tracking-tight";
 
   return (
-    <Link href="/" className="flex items-center gap-2.5 group">
+    <Link href="/" className="flex items-center gap-2 group">
       {/* 3 ascending bars icon */}
       <svg
         viewBox="0 0 46 72"
         fill="none"
-        style={{ height: `${Math.round(72 * iconScale)}px`, width: "auto" }}
+        style={{ height: `${iconHeight}px`, width: "auto" }}
         aria-hidden="true"
       >
         <rect x="0" y="43" width="13" height="29" rx="2" fill="white" />
