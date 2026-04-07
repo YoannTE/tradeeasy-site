@@ -8,4 +8,4 @@ const nextConfig: NextConfig = {
   output: "standalone",
 };
 
-export default withNextIntl(withPayload(nextConfig));
+export default withPayload(withNextIntl(nextConfig));

@@ -24,7 +24,7 @@ export async function sendEmail({
     const resend = new Resend(apiKey);
 
     const result = await resend.emails.send({
-      from: "SimplifyPro <noreply@simplifypro.com>",
+      from: "SimplifyPro <noreply@simplify-pro.com>",
       to,
       subject,
       html,

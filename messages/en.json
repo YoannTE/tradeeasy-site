@@ -747,6 +747,10 @@
     "affiliate": {
       "title": "Affiliate Program — SimplifyPro",
       "description": "Earn 30% recurring commission by promoting SimplifyPro. Join our affiliate program and start earning today."
+    },
+    "checkoutSuccess": {
+      "title": "Welcome to SimplifyPro!",
+      "description": "Your account is ready. TradingView access will be granted within 12 hours."
     }
   },
   "guides": {
@@ -847,6 +851,19 @@
           }
         ]
       }
+    }
+  },
+  "checkout": {
+    "success": {
+      "title": "You're All Set!",
+      "subtitle": "Your payment method has been saved. Your 7-day free trial begins once we grant your TradingView access (within 12 hours).",
+      "whatHappensNext": "What happens next?",
+      "step1": "We'll grant your TradingView indicator access within 12 hours",
+      "step2": "You'll receive an email confirmation when access is granted",
+      "step3": "Your 7-day free trial starts from the moment access is granted",
+      "step4": "After 7 days, your subscription begins automatically",
+      "cta": "Go to My Dashboard",
+      "note": "No charge during the trial. Cancel anytime from your dashboard."
     }
   }
 }

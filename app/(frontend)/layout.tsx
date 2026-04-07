@@ -1,4 +1,5 @@
 import { Inter, Exo_2 } from "next/font/google";
+import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
 import { PostHogProvider } from "@/components/analytics/posthog-provider";

@@ -33,12 +33,18 @@ export const Users: CollectionConfig = {
     afterChange: [onTradingviewAccessGranted, onNewUserCreated],
     afterLogin: [
       async ({ req, user }) => {
-        // Update lastLoginAt on each login
-        await req.payload.update({
-          collection: "users",
-          id: user.id,
-          data: { lastLoginAt: new Date().toISOString() },
-        });
+        // Update lastLoginAt directly via SQL to avoid triggering hooks
+        try {
+          const db = req.payload.db?.pool;
+          if (db) {
+            await db.query(
+              "UPDATE users SET last_login_at = NOW() WHERE id = $1",
+              [user.id],
+            );
+          }
+        } catch {
+          // Non-critical, silently ignore
+        }
       },
     ],
   },

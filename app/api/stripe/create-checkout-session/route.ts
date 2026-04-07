@@ -6,13 +6,10 @@ import { z } from "zod";
 import { createCheckoutSession } from "@/lib/stripe/create-checkout";
 
 const requestSchema = z.object({
-  plan: z.enum(["monthly", "annual"]).default("monthly"),
+  plan: z.enum(["monthly", "annual"]),
+  promoCode: z.string().optional(),
 });
 
-/**
- * Legacy endpoint — redirects to Stripe Checkout Session.
- * New clients should use /api/stripe/create-checkout-session instead.
- */
 export async function POST(request: Request) {
   try {
     const payload = await getPayload({ config });
@@ -21,7 +18,7 @@ export async function POST(request: Request) {
 
     if (!user) {
       return NextResponse.json(
-        { error: "You must be logged in to create a subscription." },
+        { error: "You must be logged in." },
         { status: 401 },
       );
     }
@@ -29,26 +26,33 @@ export async function POST(request: Request) {
     const stripeCustomerId = user.stripeCustomerId as string | undefined;
     if (!stripeCustomerId) {
       return NextResponse.json(
-        { error: "No Stripe customer linked." },
+        { error: "No Stripe customer linked to this account." },
         { status: 400 },
       );
     }
 
-    const body = await request.json().catch(() => ({}));
+    const body = await request.json();
     const parsed = requestSchema.safeParse(body);
-    const plan = parsed.success ? parsed.data.plan : "monthly";
 
-    const url = await createCheckoutSession({
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: "Invalid plan. Choose 'monthly' or 'annual'." },
+        { status: 400 },
+      );
+    }
+
+    const checkoutUrl = await createCheckoutSession({
       stripeCustomerId,
-      plan,
+      plan: parsed.data.plan,
       userId: String(user.id),
+      promoCode: parsed.data.promoCode,
     });
 
-    return NextResponse.json({ data: { url } });
+    return NextResponse.json({ data: { url: checkoutUrl } });
   } catch (error) {
-    console.error("[create-subscription] Error:", error);
+    console.error("[create-checkout-session] Error:", error);
     return NextResponse.json(
-      { error: "Failed to create subscription. Please try again." },
+      { error: "Failed to create checkout session." },
       { status: 500 },
     );
   }

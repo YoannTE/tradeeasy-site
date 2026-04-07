@@ -58,7 +58,7 @@ export async function PricingCardAnnual() {
       <Button
         className="mt-8 w-full"
         nativeButton={false}
-        render={<Link href="/pricing" />}
+        render={<Link href="/signup?plan=annual" />}
       >
         {t("annual.cta")}
       </Button>

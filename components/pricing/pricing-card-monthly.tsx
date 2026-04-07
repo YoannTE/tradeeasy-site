@@ -42,7 +42,7 @@ export async function PricingCardMonthly() {
         variant="outline"
         className="mt-8 w-full"
         nativeButton={false}
-        render={<Link href="/pricing" />}
+        render={<Link href="/signup?plan=monthly" />}
       >
         {t("monthly.cta")}
       </Button>

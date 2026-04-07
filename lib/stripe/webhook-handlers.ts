@@ -1,6 +1,7 @@
 import type Stripe from "stripe";
 import { getPayload } from "payload";
 import config from "@payload-config";
+import { stripe } from "./stripe";
 
 /**
  * Check if a Stripe event has already been processed (idempotence).
@@ -101,6 +102,80 @@ export function getSubscriptionIdFromInvoice(
   if (typeof sub === "string") return sub;
   if (sub && typeof sub === "object") return sub.id;
   return null;
+}
+
+/**
+ * Handle checkout.session.completed — create Payload subscription from Checkout.
+ */
+export async function handleCheckoutCompleted(
+  event: Stripe.Event,
+): Promise<void> {
+  const session = event.data.object as Stripe.Checkout.Session;
+  const payload = await getPayload({ config });
+
+  const userId = session.metadata?.userId;
+  const plan = session.metadata?.plan as "monthly" | "annual" | undefined;
+  const stripeSubId =
+    typeof session.subscription === "string"
+      ? session.subscription
+      : session.subscription?.id;
+
+  if (!userId || !stripeSubId) {
+    console.warn(
+      "[webhook] checkout.session.completed missing userId or subscriptionId",
+    );
+    return;
+  }
+
+  // Retrieve the full subscription to get trial dates
+  const subscription = await stripe.subscriptions.retrieve(stripeSubId);
+
+  // Check if already exists (idempotence)
+  const existing = await payload.find({
+    collection: "subscriptions",
+    overrideAccess: true,
+    where: { stripeSubscriptionId: { equals: stripeSubId } },
+    limit: 1,
+  });
+
+  if (existing.docs.length > 0) return;
+
+  // Create subscription record
+  const numericUserId = Number(userId);
+  await payload.create({
+    collection: "subscriptions",
+    overrideAccess: true,
+    data: {
+      user: numericUserId,
+      type: plan || "monthly",
+      status: subscription.status === "trialing" ? "trial" : "active",
+      startDate: new Date().toISOString(),
+      trialEndDate: subscription.trial_end
+        ? new Date(subscription.trial_end * 1000).toISOString()
+        : undefined,
+      nextRenewalDate: subscription.trial_end
+        ? new Date(subscription.trial_end * 1000).toISOString()
+        : undefined,
+      stripeSubscriptionId: stripeSubId,
+      stripeEventId: event.id,
+      lastSyncedAt: new Date().toISOString(),
+    },
+  });
+
+  // Update user's stripeCustomerId if not already set
+  const customerId =
+    typeof session.customer === "string"
+      ? session.customer
+      : session.customer?.id;
+
+  if (customerId) {
+    await payload.update({
+      collection: "users",
+      id: numericUserId,
+      overrideAccess: true,
+      data: { stripeCustomerId: customerId },
+    });
+  }
 }
 
 /**

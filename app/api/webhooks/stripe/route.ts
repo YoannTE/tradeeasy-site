@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { stripe, isStripeConfigured } from "@/lib/stripe/stripe";
 import {
   isEventAlreadyProcessed,
+  handleCheckoutCompleted,
   handleSubscriptionCreated,
   handlePaymentSucceeded,
 } from "@/lib/stripe/webhook-handlers";
@@ -54,6 +55,9 @@ export async function POST(request: Request) {
   // Route the event to the appropriate handler
   try {
     switch (event.type) {
+      case "checkout.session.completed":
+        await handleCheckoutCompleted(event);
+        break;
       case "customer.subscription.created":
         await handleSubscriptionCreated(event);
         break;

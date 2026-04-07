@@ -751,6 +751,10 @@
     "affiliate": {
       "title": "Partnerprogramm — SimplifyPro",
       "description": "Verdienen Sie 30 % wiederkehrende Provision, indem Sie SimplifyPro bewerben. Treten Sie unserem Partnerprogramm bei und verdienen Sie noch heute."
+    },
+    "checkoutSuccess": {
+      "title": "Willkommen bei SimplifyPro!",
+      "description": "Ihr Konto ist bereit. Der TradingView-Zugang wird innerhalb von 12 Stunden gewährt."
     }
   },
   "guides": {
@@ -851,6 +855,19 @@
           }
         ]
       }
+    }
+  },
+  "checkout": {
+    "success": {
+      "title": "Alles erledigt!",
+      "subtitle": "Ihre Zahlungsmethode wurde gespeichert. Ihre 7-tägige kostenlose Testphase beginnt, sobald wir Ihren TradingView-Zugang freischalten (innerhalb von 12 Stunden).",
+      "whatHappensNext": "Was passiert als Nächstes?",
+      "step1": "Wir schalten Ihren TradingView-Indikator-Zugang innerhalb von 12 Stunden frei",
+      "step2": "Sie erhalten eine E-Mail-Bestätigung, wenn der Zugang gewährt wurde",
+      "step3": "Ihre 7-tägige kostenlose Testphase beginnt ab dem Moment der Freischaltung",
+      "step4": "Nach 7 Tagen beginnt Ihr Abonnement automatisch",
+      "cta": "Zum Dashboard",
+      "note": "Keine Gebühren während der Testphase. Jederzeit im Dashboard kündbar."
     }
   }
 }

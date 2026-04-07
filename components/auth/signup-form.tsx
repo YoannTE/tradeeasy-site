@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -13,7 +13,8 @@ import { FormField } from "./form-field";
 import { createSignupSchema, type SignupFormData } from "./signup-schema";
 
 export function SignupForm() {
-  const router = useRouter();
+  const searchParams = useSearchParams();
+  const plan = searchParams.get("plan") || "monthly";
   const t = useTranslations("auth.signup");
   const tv = useTranslations("auth.validation");
   const [globalError, setGlobalError] = useState<string | null>(null);
@@ -32,21 +33,37 @@ export function SignupForm() {
     setGlobalError(null);
 
     try {
-      const response = await fetch("/api/auth/signup", {
+      // Step 1: Create account
+      const signupRes = await fetch("/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      const signupResult = await signupRes.json();
 
-      if (!response.ok || result.error) {
-        setGlobalError(result.error || t("genericError"));
+      if (!signupRes.ok || signupResult.error) {
+        setGlobalError(signupResult.error || t("genericError"));
         return;
       }
 
-      router.push("/onboarding");
-      router.refresh();
+      // Step 2: Create Stripe Checkout Session and redirect
+      const checkoutRes = await fetch("/api/stripe/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plan }),
+      });
+
+      const checkoutResult = await checkoutRes.json();
+
+      if (!checkoutRes.ok || checkoutResult.error) {
+        // Checkout failed but account was created — redirect to onboarding
+        window.location.href = "/onboarding";
+        return;
+      }
+
+      // Redirect to Stripe Checkout
+      window.location.href = checkoutResult.data.url;
     } catch {
       setGlobalError(t("genericError"));
     }

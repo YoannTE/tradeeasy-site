@@ -752,6 +752,10 @@
     "affiliate": {
       "title": "Programme d'affiliation — SimplifyPro",
       "description": "Gagnez 30 % de commission récurrente en promouvant SimplifyPro. Rejoignez notre programme d'affiliation et commencez à gagner."
+    },
+    "checkoutSuccess": {
+      "title": "Bienvenue chez SimplifyPro !",
+      "description": "Votre compte est prêt. L'accès TradingView sera accordé sous 12 heures."
     }
   },
   "guides": {
@@ -852,6 +856,19 @@
           }
         ]
       }
+    }
+  },
+  "checkout": {
+    "success": {
+      "title": "C'est tout bon !",
+      "subtitle": "Votre moyen de paiement a été enregistré. Votre essai gratuit de 7 jours commence dès que nous activons votre accès TradingView (sous 12 heures).",
+      "whatHappensNext": "Et maintenant ?",
+      "step1": "Nous activons votre accès à l'indicateur TradingView sous 12 heures",
+      "step2": "Vous recevrez un email de confirmation quand l'accès sera activé",
+      "step3": "Votre essai gratuit de 7 jours commence à l'activation de l'accès",
+      "step4": "Après 7 jours, votre abonnement démarre automatiquement",
+      "cta": "Aller à mon tableau de bord",
+      "note": "Aucun prélèvement pendant l'essai. Annulable à tout moment depuis votre tableau de bord."
     }
   }
 }
