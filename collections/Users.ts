@@ -9,7 +9,9 @@ import { onNewUserCreated } from "./hooks/on-new-user-created";
 
 export const Users: CollectionConfig = {
   slug: "users",
-  auth: true,
+  auth: {
+    maxLoginAttempts: 0,
+  },
   admin: {
     group: "Subscribers",
     useAsTitle: "email",
@@ -31,22 +33,7 @@ export const Users: CollectionConfig = {
       },
     ],
     afterChange: [onTradingviewAccessGranted, onNewUserCreated],
-    afterLogin: [
-      async ({ req, user }) => {
-        // Update lastLoginAt directly via SQL to avoid triggering hooks
-        try {
-          const db = req.payload.db?.pool;
-          if (db) {
-            await db.query(
-              "UPDATE users SET last_login_at = NOW() WHERE id = $1",
-              [user.id],
-            );
-          }
-        } catch {
-          // Non-critical, silently ignore
-        }
-      },
-    ],
+    afterLogin: [],
   },
   fields: [
     {
