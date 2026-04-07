@@ -5,26 +5,28 @@ interface LogoProps {
 }
 
 export function Logo({ size = "md" }: LogoProps) {
-  const circleSize = size === "sm" ? "h-10 w-10" : "h-12 w-12";
-  const monoSize = size === "sm" ? "text-sm" : "text-base";
-  const nameSize = size === "sm" ? "text-2xl" : "text-3xl";
-  return (
-    <Link href="/" className="flex items-center gap-3 group">
-      {/* Monogram circle */}
-      <div
-        className={`${circleSize} rounded-full border-2 border-blue-500 flex items-center justify-center flex-shrink-0`}
-      >
-        <span
-          className={`font-[var(--font-exo2)] italic font-extrabold ${monoSize} text-blue-500`}
-        >
-          SP
-        </span>
-      </div>
+  const iconScale = size === "sm" ? 0.7 : 0.85;
+  const textClass =
+    size === "sm"
+      ? "text-xl font-black tracking-tight"
+      : "text-2xl font-black tracking-tight";
 
-      {/* Text */}
-      <span
-        className={`${nameSize} font-black tracking-tight leading-none text-blue-500`}
+  return (
+    <Link href="/" className="flex items-center gap-2.5 group">
+      {/* 3 ascending bars icon */}
+      <svg
+        viewBox="0 0 46 72"
+        fill="none"
+        style={{ height: `${Math.round(72 * iconScale)}px`, width: "auto" }}
+        aria-hidden="true"
       >
+        <rect x="0" y="43" width="13" height="29" rx="2" fill="white" />
+        <rect x="17" y="22" width="13" height="50" rx="2" fill="white" />
+        <rect x="34" y="0" width="13" height="72" rx="2" fill="white" />
+      </svg>
+
+      {/* Wordmark */}
+      <span className={`${textClass} leading-none text-white`}>
         SimplifyPro
       </span>
     </Link>

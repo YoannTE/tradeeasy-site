@@ -1,14 +1,17 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function GuideInstallIcon() {
   return (
     <div className="flex items-center justify-center gap-5">
-      {/* SimplifyPro logo */}
-      <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-blue-500">
-        <span className="font-[var(--font-exo2)] text-lg font-extrabold italic text-blue-500">
-          SP
-        </span>
-      </div>
+      {/* SimplifyPro icon */}
+      <Image
+        src="/simplifypro-app-icon.svg"
+        alt="SimplifyPro"
+        width={56}
+        height={56}
+        className="rounded-xl"
+      />
 
       {/* Arrow */}
       <ArrowRight className="h-6 w-6 text-zinc-500" />
