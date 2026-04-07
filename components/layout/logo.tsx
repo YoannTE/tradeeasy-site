@@ -8,8 +8,8 @@ export function Logo({ size = "md" }: LogoProps) {
   const iconHeight = size === "sm" ? 24 : 28;
   const textClass =
     size === "sm"
-      ? "text-2xl font-black tracking-tight"
-      : "text-3xl font-black tracking-tight";
+      ? "text-3xl font-black tracking-tight"
+      : "text-4xl font-black tracking-tight";
 
   return (
     <Link href="/" className="flex items-center gap-2 group">
