@@ -1,10 +1,10 @@
 ---
-name: EasyTrade pricing and monetization structure
+name: SimplifyPro pricing and monetization structure
 description: Pricing tiers (49$/mo, 399$/yr), competitive positioning, and key growth decisions for a TradingView indicator SaaS product
 type: project
 ---
 
-EasyTrade is a TradingView indicator (invite-only) sold as SaaS at 49$/month or 399$/year (32% annual discount).
+SimplifyPro is a TradingView indicator (invite-only) sold as SaaS at 49$/month or 399$/year (32% annual discount).
 
 **Why:** Positioned as the "simple" alternative to Lux Algo (50$/mo) and complex suites. Single indicator with clear buy/sell arrows. Target: beginner-to-intermediate retail traders.
 

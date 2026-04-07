@@ -1,15 +1,15 @@
-# BRIEF — EasyTrade
+# BRIEF — SimplifyPro
 
 ## Vision
 
-EasyTrade simplifie la prise de decision en trading pour les particuliers
+SimplifyPro simplifie la prise de decision en trading pour les particuliers
 en fournissant des signaux visuels clairs (fleches achat/vente) directement
 sur TradingView. Les traders n'ont plus qu'a se concentrer sur la psychologie
 et le money management.
 
 ## Produit
 
-- **Indicateur** : EasyTrade V6.0, script TradingView en invite-only
+- **Indicateur** : SimplifyPro V6.0, script TradingView en invite-only
 - **Signaux** : fleches vertes (achat) et rouges (vente) sur le graphique
 - **Marches** : Indices, Forex, Crypto — toutes unites de temps
 - **Distribution** : acces invite-only TradingView, donne manuellement (delai 12h max)

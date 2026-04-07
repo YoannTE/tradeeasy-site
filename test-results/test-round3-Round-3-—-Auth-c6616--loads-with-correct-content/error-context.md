@@ -1,0 +1,91 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+    - banner [ref=e2]:
+        - generic [ref=e3]:
+            - link "EasyTrade" [ref=e4] [cursor=pointer]:
+                - /url: /
+            - navigation [ref=e5]:
+                - link "Features" [ref=e6] [cursor=pointer]:
+                    - /url: /#features
+                - link "Pricing" [ref=e7] [cursor=pointer]:
+                    - /url: /pricing
+                - link "Videos" [ref=e8] [cursor=pointer]:
+                    - /url: /videos
+                - link "Contact" [ref=e9] [cursor=pointer]:
+                    - /url: /contact
+            - button "Start Free Trial" [ref=e11] [cursor=pointer]
+    - main [ref=e12]:
+        - generic [ref=e14]:
+            - generic [ref=e15]:
+                - heading "Forgot password?" [level=1] [ref=e16]
+                - paragraph [ref=e17]: Enter your email and we'll send you a reset link
+            - generic [ref=e18]:
+                - generic [ref=e19]:
+                    - generic [ref=e20]: Email
+                    - textbox "you@example.com" [ref=e21]
+                - button "Send Reset Link" [ref=e22]
+                - link "Back to login" [ref=e23] [cursor=pointer]:
+                    - /url: /login
+                    - img [ref=e24]
+                    - text: Back to login
+    - contentinfo [ref=e26]:
+        - generic [ref=e27]:
+            - generic [ref=e28]:
+                - generic [ref=e29]:
+                    - link "EasyTrade" [ref=e30] [cursor=pointer]:
+                        - /url: /
+                    - paragraph [ref=e31]: Professional trading tools for the modern market participant.
+                - generic [ref=e32]:
+                    - heading "Product" [level=3] [ref=e33]
+                    - list [ref=e34]:
+                        - listitem [ref=e35]:
+                            - link "Features" [ref=e36] [cursor=pointer]:
+                                - /url: /#features
+                        - listitem [ref=e37]:
+                            - link "Pricing" [ref=e38] [cursor=pointer]:
+                                - /url: /pricing
+                        - listitem [ref=e39]:
+                            - link "Videos" [ref=e40] [cursor=pointer]:
+                                - /url: /videos
+                - generic [ref=e41]:
+                    - heading "Community" [level=3] [ref=e42]
+                    - list [ref=e43]:
+                        - listitem [ref=e44]:
+                            - link "Discord" [ref=e45] [cursor=pointer]:
+                                - /url: "#"
+                        - listitem [ref=e46]:
+                            - link "YouTube" [ref=e47] [cursor=pointer]:
+                                - /url: "#"
+                - generic [ref=e48]:
+                    - heading "Legal" [level=3] [ref=e49]
+                    - list [ref=e50]:
+                        - listitem [ref=e51]:
+                            - link "Terms" [ref=e52] [cursor=pointer]:
+                                - /url: /legal/terms
+                        - listitem [ref=e53]:
+                            - link "Privacy" [ref=e54] [cursor=pointer]:
+                                - /url: /legal/privacy
+                        - listitem [ref=e55]:
+                            - link "Disclaimer" [ref=e56] [cursor=pointer]:
+                                - /url: /legal/disclaimer
+            - generic [ref=e57]:
+                - paragraph [ref=e58]: © 2026 EasyTrade. All rights reserved.
+                - paragraph [ref=e59]: Trading involves significant risk. Past performance is not indicative of future results. This is not financial advice.
+    - region "Notifications alt+T"
+    - generic [ref=e64] [cursor=pointer]:
+        - button "Open Next.js Dev Tools" [ref=e65]:
+            - img [ref=e66]
+        - generic [ref=e69]:
+            - button "Open issues overlay" [ref=e70]:
+                - generic [ref=e71]:
+                    - generic [ref=e72]: "2"
+                    - generic [ref=e73]: "3"
+                - generic [ref=e74]:
+                    - text: Issue
+                    - generic [ref=e75]: s
+            - button "Collapse issues badge" [ref=e76]:
+                - img [ref=e77]
+    - alert [ref=e79]
+```

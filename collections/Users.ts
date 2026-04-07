@@ -1,24 +1,46 @@
 import type { CollectionConfig } from "payload";
+import {
+  adminOrOwnReadAccess,
+  adminOrOwnUpdateAccess,
+  adminOnlyAccess,
+} from "./access/admin-only";
+import { onTradingviewAccessGranted } from "./hooks/on-tradingview-access-granted";
+import { onNewUserCreated } from "./hooks/on-new-user-created";
 
 export const Users: CollectionConfig = {
   slug: "users",
   auth: true,
   admin: {
+    group: "Subscribers",
     useAsTitle: "email",
   },
   access: {
-    read: ({ req: { user } }) => {
-      if (!user) return false;
-      if (user.role === "admin") return true;
-      return { id: { equals: user.id } };
-    },
-    create: ({ req: { user } }) => user?.role === "admin",
-    update: ({ req: { user } }) => {
-      if (!user) return false;
-      if (user.role === "admin") return true;
-      return { id: { equals: user.id } };
-    },
-    delete: ({ req: { user } }) => user?.role === "admin",
+    read: adminOrOwnReadAccess,
+    create: adminOnlyAccess,
+    update: adminOrOwnUpdateAccess,
+    delete: adminOnlyAccess,
+  },
+  hooks: {
+    beforeChange: [
+      ({ data, operation }) => {
+        // Auto-generate referralCode on creation if not set
+        if (operation === "create" && data && !data.referralCode) {
+          data.referralCode = crypto.randomUUID().slice(0, 8);
+        }
+        return data;
+      },
+    ],
+    afterChange: [onTradingviewAccessGranted, onNewUserCreated],
+    afterLogin: [
+      async ({ req, user }) => {
+        // Update lastLoginAt on each login
+        await req.payload.update({
+          collection: "users",
+          id: user.id,
+          data: { lastLoginAt: new Date().toISOString() },
+        });
+      },
+    ],
   },
   fields: [
     {
@@ -30,6 +52,71 @@ export const Users: CollectionConfig = {
         { label: "Admin", value: "admin" },
         { label: "Editor", value: "editor" },
       ],
+    },
+    {
+      name: "firstName",
+      type: "text",
+      label: "First Name",
+    },
+    {
+      name: "lastName",
+      type: "text",
+      label: "Last Name",
+    },
+    {
+      name: "tradingviewUsername",
+      type: "text",
+      label: "TradingView Username",
+      unique: true,
+      required: true,
+    },
+    {
+      name: "tradingviewAccessStatus",
+      type: "select",
+      label: "TradingView Access Status",
+      defaultValue: "pending",
+      options: [
+        { label: "Pending", value: "pending" },
+        { label: "Granted", value: "granted" },
+        { label: "Revoked", value: "revoked" },
+      ],
+    },
+    {
+      name: "tradingviewAccessGrantedAt",
+      type: "date",
+      label: "TradingView Access Granted At",
+    },
+    {
+      name: "stripeCustomerId",
+      type: "text",
+      label: "Stripe Customer ID",
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
+      name: "referralCode",
+      type: "text",
+      label: "Referral Code",
+      unique: true,
+      admin: {
+        description: "Auto-generated on creation if left empty",
+      },
+    },
+    {
+      name: "referredBy",
+      type: "relationship",
+      relationTo: "users",
+      label: "Referred By",
+    },
+    {
+      name: "lastLoginAt",
+      type: "date",
+      label: "Last Login At",
+      admin: {
+        readOnly: true,
+        position: "sidebar",
+      },
     },
   ],
 };

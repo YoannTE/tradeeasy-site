@@ -1,9 +1,9 @@
-# EasyTrade — Index projet
+# SimplifyPro — Index projet
 
 ## En bref
 
 Site web en anglais pour promouvoir et vendre l'acces a un indicateur
-de trading TradingView (EasyTrade V6.0) par abonnement.
+de trading TradingView (SimplifyPro V6.0) par abonnement.
 
 ## Stack technique
 

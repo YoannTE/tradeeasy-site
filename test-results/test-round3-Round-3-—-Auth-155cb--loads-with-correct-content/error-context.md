@@ -1,0 +1,100 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+    - banner [ref=e2]:
+        - generic [ref=e3]:
+            - link "EasyTrade" [ref=e4] [cursor=pointer]:
+                - /url: /
+            - navigation [ref=e5]:
+                - link "Features" [ref=e6] [cursor=pointer]:
+                    - /url: /#features
+                - link "Pricing" [ref=e7] [cursor=pointer]:
+                    - /url: /pricing
+                - link "Videos" [ref=e8] [cursor=pointer]:
+                    - /url: /videos
+                - link "Contact" [ref=e9] [cursor=pointer]:
+                    - /url: /contact
+            - button "Start Free Trial" [ref=e11] [cursor=pointer]
+    - main [ref=e12]:
+        - generic [ref=e14]:
+            - generic [ref=e15]:
+                - heading "Create your account" [level=1] [ref=e16]
+                - paragraph [ref=e17]: Start your 7-day free trial with EasyTrade
+            - generic [ref=e18]:
+                - generic [ref=e19]:
+                    - generic [ref=e20]: Email
+                    - textbox "you@example.com" [ref=e21]
+                - generic [ref=e22]:
+                    - generic [ref=e23]: TradingView Username
+                    - textbox "your_tv_username" [ref=e24]
+                - generic [ref=e25]:
+                    - generic [ref=e26]: Password
+                    - textbox "Min. 8 characters" [ref=e27]
+                - generic [ref=e28]:
+                    - generic [ref=e29]: Confirm Password
+                    - textbox "Repeat your password" [ref=e30]
+                - button "Create Account" [ref=e31]
+                - paragraph [ref=e32]:
+                    - text: Already have an account?
+                    - link "Sign in" [ref=e33] [cursor=pointer]:
+                        - /url: /login
+    - contentinfo [ref=e34]:
+        - generic [ref=e35]:
+            - generic [ref=e36]:
+                - generic [ref=e37]:
+                    - link "EasyTrade" [ref=e38] [cursor=pointer]:
+                        - /url: /
+                    - paragraph [ref=e39]: Professional trading tools for the modern market participant.
+                - generic [ref=e40]:
+                    - heading "Product" [level=3] [ref=e41]
+                    - list [ref=e42]:
+                        - listitem [ref=e43]:
+                            - link "Features" [ref=e44] [cursor=pointer]:
+                                - /url: /#features
+                        - listitem [ref=e45]:
+                            - link "Pricing" [ref=e46] [cursor=pointer]:
+                                - /url: /pricing
+                        - listitem [ref=e47]:
+                            - link "Videos" [ref=e48] [cursor=pointer]:
+                                - /url: /videos
+                - generic [ref=e49]:
+                    - heading "Community" [level=3] [ref=e50]
+                    - list [ref=e51]:
+                        - listitem [ref=e52]:
+                            - link "Discord" [ref=e53] [cursor=pointer]:
+                                - /url: "#"
+                        - listitem [ref=e54]:
+                            - link "YouTube" [ref=e55] [cursor=pointer]:
+                                - /url: "#"
+                - generic [ref=e56]:
+                    - heading "Legal" [level=3] [ref=e57]
+                    - list [ref=e58]:
+                        - listitem [ref=e59]:
+                            - link "Terms" [ref=e60] [cursor=pointer]:
+                                - /url: /legal/terms
+                        - listitem [ref=e61]:
+                            - link "Privacy" [ref=e62] [cursor=pointer]:
+                                - /url: /legal/privacy
+                        - listitem [ref=e63]:
+                            - link "Disclaimer" [ref=e64] [cursor=pointer]:
+                                - /url: /legal/disclaimer
+            - generic [ref=e65]:
+                - paragraph [ref=e66]: © 2026 EasyTrade. All rights reserved.
+                - paragraph [ref=e67]: Trading involves significant risk. Past performance is not indicative of future results. This is not financial advice.
+    - region "Notifications alt+T"
+    - generic [ref=e72] [cursor=pointer]:
+        - button "Open Next.js Dev Tools" [ref=e73]:
+            - img [ref=e74]
+        - generic [ref=e77]:
+            - button "Open issues overlay" [ref=e78]:
+                - generic [ref=e79]:
+                    - generic [ref=e80]: "2"
+                    - generic [ref=e81]: "3"
+                - generic [ref=e82]:
+                    - text: Issue
+                    - generic [ref=e83]: s
+            - button "Collapse issues badge" [ref=e84]:
+                - img [ref=e85]
+    - alert [ref=e87]
+```

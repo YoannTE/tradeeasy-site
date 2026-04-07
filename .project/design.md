@@ -1,4 +1,4 @@
-# Design System — EasyTrade
+# Design System — SimplifyPro
 
 ## Direction visuelle
 

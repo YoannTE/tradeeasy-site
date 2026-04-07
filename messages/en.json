@@ -1,0 +1,852 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "videos": "Videos",
+    "guides": "Guides",
+    "contact": "Contact",
+    "startTrial": "Start Free Trial",
+    "dashboard": "Dashboard",
+    "menuLabel": "Navigation menu"
+  },
+  "hero": {
+    "badge": "Institutional Grade Signals",
+    "title1": "Stop Guessing.",
+    "title2": "Start Trading with",
+    "title3": "Confidence.",
+    "subtitle": "Precision-engineered TradingView indicators that filter noise and identify high-probability entries in any market condition.",
+    "cta": "Get Started Now",
+    "demo": "Watch Demo",
+    "noCharge": "No charge for 7 days · Cancel anytime",
+    "chartPreview": "TradingView Chart Preview"
+  },
+  "socialProof": {
+    "trusted": "TRUSTED BY 5,000+ TRADERS GLOBALLY"
+  },
+  "features": {
+    "title": "Why Traders Choose SimplifyPro",
+    "subtitle": "Built by traders, for traders. Every feature is designed to give you an unfair advantage in the markets.",
+    "clearSignals": {
+      "title": "Clear Buy/Sell Signals",
+      "description": "No ambiguity. Our indicator highlights precise entry and exit points with color-coded signals directly on your chart."
+    },
+    "anyMarket": {
+      "title": "Works on Any Market",
+      "description": "Indices, forex, crypto, stocks, commodities — SimplifyPro adapts to any asset class and any timeframe seamlessly."
+    },
+    "noExperience": {
+      "title": "No Experience Needed",
+      "description": "Whether you're a beginner or a seasoned trader, our plug-and-play indicator requires zero configuration."
+    }
+  },
+  "tradingview": {
+    "title": "TradingView Native",
+    "description": "SimplifyPro integrates directly into TradingView, the world's most popular charting platform. No external software, no complicated setup — just add the indicator and start trading.",
+    "features": {
+      "pushNotifications": "Push Notifications",
+      "webhookSupport": "Webhook Support for Automation",
+      "multiTimeframe": "Multi-timeframe Analysis"
+    },
+    "preview": "TradingView Integration Preview"
+  },
+  "performance": {
+    "title": "Daily Performance",
+    "subtitle": "See how SimplifyPro performed today across the most traded markets."
+  },
+  "marketNews": {
+    "title": "Market News",
+    "subtitle": "Stay informed with the latest financial headlines from trusted sources.",
+    "poweredBy": "Powered by public news sources · Links redirect to original articles",
+    "timePrefix": "",
+    "timeSuffix": "ago",
+    "news1": "Fed Signals Potential Rate Adjustments Amid Economic Uncertainty",
+    "news2": "EUR/USD Consolidates Near Key Support as Dollar Strengthens",
+    "news3": "Bitcoin Surges Past $95K on Institutional Buying Momentum",
+    "news4": "S&P 500 Reaches New Highs on Strong Tech Earnings",
+    "news5": "Oil Prices Rise on Supply Concerns and Middle East Tensions"
+  },
+  "howItWorks": {
+    "title": "Start Trading in Minutes",
+    "steps": {
+      "step1": {
+        "title": "Sign Up",
+        "description": "Choose your plan and create your SimplifyPro account in under 60 seconds."
+      },
+      "step2": {
+        "title": "Get Access",
+        "description": "Provide your TradingView username and get indicator access within 12 hours."
+      },
+      "step3": {
+        "title": "Start Trading",
+        "description": "Apply the indicator to your charts and follow the precise signals."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Voices of the Community",
+    "items": {
+      "marcus": {
+        "quote": "I've tried dozens of indicators... This is the first one that actually stays consistent.",
+        "name": "Marcus T.",
+        "role": "Full-time Crypto Trader"
+      },
+      "sarah": {
+        "quote": "SimplifyPro simplified my workflow. I no longer spend 8 hours staring at candles.",
+        "name": "Sarah Jenkins",
+        "role": "Swing Trader"
+      },
+      "david": {
+        "quote": "The transparency is what got me. They don't hide their losing trades.",
+        "name": "David L.",
+        "role": "Forex Specialist"
+      }
+    }
+  },
+  "pricingPreview": {
+    "title": "Invest in Your Trading",
+    "subtitle": "No hidden fees. Cancel anytime.",
+    "monthly": {
+      "name": "Monthly",
+      "price": "$49",
+      "period": "/month",
+      "cta": "Select Monthly"
+    },
+    "annual": {
+      "name": "Annual",
+      "price": "$349",
+      "period": "/year",
+      "save": "Save 40% vs Monthly",
+      "badge": "BEST VALUE",
+      "bonus": "2 Months Free",
+      "cta": "Get Started with Annual"
+    },
+    "features": {
+      "fullAccess": "Full Access to Indicator",
+      "discordSupport": "24/7 Email Support",
+      "mobileAlerts": "Mobile & Desktop Alerts",
+      "trainingGuide": "Standard Training Guide",
+      "prioritySupport": "Priority Support"
+    }
+  },
+  "cta": {
+    "title": "Ready to trade with confidence?",
+    "subtitle": "Join thousands of traders who have already revolutionized their strategy with SimplifyPro.",
+    "button": "Start Your Free Trial Now",
+    "noCard": "No credit card required for 7 days."
+  },
+  "footer": {
+    "tagline": "Professional trading tools for the modern market participant.",
+    "product": "Product",
+    "community": "Community",
+    "legal": "Legal",
+    "features": "Features",
+    "pricing": "Pricing",
+    "videos": "Videos",
+    "guides": "Guides",
+    "youtube": "YouTube",
+    "affiliate": "Affiliate Program",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "disclaimer": "Disclaimer",
+    "copyright": "© 2026 SimplifyPro. All rights reserved.",
+    "riskWarning": "Trading involves significant risk. Past performance is not indicative of future results. This is not financial advice."
+  },
+  "pricing": {
+    "title": "Invest in Your Trading",
+    "subtitle": "Start your 7-day free trial. Cancel anytime.",
+    "monthly": {
+      "name": "Monthly",
+      "price": "$49",
+      "period": "/month",
+      "billing": "Billed monthly",
+      "cta": "Start 7-Day Free Trial",
+      "note": "Credit card required. Cancel anytime."
+    },
+    "annual": {
+      "name": "Annual",
+      "price": "$349",
+      "period": "/year",
+      "perMonth": "$29/mo",
+      "save": "Save 40%",
+      "badge": "BEST VALUE",
+      "billing": "Billed annually",
+      "cta": "Start 7-Day Free Trial",
+      "note": "Credit card required. Cancel anytime."
+    },
+    "features": {
+      "indicator": "SimplifyPro V6.0 Indicator",
+      "allMarkets": "All Markets (Indices, Forex, Crypto)",
+      "allTimeframes": "All Timeframes",
+      "signals": "Buy & Sell Signals",
+      "tutorials": "Video Tutorials & Guides",
+      "emailSupport": "Email Support",
+      "prioritySupport": "Priority Support",
+      "twoMonthsFree": "2 Months Free"
+    },
+    "guarantee": {
+      "text": "14-Day Money-Back Guarantee",
+      "subtext": "Not satisfied? Get a full refund within 14 days of your first payment. No questions asked."
+    },
+    "promo": {
+      "label": "Have a promo code?",
+      "placeholder": "Enter promo code",
+      "apply": "Apply",
+      "toast": "Promo codes will be available soon"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "trial": {
+          "question": "How does the 7-day free trial work?",
+          "answer": "Sign up with your credit card — you won't be charged during the trial. If you cancel before 7 days, you pay nothing. Your trial starts when we activate your TradingView access (within 12 hours), so you get the full 7 days."
+        },
+        "afterTrial": {
+          "question": "What happens after my trial ends?",
+          "answer": "Your card is automatically charged $49/mo or $349/year depending on your chosen plan. You can cancel anytime before the trial ends to avoid any charge."
+        },
+        "guarantee": {
+          "question": "Is there a money-back guarantee?",
+          "answer": "Yes! We offer a 14-day money-back guarantee after your first payment. If you're not satisfied with SimplifyPro, contact us within 14 days of being charged and we'll issue a full refund — no questions asked."
+        },
+        "cancel": {
+          "question": "Can I cancel anytime?",
+          "answer": "Yes. Cancel from your dashboard in one click. You'll keep access until the end of your billing period. No cancellation fees, no hassle."
+        },
+        "beginners": {
+          "question": "Is SimplifyPro suitable for beginners?",
+          "answer": "Absolutely. SimplifyPro is designed to be simple: green arrows mean buy, red arrows mean sell. No complex setup needed. We also provide video tutorials and step-by-step guides to get you started."
+        },
+        "freeIndicators": {
+          "question": "How is SimplifyPro different from free TradingView indicators?",
+          "answer": "Free indicators typically use basic signals (RSI, MACD) that generate a lot of noise and false signals. SimplifyPro uses a proprietary algorithm that filters out market noise and only shows high-probability entry and exit points. Our daily performance page shows real, transparent results."
+        },
+        "access": {
+          "question": "How do I get access to the indicator on TradingView?",
+          "answer": "After signing up, provide your TradingView username. Our team will grant you invite-only access within 12 hours. You'll receive an email confirmation as soon as it's activated."
+        },
+        "markets": {
+          "question": "What markets and timeframes does SimplifyPro support?",
+          "answer": "SimplifyPro works on any market — Indices (Nasdaq, S&P 500, DAX), Forex (EUR/USD, GBP/USD), Crypto (Bitcoin, Ethereum, Solana), Stocks, and Commodities (Gold, Oil). It works on all timeframes from 1 minute to monthly."
+        },
+        "mobile": {
+          "question": "Can I use SimplifyPro on my phone?",
+          "answer": "Yes! Since SimplifyPro runs on TradingView, you can use it on TradingView's mobile app. You can also set up push notification alerts so you never miss a signal, even when you're away from your desk."
+        },
+        "switchPlan": {
+          "question": "Can I switch between monthly and annual plans?",
+          "answer": "Yes. You can upgrade from monthly to annual at any time from your dashboard. The price difference will be prorated. You can also downgrade from annual to monthly at the end of your billing cycle."
+        },
+        "advice": {
+          "question": "Is this financial advice?",
+          "answer": "No. SimplifyPro is a technical analysis tool. It does not constitute financial advice. Past performance is not indicative of future results. Always trade responsibly, manage your risk, and never trade with money you can't afford to lose."
+        }
+      }
+    }
+  },
+  "videos": {
+    "title": "Videos & Tutorials",
+    "subtitle": "Learn how to install, configure, and master SimplifyPro on TradingView.",
+    "guideBanner": "Prefer step-by-step guides with screenshots?",
+    "guideBannerLink": "Check out our Guides",
+    "watchOnYouTube": "Watch on YouTube →",
+    "categories": {
+      "all": "All",
+      "installation": "Installation",
+      "usage": "Usage",
+      "strategy": "Strategy",
+      "tradingLive": "Trading Live"
+    },
+    "items": {
+      "install": {
+        "title": "How to Install SimplifyPro on TradingView",
+        "description": "Step-by-step guide to add SimplifyPro V6.0 to your TradingView chart."
+      },
+      "signals": {
+        "title": "Understanding Buy & Sell Signals",
+        "description": "Learn how to read and act on SimplifyPro's arrow signals."
+      },
+      "forex": {
+        "title": "Forex Trading Strategy with SimplifyPro",
+        "description": "A complete forex strategy using SimplifyPro on EUR/USD."
+      },
+      "live": {
+        "title": "Live Trading Session — March 2026",
+        "description": "Watch a real trading session using SimplifyPro signals."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question? We'd love to hear from you.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell us what you need help with...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successToast": "Message sent! We'll get back to you within 24 hours."
+    },
+    "subjects": {
+      "general": "General Inquiry",
+      "technical": "Technical Support",
+      "billing": "Billing",
+      "partnership": "Partnership",
+      "other": "Other"
+    },
+    "info": {
+      "email": {
+        "title": "Email",
+        "description": "support@simplifypro.com",
+        "detail": "Send us an email anytime"
+      },
+      "responseTime": {
+        "title": "Response Time",
+        "description": "Within 24 hours",
+        "detail": "We reply to every message"
+      }
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last updated:",
+    "terms": {
+      "title": "Terms of Service",
+      "section1": {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing or using SimplifyPro (\"the Service\"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you must not use the Service."
+      },
+      "section2": {
+        "title": "2. Service Description",
+        "content": "SimplifyPro provides a trading indicator for use on the TradingView platform. The indicator generates buy and sell signals based on technical analysis. SimplifyPro is a tool, not financial advice. You are solely responsible for your trading decisions."
+      },
+      "section3": {
+        "title": "3. Subscription and Payment",
+        "content": "SimplifyPro offers two subscription plans: Monthly at $49/month and Annual at $349/year. All new subscriptions include a 7-day free trial. A valid credit card is required to start the trial. You will be charged automatically at the end of the trial period unless you cancel before it ends."
+      },
+      "section4": {
+        "title": "4. Cancellation and Refunds",
+        "content": "You may cancel your subscription at any time through your account settings. Upon cancellation, you will retain access to the Service until the end of your current billing period. No partial refunds are provided for unused time within a billing cycle."
+      },
+      "section5": {
+        "title": "5. TradingView Access",
+        "content": "Access to the SimplifyPro indicator on TradingView is granted via invite-only permissions. After subscribing, an administrator will manually grant you access within 12 hours. You must provide your TradingView username during signup."
+      },
+      "section6": {
+        "title": "6. User Responsibilities",
+        "content": "You agree to provide accurate information during registration, maintain the security of your account, not share your TradingView access with third parties, and use the Service in compliance with all applicable laws and regulations."
+      },
+      "section7": {
+        "title": "7. Disclaimer of Warranties",
+        "content": "The Service is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. We do not guarantee the accuracy, completeness, or reliability of any trading signals generated by the indicator."
+      },
+      "section8": {
+        "title": "8. Limitation of Liability",
+        "content": "In no event shall SimplifyPro, its owners, employees, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service, including but not limited to trading losses."
+      },
+      "section9": {
+        "title": "9. Changes to Terms",
+        "content": "We reserve the right to modify these Terms of Service at any time. Changes will be posted on this page with an updated revision date. Continued use of the Service after any modifications constitutes acceptance of the revised terms."
+      },
+      "section10": {
+        "title": "10. Age Requirement",
+        "content": "You must be at least 18 years old to use SimplifyPro. By creating an account, you confirm that you are of legal age to enter into a binding agreement and to engage in trading activities in your jurisdiction."
+      },
+      "section11": {
+        "title": "11. Governing Law and Jurisdiction",
+        "content": "These Terms of Service are governed by and construed in accordance with the laws of France. Any disputes arising from or relating to these terms shall be subject to the exclusive jurisdiction of the courts of Paris, France. If you are accessing the Service from outside France, you are responsible for compliance with your local laws."
+      },
+      "section12": {
+        "title": "12. Right of Withdrawal (EU)",
+        "content": "If you are a consumer residing in the European Union, you have the right to withdraw from your subscription within 14 days of your initial purchase, without giving any reason. To exercise this right, contact us at support@simplifypro.com. If you have actively used the Service during the withdrawal period, a proportional amount may be charged for the service received. This right of withdrawal does not apply to the free trial period."
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "section1": {
+        "title": "1. Information We Collect",
+        "content": "We collect the following personal information when you create an account or subscribe to SimplifyPro: your name, email address, and TradingView username. Payment information (credit card details) is collected and processed securely by Stripe — we never store your payment details on our servers."
+      },
+      "section2": {
+        "title": "2. How We Use Your Information",
+        "content": "Your information is used to provide and maintain the Service, process payments and manage subscriptions, grant access to the TradingView indicator, send transactional emails (subscription confirmations, receipts, access notifications), and improve the Service through anonymized analytics."
+      },
+      "section3": {
+        "title": "3. Data Sharing",
+        "content": "We share your data only with the following trusted third-party services: Stripe for payment processing, Resend for transactional email delivery, and PostHog for anonymized product analytics. We do not sell, rent, or share your personal information with any other third parties."
+      },
+      "section4": {
+        "title": "4. Data Security",
+        "content": "We implement industry-standard security measures to protect your personal information. All data is transmitted over encrypted connections (HTTPS). However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security."
+      },
+      "section5": {
+        "title": "5. Your Rights",
+        "content": "You have the right to access, correct, or delete your personal data at any time. You may request a copy of your data or ask us to delete your account by contacting us at support@simplifypro.com. We will respond to your request within 30 days."
+      },
+      "section6": {
+        "title": "6. Cookies and Analytics",
+        "content": "We use PostHog for product analytics to understand how users interact with our platform. PostHog may use cookies or similar technologies to collect anonymized usage data. You can opt out of analytics tracking through your browser settings."
+      },
+      "section7": {
+        "title": "7. Contact",
+        "content": "If you have any questions about this Privacy Policy or how we handle your data, please contact us at support@simplifypro.com."
+      },
+      "section8": {
+        "title": "8. GDPR Compliance (European Users)",
+        "content": "If you are located in the European Economic Area (EEA), your personal data is processed in accordance with the General Data Protection Regulation (GDPR). Legal basis for processing: contract performance (providing the Service), legitimate interest (improving the Service), and consent (marketing communications). Your data may be transferred to third-party processors located outside the EEA (Stripe in the USA, Resend in the USA, PostHog in the USA). These transfers are protected by Standard Contractual Clauses (SCCs) approved by the European Commission. You have the right to: access your data, rectify inaccurate data, erase your data (\"right to be forgotten\"), restrict processing, data portability, and object to processing. To exercise any of these rights, contact our Data Protection contact at support@simplifypro.com. If you believe your rights have been violated, you may lodge a complaint with your local data protection authority."
+      },
+      "section9": {
+        "title": "9. Data Retention",
+        "content": "We retain your personal data for as long as your account is active or as needed to provide the Service. After account deletion, we may retain certain data for up to 12 months to comply with legal obligations (tax, accounting) and to resolve disputes. Payment records are retained by Stripe according to their own retention policy."
+      }
+    },
+    "disclaimer": {
+      "title": "Trading Disclaimer",
+      "section1": {
+        "title": "Not Financial Advice",
+        "content": "SimplifyPro is a technical analysis tool and does NOT provide financial advice. Nothing on this website or within the SimplifyPro indicator should be construed as a recommendation to buy, sell, or hold any financial instrument. All trading signals are generated by algorithms and are for informational purposes only."
+      },
+      "section2": {
+        "title": "Risk Warning",
+        "content": "Trading involves significant risk of loss. Forex, cryptocurrencies, stocks, and other financial instruments are highly volatile and may not be suitable for all investors. You should carefully consider your financial situation and risk tolerance before engaging in any trading activity. Only trade with money you can afford to lose."
+      },
+      "section3": {
+        "title": "No Guarantees",
+        "content": "Past performance is not indicative of future results. Any examples of past trades, performance metrics, or win rates shown on this website are for illustrative purposes only. There is no guarantee that you will achieve similar results. Markets are unpredictable and no trading system can eliminate risk entirely."
+      },
+      "section4": {
+        "title": "User Responsibility",
+        "content": "You are solely responsible for your own trading decisions and their outcomes. SimplifyPro, its owners, employees, and affiliates are not responsible for any losses you may incur as a result of using the indicator. By using the Service, you acknowledge that you understand the risks involved in trading."
+      },
+      "section5": {
+        "title": "Regulatory Notice",
+        "content": "SimplifyPro is not a registered broker-dealer, investment advisor, or financial institution. We are not regulated by any financial authority. The Service is provided as an educational and analytical tool. If you require financial advice, please consult a qualified and licensed financial professional."
+      }
+    }
+  },
+  "auth": {
+    "signup": {
+      "title": "Create your account",
+      "description": "Start your 7-day free trial with SimplifyPro",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "tvUsernameLabel": "TradingView Username",
+      "tvUsernamePlaceholder": "your_tv_username",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Min. 8 characters",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submitButton": "Create Account",
+      "submitting": "Creating account...",
+      "alreadyHaveAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "genericError": "Something went wrong. Please try again."
+    },
+    "login": {
+      "title": "Welcome back",
+      "description": "Sign in to your SimplifyPro account",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Your password",
+      "forgotPassword": "Forgot password?",
+      "submitButton": "Sign In",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "invalidCredentials": "Invalid email or password",
+      "genericError": "Something went wrong. Please try again."
+    },
+    "forgotPassword": {
+      "title": "Forgot password?",
+      "description": "Enter your email and we'll send you a reset link",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "submitButton": "Send Reset Link",
+      "submitting": "Sending...",
+      "backToLogin": "Back to login",
+      "successTitle": "Check your email",
+      "successMessage": "If an account with that email exists, you'll receive a password reset link.",
+      "genericError": "Something went wrong. Please try again."
+    },
+    "resetPassword": {
+      "title": "Reset your password",
+      "description": "Enter your new password below",
+      "passwordLabel": "New Password",
+      "passwordPlaceholder": "Min. 8 characters",
+      "confirmPasswordLabel": "Confirm New Password",
+      "confirmPasswordPlaceholder": "Repeat your new password",
+      "submitButton": "Reset Password",
+      "submitting": "Resetting...",
+      "backToLogin": "Back to login",
+      "invalidLinkTitle": "Invalid link",
+      "invalidLinkMessage": "This password reset link is invalid or has expired.",
+      "requestNewLink": "Request a new reset link",
+      "successTitle": "Password reset!",
+      "successMessage": "Your password has been updated. Redirecting to login...",
+      "missingToken": "Missing reset token. Please use the link from your email.",
+      "genericError": "Something went wrong. Please try again."
+    },
+    "validation": {
+      "emailRequired": "Please enter a valid email address",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordRequired": "Password is required",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordsMismatch": "Passwords do not match",
+      "tvUsernameRequired": "TradingView username is required",
+      "tvUsernameMin": "TradingView username must be at least 3 characters"
+    }
+  },
+  "onboarding": {
+    "title": "Welcome to SimplifyPro!",
+    "subtitle": "Your TradingView access is being set up. Here's how to prepare.",
+    "status": {
+      "granted": "Access Granted",
+      "pending": "Access Pending",
+      "grantedMessage": "Your TradingView access has been activated. You can start using SimplifyPro V6.0 right away.",
+      "pendingMessage": "Your TradingView access is being set up. This usually takes less than 12 hours. In the meantime, here's how to prepare."
+    },
+    "checklist": {
+      "title": "Prepare while you wait",
+      "createTv": {
+        "title": "Create a TradingView account",
+        "description": "You need a TradingView account to use our indicator. A free plan works."
+      },
+      "setupChart": {
+        "title": "Set up your chart workspace",
+        "description": "Open a chart and configure your preferred timeframe and layout."
+      },
+      "watchTutorial": {
+        "title": "Watch the installation tutorial",
+        "description": "Learn how to add SimplifyPro V6.0 to your TradingView charts."
+      }
+    },
+    "video": {
+      "title": "How to Install SimplifyPro V6.0",
+      "placeholder": "Video tutorial coming soon"
+    }
+  },
+  "dashboard": {
+    "title": "Your Dashboard",
+    "subtitle": "Manage your subscription, access, and account.",
+    "subscription": {
+      "title": "Your Subscription",
+      "noSubscription": "No active subscription.",
+      "viewPlans": "View plans →",
+      "planLabel": "Plan:",
+      "monthly": "Monthly — $49/mo",
+      "annual": "Annual — $349/year",
+      "trialEnds": "Trial ends:",
+      "daysRemaining": "{count} days remaining",
+      "nextRenewal": "Next renewal:",
+      "status": {
+        "trial": "Trial",
+        "active": "Active",
+        "paymentFailed": "Payment Failed",
+        "cancelled": "Cancelled",
+        "expired": "Expired"
+      }
+    },
+    "tradingview": {
+      "title": "TradingView Access",
+      "username": "Username:",
+      "status": {
+        "pending": "Pending",
+        "granted": "Granted",
+        "revoked": "Revoked"
+      },
+      "messages": {
+        "pending": "Your access will be granted within 12 hours.",
+        "granted": "Your indicator is active on TradingView.",
+        "revoked": "Your TradingView access has been revoked. Please contact support if you believe this is an error."
+      }
+    },
+    "links": {
+      "title": "Quick Links",
+      "videosTutorials": "Videos & Tutorials",
+      "manageBilling": "Manage Billing",
+      "contactSupport": "Contact Support"
+    },
+    "actions": {
+      "manageBilling": "Manage Billing",
+      "loading": "Loading...",
+      "cancelSubscription": "Cancel Subscription",
+      "cancelTitle": "Cancel your subscription?",
+      "cancelDescription": "You will lose access to SimplifyPro at the end of your current billing period. Your TradingView indicator access will be revoked.",
+      "keepSubscription": "Keep Subscription",
+      "yesCancel": "Yes, Cancel"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "email": {
+    "welcome": {
+      "subject": "Welcome to SimplifyPro! Your access is on its way",
+      "heading": "Welcome to SimplifyPro!",
+      "greeting": "Thanks for signing up, {username}! Your TradingView access will be activated within 12 hours.",
+      "prepareTitle": "In the meantime, here's how to prepare:",
+      "step1": "Create a TradingView account if you don't have one",
+      "step2": "Set up your chart workspace",
+      "step3": "Watch our installation tutorial videos",
+      "step4": "Browse our trading guides",
+      "cta": "Watch Tutorial Videos",
+      "footer": "Questions? Contact us at support@simplifypro.com"
+    },
+    "accessGranted": {
+      "subject": "Your TradingView Access is Now Active!",
+      "heading": "Your TradingView access is now active!",
+      "message": "Great news! The SimplifyPro V6.0 indicator has been activated on your TradingView account {username}.",
+      "howToStart": "How to get started:",
+      "step1": "Open TradingView",
+      "step2": "Go to Indicators & Strategies",
+      "step3": "Search for SimplifyPro V6.0 under \"Invite-only scripts\"",
+      "step4": "Add it to your chart and start trading!",
+      "trialNote": "Your 7-day free trial starts now. Enjoy exploring SimplifyPro!",
+      "help": "Need help? Reply to this email or contact our support team.",
+      "footer": "SimplifyPro — Smart Trading Made Simple"
+    },
+    "paymentFailed": {
+      "subject": "Action Required: Payment Failed for SimplifyPro",
+      "heading": "Payment Failed",
+      "message": "We were unable to process your payment for SimplifyPro.",
+      "warning": "Please update your payment method within 7 days to avoid losing access to SimplifyPro and your TradingView indicator.",
+      "cta": "Update Payment Method",
+      "footer": "If you need help, contact us at support@simplifypro.com"
+    },
+    "trialReminder": {
+      "subject": "Your SimplifyPro trial ends in 2 days",
+      "heading": "Your trial ends in 2 days",
+      "message": "Your 7-day free trial ends on {date}.",
+      "chargeNote": "After that, you'll be charged {price}.",
+      "keepAccess": "To keep your access, no action is needed — your card will be charged automatically.",
+      "cancelNote": "To cancel, visit your dashboard before your trial ends.",
+      "cta": "Go to Dashboard",
+      "footer": "SimplifyPro — Smart Trading Made Simple"
+    }
+  },
+  "affiliate": {
+    "hero": {
+      "badge": "Earn While You Trade",
+      "title": "SimplifyPro Affiliate Program",
+      "subtitle": "Share SimplifyPro with your audience and earn 30% recurring commission on every referral — for as long as they stay subscribed.",
+      "cta": "Apply Now"
+    },
+    "stats": {
+      "commission": "30%",
+      "commissionLabel": "Recurring Commission",
+      "cookie": "90 Days",
+      "cookieLabel": "Cookie Duration",
+      "payout": "$50",
+      "payoutLabel": "Min. Payout",
+      "frequency": "Monthly",
+      "frequencyLabel": "Payouts"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Apply",
+        "description": "Fill out the application form below. We review all applications within 48 hours."
+      },
+      "step2": {
+        "title": "Share",
+        "description": "Get your unique referral link and share it with your audience — on YouTube, social media, or your website."
+      },
+      "step3": {
+        "title": "Earn",
+        "description": "Earn 30% of every subscription payment from users who sign up through your link. Commissions are recurring as long as they stay subscribed."
+      }
+    },
+    "benefits": {
+      "title": "Why Join?",
+      "recurring": {
+        "title": "Recurring Revenue",
+        "description": "Earn 30% every month (or year) your referrals stay subscribed. Not just a one-time bonus."
+      },
+      "cookie": {
+        "title": "90-Day Cookie",
+        "description": "If someone clicks your link and signs up within 90 days, you get the commission — even if they don't buy immediately."
+      },
+      "dashboard": {
+        "title": "Real-Time Dashboard",
+        "description": "Track your clicks, conversions, and earnings in real-time with your affiliate dashboard."
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "description": "Get marketing materials, banners, and direct support from our team to maximize your earnings."
+      },
+      "noLimit": {
+        "title": "No Earnings Cap",
+        "description": "There's no limit on how much you can earn. The more you refer, the more you make."
+      },
+      "trusted": {
+        "title": "Trusted Product",
+        "description": "Promote a product with real daily performance results, transparent pricing, and happy customers."
+      }
+    },
+    "earnings": {
+      "title": "Earning Potential",
+      "subtitle": "Here's what your monthly earnings could look like:",
+      "referrals": "Active Referrals",
+      "monthlyEarnings": "Monthly Earnings",
+      "yearlyEarnings": "Yearly Earnings"
+    },
+    "form": {
+      "title": "Apply to Become an Affiliate",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "platformLabel": "Where will you promote SimplifyPro?",
+      "platformPlaceholder": "YouTube, Twitter, Blog, Instagram...",
+      "audienceLabel": "Estimated audience size",
+      "audiencePlaceholder": "e.g. 5,000 YouTube subscribers",
+      "messageLabel": "Tell us about yourself (optional)",
+      "messagePlaceholder": "Why are you interested in the affiliate program?",
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "successToast": "Application submitted! We'll review it within 48 hours."
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "SimplifyPro — Stop Guessing. Start Trading with Confidence.",
+      "description": "Precision-engineered TradingView indicators that filter noise and identify high-probability entries in any market condition. Trusted by 5,000+ traders globally."
+    },
+    "pricing": {
+      "title": "Pricing — SimplifyPro",
+      "description": "Choose your SimplifyPro plan. Start with a 7-day free trial. Monthly at $49/mo or Annual at $349/year with 40% savings."
+    },
+    "videos": {
+      "title": "Videos & Tutorials — SimplifyPro",
+      "description": "Learn how to install, configure, and master SimplifyPro on TradingView with our video tutorials."
+    },
+    "contact": {
+      "title": "Contact Us — SimplifyPro",
+      "description": "Get in touch with the SimplifyPro team. Have a question? We'd love to hear from you."
+    },
+    "dashboard": {
+      "title": "Your Dashboard — SimplifyPro",
+      "description": "Manage your SimplifyPro subscription and TradingView access."
+    },
+    "onboarding": {
+      "title": "Getting Started — SimplifyPro",
+      "description": "Prepare your TradingView workspace while we activate your SimplifyPro access."
+    },
+    "guides": {
+      "title": "Step-by-Step Guides — SimplifyPro",
+      "description": "Learn how to install, configure, and master SimplifyPro with our detailed step-by-step guides."
+    },
+    "affiliate": {
+      "title": "Affiliate Program — SimplifyPro",
+      "description": "Earn 30% recurring commission by promoting SimplifyPro. Join our affiliate program and start earning today."
+    }
+  },
+  "guides": {
+    "title": "Step-by-Step Guides",
+    "subtitle": "Learn how to install, configure, and master SimplifyPro with our detailed guides.",
+    "readGuide": "Read Guide",
+    "backToGuides": "Back to All Guides",
+    "steps": "steps",
+    "minutes": "min",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "categories": {
+      "installation": "Installation",
+      "usage": "Usage",
+      "strategy": "Strategy",
+      "troubleshooting": "Troubleshooting"
+    },
+    "tip": "Pro Tip",
+    "placeholder": {
+      "guide1": {
+        "title": "How to Install SimplifyPro on TradingView",
+        "description": "A complete step-by-step guide to adding SimplifyPro V6.3 to your TradingView charts in under 5 minutes.",
+        "steps": [
+          {
+            "title": "Open TradingView",
+            "content": "Go to tradingview.com and log in to your account. If you don't have one, create a free account first."
+          },
+          {
+            "title": "Open the Indicators Panel",
+            "content": "Click on the 'Indicators' button at the top of your chart, or use the shortcut key '/' to open the search."
+          },
+          {
+            "title": "Search for SimplifyPro",
+            "content": "In the search bar, type 'SimplifyPro V6.3'. Since it's an invite-only indicator, it will appear under 'Invite-Only Scripts'."
+          },
+          {
+            "title": "Add to Chart",
+            "content": "Click on 'SimplifyPro V6.3' to add it to your chart. The indicator will appear with buy (green) and sell (red) arrows."
+          },
+          {
+            "title": "Configure Your Preferences",
+            "content": "Click the settings icon next to the indicator name to customize colors, timeframes, and alert settings."
+          },
+          {
+            "title": "Start Trading",
+            "content": "You're all set! Follow the green arrows for buy signals and red arrows for sell signals. Remember to always manage your risk."
+          }
+        ]
+      },
+      "guide2": {
+        "title": "Understanding Buy & Sell Signals",
+        "description": "Learn how to read and act on SimplifyPro's arrow signals for better trading decisions.",
+        "steps": [
+          {
+            "title": "Green Arrows = Buy Signal",
+            "content": "When you see a green arrow pointing up below a candle, it indicates a potential buying opportunity. The signal is strongest when it appears near a support level."
+          },
+          {
+            "title": "Red Arrows = Sell Signal",
+            "content": "A red arrow pointing down above a candle indicates a potential selling opportunity. Look for confirmation from the overall trend direction."
+          },
+          {
+            "title": "Signal Strength",
+            "content": "Not all signals are equal. Signals that align with the overall trend are more reliable. Use higher timeframes to identify the trend, then trade signals on lower timeframes."
+          },
+          {
+            "title": "When to Avoid Signals",
+            "content": "Avoid trading signals during major news events, in choppy/sideways markets, or when the signal goes against the higher timeframe trend."
+          }
+        ]
+      },
+      "guide3": {
+        "title": "Setting Up Alerts for SimplifyPro Signals",
+        "description": "Never miss a trading signal — set up automatic alerts on TradingView.",
+        "steps": [
+          {
+            "title": "Right-Click on the Indicator",
+            "content": "On your chart, right-click on the SimplifyPro indicator and select 'Add Alert'."
+          },
+          {
+            "title": "Configure Alert Condition",
+            "content": "Set the condition to trigger when SimplifyPro generates a new buy or sell signal."
+          },
+          {
+            "title": "Choose Notification Method",
+            "content": "Select how you want to be notified: push notification (mobile), email, or webhook."
+          },
+          {
+            "title": "Set Alert Name",
+            "content": "Give your alert a clear name like 'SimplifyPro EUR/USD Buy Signal' so you can identify it quickly."
+          },
+          {
+            "title": "Activate and Monitor",
+            "content": "Click 'Create' to activate the alert. You'll receive notifications whenever a new signal appears on your chart."
+          }
+        ]
+      }
+    }
+  }
+}

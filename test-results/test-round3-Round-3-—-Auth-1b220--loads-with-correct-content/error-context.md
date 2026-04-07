@@ -1,0 +1,85 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+    - banner [ref=e2]:
+        - generic [ref=e3]:
+            - link "EasyTrade" [ref=e4] [cursor=pointer]:
+                - /url: /
+            - navigation [ref=e5]:
+                - link "Features" [ref=e6] [cursor=pointer]:
+                    - /url: /#features
+                - link "Pricing" [ref=e7] [cursor=pointer]:
+                    - /url: /pricing
+                - link "Videos" [ref=e8] [cursor=pointer]:
+                    - /url: /videos
+                - link "Contact" [ref=e9] [cursor=pointer]:
+                    - /url: /contact
+            - button "Start Free Trial" [ref=e11] [cursor=pointer]
+    - main [ref=e12]:
+        - generic [ref=e14]:
+            - generic [ref=e15]:
+                - heading "Invalid link" [level=1] [ref=e16]
+                - paragraph
+            - paragraph [ref=e17]: This password reset link is invalid or has expired.
+            - link "Request a new reset link" [ref=e18] [cursor=pointer]:
+                - /url: /forgot-password
+    - contentinfo [ref=e19]:
+        - generic [ref=e20]:
+            - generic [ref=e21]:
+                - generic [ref=e22]:
+                    - link "EasyTrade" [ref=e23] [cursor=pointer]:
+                        - /url: /
+                    - paragraph [ref=e24]: Professional trading tools for the modern market participant.
+                - generic [ref=e25]:
+                    - heading "Product" [level=3] [ref=e26]
+                    - list [ref=e27]:
+                        - listitem [ref=e28]:
+                            - link "Features" [ref=e29] [cursor=pointer]:
+                                - /url: /#features
+                        - listitem [ref=e30]:
+                            - link "Pricing" [ref=e31] [cursor=pointer]:
+                                - /url: /pricing
+                        - listitem [ref=e32]:
+                            - link "Videos" [ref=e33] [cursor=pointer]:
+                                - /url: /videos
+                - generic [ref=e34]:
+                    - heading "Community" [level=3] [ref=e35]
+                    - list [ref=e36]:
+                        - listitem [ref=e37]:
+                            - link "Discord" [ref=e38] [cursor=pointer]:
+                                - /url: "#"
+                        - listitem [ref=e39]:
+                            - link "YouTube" [ref=e40] [cursor=pointer]:
+                                - /url: "#"
+                - generic [ref=e41]:
+                    - heading "Legal" [level=3] [ref=e42]
+                    - list [ref=e43]:
+                        - listitem [ref=e44]:
+                            - link "Terms" [ref=e45] [cursor=pointer]:
+                                - /url: /legal/terms
+                        - listitem [ref=e46]:
+                            - link "Privacy" [ref=e47] [cursor=pointer]:
+                                - /url: /legal/privacy
+                        - listitem [ref=e48]:
+                            - link "Disclaimer" [ref=e49] [cursor=pointer]:
+                                - /url: /legal/disclaimer
+            - generic [ref=e50]:
+                - paragraph [ref=e51]: © 2026 EasyTrade. All rights reserved.
+                - paragraph [ref=e52]: Trading involves significant risk. Past performance is not indicative of future results. This is not financial advice.
+    - region "Notifications alt+T"
+    - generic [ref=e57] [cursor=pointer]:
+        - button "Open Next.js Dev Tools" [ref=e58]:
+            - img [ref=e59]
+        - generic [ref=e62]:
+            - button "Open issues overlay" [ref=e63]:
+                - generic [ref=e64]:
+                    - generic [ref=e65]: "2"
+                    - generic [ref=e66]: "3"
+                - generic [ref=e67]:
+                    - text: Issue
+                    - generic [ref=e68]: s
+            - button "Collapse issues badge" [ref=e69]:
+                - img [ref=e70]
+    - alert [ref=e72]
+```

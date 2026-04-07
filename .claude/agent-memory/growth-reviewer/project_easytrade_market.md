@@ -1,6 +1,6 @@
 ---
-name: EasyTrade competitive landscape and market risks
-description: Key competitors (Lux Algo, TrendSpider, etc.), market trends, and identified business risks for EasyTrade
+name: SimplifyPro competitive landscape and market risks
+description: Key competitors (Lux Algo, TrendSpider, etc.), market trends, and identified business risks for SimplifyPro
 type: project
 ---
 
@@ -10,9 +10,9 @@ Main competitors: Lux Algo (~50$/mo, leader), TrendSpider (~39-197$/mo), Indicat
 
 **How to apply:**
 
-- Market average is 50-80$/mo for full-service tools. EasyTrade at 49$/mo is at the low end, justified by simplicity positioning.
-- ALL serious competitors have Discord communities -- EasyTrade must add one.
-- ALL serious competitors offer trial or money-back guarantee -- EasyTrade must add one.
+- Market average is 50-80$/mo for full-service tools. SimplifyPro at 49$/mo is at the low end, justified by simplicity positioning.
+- ALL serious competitors have Discord communities -- SimplifyPro must add one.
+- ALL serious competitors offer trial or money-back guarantee -- SimplifyPro must add one.
 - Key risk: total platform dependency on TradingView. Need to build proprietary value (community, dashboard, content) outside TradingView.
 - Key risk: regulatory (trading signals in gray zone for AMF/SEC).
 - Key risk: structural churn of 8-15%/month in retail trading tools. Need 4-5 months average retention to be profitable per customer.

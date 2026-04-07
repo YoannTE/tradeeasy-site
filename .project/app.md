@@ -1,4 +1,4 @@
-# App — EasyTrade
+# App — SimplifyPro
 
 ## Probleme
 
@@ -9,7 +9,7 @@ classiques (RSI, MACD, etc.) ne donnent pas de signaux clairs d'entree et de sor
 Ils doivent gerer simultanement l'analyse technique ET la psychologie du trading,
 ce qui rend la rentabilite tres difficile pour les debutants et intermediaires.
 
-EasyTrade existe pour simplifier la prise de decision en trading en fournissant
+SimplifyPro existe pour simplifier la prise de decision en trading en fournissant
 des signaux visuels clairs (fleches vertes = achat, fleches rouges = vente)
 directement sur le graphique TradingView, permettant aux traders de se concentrer
 uniquement sur la psychologie et le money management.
@@ -18,7 +18,7 @@ uniquement sur la psychologie et le money management.
 
 ### Visiteur (non-client)
 
-- **Objectif** : decouvrir EasyTrade, voir des preuves que ca marche, decider de s'abonner
+- **Objectif** : decouvrir SimplifyPro, voir des preuves que ca marche, decider de s'abonner
 - **Niveau technique** : variable (debutant a intermediaire en trading)
 - **Acces** : pages publiques du site, videos/tutos en acces libre, screenshots de trades
 
@@ -33,7 +33,7 @@ uniquement sur la psychologie et le money management.
 
 ### Abonne (client payant)
 
-- **Objectif** : utiliser l'indicateur EasyTrade V6.0 sur TradingView pour trader
+- **Objectif** : utiliser l'indicateur SimplifyPro V6.0 sur TradingView pour trader
 - **Niveau technique** : sait utiliser TradingView (ou apprend via les tutos du site)
 - **Acces** : espace personnel (details abonnement + donnees bancaires),
   indicateur en invite-only sur TradingView (acces donne manuellement par l'admin,
@@ -89,7 +89,7 @@ uniquement sur la psychologie et le money management.
 - Disclaimer legal obligatoire ("pas un conseil financier")
 - Essai gratuit ou garantie satisfait ou rembourse tres repandus
 
-### Differenciateurs EasyTrade
+### Differenciateurs SimplifyPro
 
 - **Simplicite** : un seul indicateur clair ("suivez les fleches") vs suites complexes
 - **Prix competitif** : 49$/mois, pile dans la moyenne du marche
@@ -126,7 +126,7 @@ uniquement sur la psychologie et le money management.
 - **Localisation Payload native** au lieu de champs FR/EN manuels (extensible)
 - **Champs referral prepares** : `referralCode` + `referredBy` dans User (pour Phase 2)
 - **Prix annuel** : 349$/an (~29$/mois, reduction 40%)
-- **A prevoir plus tard** : screenshots de trades partageables avec branding EasyTrade,
+- **A prevoir plus tard** : screenshots de trades partageables avec branding SimplifyPro,
   programme de parrainage, tier premium a 99$/mois, blog SEO
 
 ## Parcours utilisateur
@@ -205,7 +205,7 @@ uniquement sur la psychologie et le money management.
 
 ### Nice-to-have
 
-- [ ] F23 — Screenshots partageables : captures de trades avec branding EasyTrade
+- [ ] F23 — Screenshots partageables : captures de trades avec branding SimplifyPro
 - [ ] F24 — Tier premium 99$/mois : alertes temps reel, coaching mensuel
 - [ ] F25 — Chatbot/FAQ interactive : reponses automatiques
 - [ ] F26 — Temoignages video : integration de videos clients
