@@ -10,11 +10,11 @@
     "menuLabel": "Menu de navigation"
   },
   "hero": {
-    "badge": "Signaux de qualité institutionnelle",
+    "badge": "100% Non-Repaint · Alertes en temps réel",
     "title1": "Arrêtez de deviner.",
     "title2": "Tradez avec",
     "title3": "Confiance.",
-    "subtitle": "Des indicateurs TradingView conçus avec précision qui filtrent le bruit et identifient les entrées à forte probabilité, quelles que soient les conditions du marché.",
+    "subtitle": "Des signaux d'achat/vente non-repaint directement sur votre graphique TradingView. Recevez des alertes instantanées sur votre téléphone, PC ou par email — ne ratez plus jamais un trade.",
     "cta": "Commencer maintenant",
     "demo": "Voir la démo",
     "noCharge": "Gratuit pendant 7 jours · Résiliation à tout moment",
@@ -26,9 +26,17 @@
   "features": {
     "title": "Pourquoi les traders choisissent SimplifyPro",
     "subtitle": "Conçu par des traders, pour des traders. Chaque fonctionnalité est pensée pour vous donner un avantage décisif sur les marchés.",
+    "liveSignals": {
+      "title": "Signaux 100% Non-Repaint",
+      "description": "Contrairement à la plupart des indicateurs qui modifient secrètement leurs signaux passés pour paraître précis, les signaux SimplifyPro sont définitifs. Une fois qu'une flèche d'achat ou de vente apparaît, elle ne bouge plus et ne disparaît jamais. Ce que vous voyez est ce qui s'est réellement passé — en temps réel."
+    },
+    "realTimeAlerts": {
+      "title": "Alertes sur téléphone, PC et email",
+      "description": "Ne ratez plus jamais un trade. Configurez les alertes TradingView et recevez une notification instantanée sur votre téléphone, ordinateur ou par email à chaque signal d'achat ou de vente — même quand vous n'êtes pas devant votre écran."
+    },
     "clearSignals": {
       "title": "Signaux d'achat/vente clairs",
-      "description": "Aucune ambiguïté. Notre indicateur met en évidence les points d'entrée et de sortie précis avec des signaux colorés directement sur votre graphique."
+      "description": "Aucune ambiguïté. Notre indicateur affiche des points d'entrée et de sortie précis avec des flèches colorées directement sur votre graphique. Flèche verte = achat. Flèche rouge = vente."
     },
     "anyMarket": {
       "title": "Fonctionne sur tous les marchés",
@@ -37,21 +45,28 @@
     "noExperience": {
       "title": "Aucune expérience requise",
       "description": "Que vous soyez débutant ou trader expérimenté, notre indicateur prêt à l'emploi ne nécessite aucune configuration."
+    },
+    "affiliateProgram": {
+      "title": "Gagnez en partageant",
+      "description": "Vous aimez SimplifyPro ? Partagez-le avec d'autres traders et gagnez 30% de commission récurrente sur chaque parrainage. Plus vous amenez de traders, plus vous gagnez — chaque mois."
     }
   },
   "tradingview": {
-    "title": "Natif TradingView",
-    "description": "SimplifyPro s'intègre directement dans TradingView, la plateforme de graphiques la plus populaire au monde. Pas de logiciel externe, pas de configuration compliquée — ajoutez simplement l'indicateur et commencez à trader.",
+    "title": "Ne ratez plus jamais un signal",
+    "description": "SimplifyPro fonctionne nativement sur TradingView. Configurez des alertes en quelques secondes et recevez une notification instantanée à chaque signal d'achat ou de vente — sur votre téléphone, ordinateur ou par email. Pas besoin de rester devant votre écran toute la journée.",
     "features": {
-      "pushNotifications": "Notifications push",
-      "webhookSupport": "Support Webhook pour l'automatisation",
-      "multiTimeframe": "Analyse multi-timeframe"
+      "pushNotifications": "Notifications push sur iOS et Android",
+      "emailAlerts": "Alertes par email à chaque signal",
+      "desktopAlerts": "Notifications pop-up sur ordinateur",
+      "webhookSupport": "Support webhook pour le trading automatisé",
+      "multiTimeframe": "Fonctionne sur tous les timeframes"
     },
-    "preview": "Aperçu de l'intégration TradingView"
+    "preview": "Configuration des alertes TradingView"
   },
   "performance": {
-    "title": "Performance du jour",
-    "subtitle": "Découvrez comment SimplifyPro a performé aujourd'hui sur les marchés les plus tradés."
+    "title": "Exemples de performances récentes",
+    "subtitle": "Voyez comment les signaux SimplifyPro performent en conditions réelles sur les actifs les plus tradés.",
+    "watchVideo": "Voir la vidéo"
   },
   "marketNews": {
     "title": "Actualités des marchés",
@@ -63,7 +78,12 @@
     "news2": "L'EUR/USD se consolide près d'un support clé alors que le dollar se renforce",
     "news3": "Le Bitcoin dépasse les 95 000 $ porté par les achats institutionnels",
     "news4": "Le S&P 500 atteint de nouveaux sommets grâce aux résultats tech",
-    "news5": "Les prix du pétrole augmentent sur fond de tensions au Moyen-Orient"
+    "news5": "Les prix du pétrole augmentent sur fond de tensions au Moyen-Orient",
+    "news6": "L'or atteint un record historique alors que les investisseurs cherchent des valeurs refuges",
+    "news7": "Les flux entrants dans les ETF Ethereum atteignent 1,2 Md$ avec la demande institutionnelle",
+    "news8": "La Banque du Japon maintient ses taux, le yen s'affaiblit face au dollar",
+    "news9": "Les futures du Nasdaq pointent à la hausse avant les résultats trimestriels clés",
+    "news10": "Le GBP/USD casse un niveau de résistance clé grâce aux bons chiffres de l'emploi britannique"
   },
   "howItWorks": {
     "title": "Commencez à trader en quelques minutes",
@@ -127,6 +147,18 @@
       "trainingGuide": "Guide de formation standard",
       "prioritySupport": "Support prioritaire"
     }
+  },
+  "affiliatePreview": {
+    "badge": "Programme d'affiliation",
+    "title": "Vous aimez SimplifyPro ? Gagnez en partageant.",
+    "description": "Recommandez SimplifyPro à d'autres traders et gagnez 30% de commission récurrente sur chaque parrainage — tant qu'ils restent abonnés. Sans plafond, sans limite.",
+    "stat1Value": "30%",
+    "stat1Label": "Commission récurrente",
+    "stat2Value": "90 jours",
+    "stat2Label": "Durée du cookie",
+    "stat3Value": "Mensuel",
+    "stat3Label": "Paiements",
+    "cta": "Rejoindre le programme d'affiliation"
   },
   "cta": {
     "title": "Prêt à trader avec confiance ?",

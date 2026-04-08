@@ -1,10 +1,13 @@
-import { Target, Globe, CheckCircle } from "lucide-react";
+import { Shield, Bell, Target, Globe, CheckCircle, Users } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 const featureKeys = [
+  { key: "liveSignals" as const, icon: Shield },
+  { key: "realTimeAlerts" as const, icon: Bell },
   { key: "clearSignals" as const, icon: Target },
   { key: "anyMarket" as const, icon: Globe },
   { key: "noExperience" as const, icon: CheckCircle },
+  { key: "affiliateProgram" as const, icon: Users },
 ];
 
 export async function FeaturesSection() {
@@ -20,13 +23,13 @@ export async function FeaturesSection() {
           {t("subtitle")}
         </p>
 
-        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {featureKeys.map((feature) => (
+        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {featureKeys.map((feature, index) => (
             <div
               key={feature.key}
-              className="rounded-xl border border-zinc-800 bg-zinc-900 p-6"
+              className="rounded-xl border border-blue-500/40 bg-zinc-900 p-6 shadow-lg shadow-blue-500/5"
             >
-              <div className="inline-flex rounded-lg bg-blue-500/10 p-2 text-blue-500">
+              <div className="inline-flex rounded-lg bg-blue-500/20 p-2 text-blue-400">
                 <feature.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-3 text-base md:text-xl font-semibold text-white">

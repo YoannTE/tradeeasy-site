@@ -10,11 +10,11 @@
     "menuLabel": "Navigation menu"
   },
   "hero": {
-    "badge": "Institutional Grade Signals",
+    "badge": "100% Non-Repaint · Real-Time Alerts",
     "title1": "Stop Guessing.",
     "title2": "Start Trading with",
     "title3": "Confidence.",
-    "subtitle": "Precision-engineered TradingView indicators that filter noise and identify high-probability entries in any market condition.",
+    "subtitle": "Non-repaint buy/sell signals directly on your TradingView chart. Get instant alerts on your phone, PC, or email — never miss a trade again.",
     "cta": "Get Started Now",
     "demo": "Watch Demo",
     "noCharge": "No charge for 7 days · Cancel anytime",
@@ -26,9 +26,17 @@
   "features": {
     "title": "Why Traders Choose SimplifyPro",
     "subtitle": "Built by traders, for traders. Every feature is designed to give you an unfair advantage in the markets.",
+    "liveSignals": {
+      "title": "100% Non-Repaint Signals",
+      "description": "Unlike most indicators that secretly change past signals to look accurate, SimplifyPro signals are final. Once a buy or sell arrow appears on your chart, it never moves or disappears. What you see is what happened — in real time."
+    },
+    "realTimeAlerts": {
+      "title": "Alerts on Phone, PC & Email",
+      "description": "Never miss a trade again. Set up TradingView alerts and get notified instantly on your phone, desktop, or by email every time a buy or sell signal appears — even when you're away from your screen."
+    },
     "clearSignals": {
       "title": "Clear Buy/Sell Signals",
-      "description": "No ambiguity. Our indicator highlights precise entry and exit points with color-coded signals directly on your chart."
+      "description": "No ambiguity. Our indicator highlights precise entry and exit points with color-coded arrows directly on your chart. Green arrow = buy. Red arrow = sell."
     },
     "anyMarket": {
       "title": "Works on Any Market",
@@ -37,21 +45,28 @@
     "noExperience": {
       "title": "No Experience Needed",
       "description": "Whether you're a beginner or a seasoned trader, our plug-and-play indicator requires zero configuration."
+    },
+    "affiliateProgram": {
+      "title": "Earn by Sharing",
+      "description": "Love SimplifyPro? Share it with fellow traders and earn 30% recurring commission on every referral. The more traders you bring, the more you earn — every single month."
     }
   },
   "tradingview": {
-    "title": "TradingView Native",
-    "description": "SimplifyPro integrates directly into TradingView, the world's most popular charting platform. No external software, no complicated setup — just add the indicator and start trading.",
+    "title": "Never Miss a Signal Again",
+    "description": "SimplifyPro runs natively on TradingView. Set up alerts in seconds and receive instant notifications every time a buy or sell signal appears — on your phone, desktop, or via email. You don't need to watch your screen all day.",
     "features": {
-      "pushNotifications": "Push Notifications",
-      "webhookSupport": "Webhook Support for Automation",
-      "multiTimeframe": "Multi-timeframe Analysis"
+      "pushNotifications": "Push notifications on iOS & Android",
+      "emailAlerts": "Email alerts for every signal",
+      "desktopAlerts": "Desktop pop-up notifications",
+      "webhookSupport": "Webhook support for automated trading",
+      "multiTimeframe": "Works on any timeframe"
     },
-    "preview": "TradingView Integration Preview"
+    "preview": "TradingView Alert Setup"
   },
   "performance": {
-    "title": "Daily Performance",
-    "subtitle": "See how SimplifyPro performed today across the most traded markets."
+    "title": "Recent Performance Examples",
+    "subtitle": "See how SimplifyPro signals perform in real market conditions across the most traded assets.",
+    "watchVideo": "Watch video"
   },
   "marketNews": {
     "title": "Market News",
@@ -63,7 +78,12 @@
     "news2": "EUR/USD Consolidates Near Key Support as Dollar Strengthens",
     "news3": "Bitcoin Surges Past $95K on Institutional Buying Momentum",
     "news4": "S&P 500 Reaches New Highs on Strong Tech Earnings",
-    "news5": "Oil Prices Rise on Supply Concerns and Middle East Tensions"
+    "news5": "Oil Prices Rise on Supply Concerns and Middle East Tensions",
+    "news6": "Gold Hits Record High as Investors Seek Safe-Haven Assets",
+    "news7": "Ethereum ETF Inflows Surge to $1.2B as Institutional Demand Grows",
+    "news8": "Bank of Japan Holds Rates Steady, Yen Weakens Against Dollar",
+    "news9": "Nasdaq Futures Point Higher Ahead of Key Earnings Reports",
+    "news10": "GBP/USD Breaks Key Resistance Level on Strong UK Employment Data"
   },
   "howItWorks": {
     "title": "Start Trading in Minutes",
@@ -127,6 +147,18 @@
       "trainingGuide": "Standard Training Guide",
       "prioritySupport": "Priority Support"
     }
+  },
+  "affiliatePreview": {
+    "badge": "Affiliate Program",
+    "title": "Love SimplifyPro? Earn While You Share.",
+    "description": "Recommend SimplifyPro to other traders and earn 30% recurring commission on every referral — for as long as they stay subscribed. No cap, no limits.",
+    "stat1Value": "30%",
+    "stat1Label": "Recurring Commission",
+    "stat2Value": "90 Days",
+    "stat2Label": "Cookie Duration",
+    "stat3Value": "Monthly",
+    "stat3Label": "Payouts",
+    "cta": "Join the Affiliate Program"
   },
   "cta": {
     "title": "Ready to trade with confidence?",

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Play } from "lucide-react";
 
 const assetLabels: Record<string, string> = {
   nasdaq: "Nasdaq",
@@ -26,26 +27,15 @@ interface Screenshot {
 
 interface DailyPerformanceGridProps {
   screenshots: Screenshot[];
-  date: string;
 }
 
 export function DailyPerformanceGrid({
   screenshots,
-  date,
 }: DailyPerformanceGridProps) {
   const [selectedImage, setSelectedImage] = useState<Screenshot | null>(null);
 
-  const formattedDate = new Date(date).toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   return (
     <>
-      <p className="mt-2 text-center text-sm text-zinc-500">{formattedDate}</p>
-
       <div className="mt-6 md:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
         {screenshots.map((item) => (
           <button
@@ -62,13 +52,19 @@ export function DailyPerformanceGrid({
                 className="object-cover transition-transform group-hover:scale-[1.02]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
+              {/* Play icon overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-black/60 text-white transition-transform group-hover:scale-110">
+                  <Play
+                    className="h-5 w-5 md:h-6 md:w-6 ml-0.5"
+                    fill="currentColor"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="px-3 py-2 md:px-4 md:py-3 flex items-center justify-between">
+            <div className="px-3 py-2 md:px-4 md:py-3">
               <span className="text-xs md:text-sm font-medium text-white">
                 {assetLabels[item.asset] || item.asset}
-              </span>
-              <span className="hidden md:inline text-xs text-zinc-500">
-                Click to enlarge
               </span>
             </div>
           </button>

@@ -10,11 +10,11 @@
     "menuLabel": "Navigationsmenü"
   },
   "hero": {
-    "badge": "Institutionelle Handelssignale",
+    "badge": "100% Non-Repaint · Echtzeit-Benachrichtigungen",
     "title1": "Schluss mit Raten.",
     "title2": "Traden Sie mit",
     "title3": "Überzeugung.",
-    "subtitle": "Präzise entwickelte TradingView-Indikatoren, die Marktrauschen filtern und hochwahrscheinliche Einstiege unter allen Marktbedingungen identifizieren.",
+    "subtitle": "Non-Repaint Kauf-/Verkaufssignale direkt auf Ihrem TradingView-Chart. Erhalten Sie sofortige Benachrichtigungen auf Handy, PC oder per E-Mail — verpassen Sie nie wieder einen Trade.",
     "cta": "Jetzt starten",
     "demo": "Demo ansehen",
     "noCharge": "7 Tage kostenlos · Jederzeit kündbar",
@@ -26,9 +26,17 @@
   "features": {
     "title": "Warum Trader SimplifyPro wählen",
     "subtitle": "Von Tradern für Trader entwickelt. Jede Funktion ist darauf ausgelegt, Ihnen einen entscheidenden Vorteil an den Märkten zu verschaffen.",
+    "liveSignals": {
+      "title": "100% Non-Repaint Signale",
+      "description": "Im Gegensatz zu den meisten Indikatoren, die vergangene Signale heimlich ändern, sind SimplifyPro-Signale endgültig. Sobald ein Kauf- oder Verkaufspfeil auf Ihrem Chart erscheint, bewegt er sich nie und verschwindet nie. Was Sie sehen, ist was passiert ist — in Echtzeit."
+    },
+    "realTimeAlerts": {
+      "title": "Benachrichtigungen auf Handy, PC & E-Mail",
+      "description": "Verpassen Sie nie wieder einen Trade. Richten Sie TradingView-Alerts ein und werden Sie sofort auf Ihrem Handy, Desktop oder per E-Mail benachrichtigt, sobald ein Kauf- oder Verkaufssignal erscheint — auch wenn Sie nicht am Bildschirm sind."
+    },
     "clearSignals": {
       "title": "Klare Kauf-/Verkaufssignale",
-      "description": "Keine Mehrdeutigkeit. Unser Indikator zeigt präzise Ein- und Ausstiegspunkte mit farbcodierten Signalen direkt auf Ihrem Chart."
+      "description": "Keine Mehrdeutigkeit. Unser Indikator zeigt präzise Ein- und Ausstiegspunkte mit farbcodierten Pfeilen direkt auf Ihrem Chart. Grüner Pfeil = Kauf. Roter Pfeil = Verkauf."
     },
     "anyMarket": {
       "title": "Funktioniert auf jedem Markt",
@@ -37,21 +45,28 @@
     "noExperience": {
       "title": "Keine Erfahrung nötig",
       "description": "Ob Anfänger oder erfahrener Trader — unser Plug-and-Play-Indikator erfordert keinerlei Konfiguration."
+    },
+    "affiliateProgram": {
+      "title": "Verdienen Sie durch Teilen",
+      "description": "Sie lieben SimplifyPro? Teilen Sie es mit anderen Tradern und verdienen Sie 30% wiederkehrende Provision für jede Empfehlung. Je mehr Trader Sie mitbringen, desto mehr verdienen Sie — jeden Monat."
     }
   },
   "tradingview": {
-    "title": "TradingView-nativ",
-    "description": "SimplifyPro integriert sich direkt in TradingView, die weltweit beliebteste Charting-Plattform. Keine externe Software, keine komplizierte Einrichtung — einfach den Indikator hinzufügen und mit dem Traden beginnen.",
+    "title": "Verpassen Sie nie wieder ein Signal",
+    "description": "SimplifyPro läuft nativ auf TradingView. Richten Sie in Sekunden Alerts ein und erhalten Sie sofortige Benachrichtigungen bei jedem Kauf- oder Verkaufssignal — auf Ihrem Handy, Desktop oder per E-Mail. Sie müssen nicht den ganzen Tag auf Ihren Bildschirm schauen.",
     "features": {
-      "pushNotifications": "Push-Benachrichtigungen",
-      "webhookSupport": "Webhook-Unterstützung für Automatisierung",
-      "multiTimeframe": "Multi-Zeitrahmen-Analyse"
+      "pushNotifications": "Push-Benachrichtigungen auf iOS und Android",
+      "emailAlerts": "E-Mail-Benachrichtigungen bei jedem Signal",
+      "desktopAlerts": "Desktop-Pop-up-Benachrichtigungen",
+      "webhookSupport": "Webhook-Unterstützung für automatisiertes Trading",
+      "multiTimeframe": "Funktioniert auf jedem Zeitrahmen"
     },
-    "preview": "TradingView-Integrationsvorschau"
+    "preview": "TradingView-Alert-Einrichtung"
   },
   "performance": {
-    "title": "Tägliche Performance",
-    "subtitle": "Sehen Sie, wie SimplifyPro heute auf den meistgehandelten Märkten abgeschnitten hat."
+    "title": "Aktuelle Performance-Beispiele",
+    "subtitle": "Sehen Sie, wie SimplifyPro-Signale unter realen Marktbedingungen bei den meistgehandelten Vermögenswerten abschneiden.",
+    "watchVideo": "Video ansehen"
   },
   "marketNews": {
     "title": "Marktnachrichten",
@@ -63,7 +78,12 @@
     "news2": "EUR/USD konsolidiert nahe wichtiger Unterstützung bei stärkerem Dollar",
     "news3": "Bitcoin steigt über $95K durch institutionellen Kaufdruck",
     "news4": "S&P 500 erreicht neue Höchststände dank starker Tech-Ergebnisse",
-    "news5": "Ölpreise steigen aufgrund von Angebotssorgen und Spannungen im Nahen Osten"
+    "news5": "Ölpreise steigen aufgrund von Angebotssorgen und Spannungen im Nahen Osten",
+    "news6": "Gold erreicht Rekordhoch, da Anleger sichere Häfen suchen",
+    "news7": "Ethereum-ETF-Zuflüsse steigen auf 1,2 Mrd. $ bei wachsender institutioneller Nachfrage",
+    "news8": "Bank of Japan hält Zinsen stabil, Yen schwächt sich gegenüber dem Dollar ab",
+    "news9": "Nasdaq-Futures deuten auf Gewinne vor wichtigen Quartalsergebnissen hin",
+    "news10": "GBP/USD durchbricht wichtiges Widerstandsniveau dank starker britischer Arbeitsmarktdaten"
   },
   "howItWorks": {
     "title": "In Minuten mit dem Traden beginnen",
@@ -127,6 +147,18 @@
       "trainingGuide": "Standard-Trainingsanleitung",
       "prioritySupport": "Prioritäts-Support"
     }
+  },
+  "affiliatePreview": {
+    "badge": "Partnerprogramm",
+    "title": "Sie lieben SimplifyPro? Verdienen Sie durch Teilen.",
+    "description": "Empfehlen Sie SimplifyPro anderen Tradern und verdienen Sie 30% wiederkehrende Provision für jede Empfehlung — solange sie abonniert bleiben. Ohne Limit, ohne Deckelung.",
+    "stat1Value": "30%",
+    "stat1Label": "Wiederkehrende Provision",
+    "stat2Value": "90 Tage",
+    "stat2Label": "Cookie-Dauer",
+    "stat3Value": "Monatlich",
+    "stat3Label": "Auszahlungen",
+    "cta": "Dem Partnerprogramm beitreten"
   },
   "cta": {
     "title": "Bereit, mit Überzeugung zu traden?",

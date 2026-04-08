@@ -73,10 +73,7 @@ export async function LivePerformanceSection() {
           {t("subtitle")}
         </p>
 
-        <DailyPerformanceGrid
-          screenshots={staticScreenshots}
-          date={new Date().toISOString()}
-        />
+        <DailyPerformanceGrid screenshots={staticScreenshots} />
       </div>
     </section>
   );
