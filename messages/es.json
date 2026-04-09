@@ -333,7 +333,7 @@
     "info": {
       "email": {
         "title": "Email",
-        "description": "support@simplifypro.com",
+        "description": "yoann@simplify-pro.com",
         "detail": "Envíanos un email en cualquier momento"
       },
       "responseTime": {
@@ -393,7 +393,7 @@
       },
       "section12": {
         "title": "12. Derecho de Desistimiento (UE)",
-        "content": "Si eres un consumidor residente en la Unión Europea, tienes derecho a desistir de tu suscripción dentro de los 14 días posteriores a tu compra inicial, sin necesidad de dar ninguna razón. Para ejercer este derecho, contáctanos en support@simplifypro.com. Si has utilizado activamente el Servicio durante el período de desistimiento, se podrá cobrar un importe proporcional por el servicio recibido. Este derecho de desistimiento no se aplica al período de prueba gratuita."
+        "content": "Si eres un consumidor residente en la Unión Europea, tienes derecho a desistir de tu suscripción dentro de los 14 días posteriores a tu compra inicial, sin necesidad de dar ninguna razón. Para ejercer este derecho, contáctanos en yoann@simplify-pro.com. Si has utilizado activamente el Servicio durante el período de desistimiento, se podrá cobrar un importe proporcional por el servicio recibido. Este derecho de desistimiento no se aplica al período de prueba gratuita."
       }
     },
     "privacy": {
@@ -416,7 +416,7 @@
       },
       "section5": {
         "title": "5. Tus Derechos",
-        "content": "Tienes derecho a acceder, corregir o eliminar tus datos personales en cualquier momento. Puedes solicitar una copia de tus datos o pedirnos que eliminemos tu cuenta contactándonos en support@simplifypro.com. Responderemos a tu solicitud en un plazo de 30 días."
+        "content": "Tienes derecho a acceder, corregir o eliminar tus datos personales en cualquier momento. Puedes solicitar una copia de tus datos o pedirnos que eliminemos tu cuenta contactándonos en yoann@simplify-pro.com. Responderemos a tu solicitud en un plazo de 30 días."
       },
       "section6": {
         "title": "6. Cookies y Análisis",
@@ -424,11 +424,11 @@
       },
       "section7": {
         "title": "7. Contacto",
-        "content": "Si tienes alguna pregunta sobre esta Política de Privacidad o sobre cómo manejamos tus datos, contáctanos en support@simplifypro.com."
+        "content": "Si tienes alguna pregunta sobre esta Política de Privacidad o sobre cómo manejamos tus datos, contáctanos en yoann@simplify-pro.com."
       },
       "section8": {
         "title": "8. Cumplimiento del RGPD (Usuarios Europeos)",
-        "content": "Si te encuentras en el Espacio Económico Europeo (EEE), tus datos personales se procesan de conformidad con el Reglamento General de Protección de Datos (RGPD). Base legal para el tratamiento: ejecución del contrato (prestación del Servicio), interés legítimo (mejora del Servicio) y consentimiento (comunicaciones de marketing). Tus datos pueden ser transferidos a procesadores de terceros ubicados fuera del EEE (Stripe en EE.UU., Resend en EE.UU., PostHog en EE.UU.). Estas transferencias están protegidas por Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea. Tienes derecho a: acceder a tus datos, rectificar datos inexactos, borrar tus datos (\"derecho al olvido\"), limitar el tratamiento, portabilidad de datos y oponerte al tratamiento. Para ejercer cualquiera de estos derechos, contacta a nuestro responsable de protección de datos en support@simplifypro.com. Si crees que tus derechos han sido vulnerados, puedes presentar una reclamación ante tu autoridad local de protección de datos."
+        "content": "Si te encuentras en el Espacio Económico Europeo (EEE), tus datos personales se procesan de conformidad con el Reglamento General de Protección de Datos (RGPD). Base legal para el tratamiento: ejecución del contrato (prestación del Servicio), interés legítimo (mejora del Servicio) y consentimiento (comunicaciones de marketing). Tus datos pueden ser transferidos a procesadores de terceros ubicados fuera del EEE (Stripe en EE.UU., Resend en EE.UU., PostHog en EE.UU.). Estas transferencias están protegidas por Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea. Tienes derecho a: acceder a tus datos, rectificar datos inexactos, borrar tus datos (\"derecho al olvido\"), limitar el tratamiento, portabilidad de datos y oponerte al tratamiento. Para ejercer cualquiera de estos derechos, contacta a nuestro responsable de protección de datos en yoann@simplify-pro.com. Si crees que tus derechos han sido vulnerados, puedes presentar una reclamación ante tu autoridad local de protección de datos."
       },
       "section9": {
         "title": "9. Retención de Datos",
@@ -630,7 +630,7 @@
       "step3": "Mira nuestros tutoriales en video de instalación",
       "step4": "Explora nuestras guías de trading",
       "cta": "Ver Tutoriales en Video",
-      "footer": "¿Preguntas? Contáctanos en support@simplifypro.com"
+      "footer": "¿Preguntas? Contáctanos en yoann@simplify-pro.com"
     },
     "accessGranted": {
       "subject": "¡Tu Acceso a TradingView Ya Está Activo!",
@@ -651,7 +651,7 @@
       "message": "No pudimos procesar tu pago de SimplifyPro.",
       "warning": "Por favor, actualiza tu método de pago en un plazo de 7 días para evitar perder el acceso a SimplifyPro y a tu indicador de TradingView.",
       "cta": "Actualizar Método de Pago",
-      "footer": "Si necesitas ayuda, contáctanos en support@simplifypro.com"
+      "footer": "Si necesitas ayuda, contáctanos en yoann@simplify-pro.com"
     },
     "trialReminder": {
       "subject": "Tu prueba de SimplifyPro termina en 2 días",

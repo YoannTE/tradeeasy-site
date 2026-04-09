@@ -333,7 +333,7 @@
     "info": {
       "email": {
         "title": "Email",
-        "description": "support@simplifypro.com",
+        "description": "yoann@simplify-pro.com",
         "detail": "Send us an email anytime"
       },
       "responseTime": {
@@ -393,7 +393,7 @@
       },
       "section12": {
         "title": "12. Right of Withdrawal (EU)",
-        "content": "If you are a consumer residing in the European Union, you have the right to withdraw from your subscription within 14 days of your initial purchase, without giving any reason. To exercise this right, contact us at support@simplifypro.com. If you have actively used the Service during the withdrawal period, a proportional amount may be charged for the service received. This right of withdrawal does not apply to the free trial period."
+        "content": "If you are a consumer residing in the European Union, you have the right to withdraw from your subscription within 14 days of your initial purchase, without giving any reason. To exercise this right, contact us at yoann@simplify-pro.com. If you have actively used the Service during the withdrawal period, a proportional amount may be charged for the service received. This right of withdrawal does not apply to the free trial period."
       }
     },
     "privacy": {
@@ -416,7 +416,7 @@
       },
       "section5": {
         "title": "5. Your Rights",
-        "content": "You have the right to access, correct, or delete your personal data at any time. You may request a copy of your data or ask us to delete your account by contacting us at support@simplifypro.com. We will respond to your request within 30 days."
+        "content": "You have the right to access, correct, or delete your personal data at any time. You may request a copy of your data or ask us to delete your account by contacting us at yoann@simplify-pro.com. We will respond to your request within 30 days."
       },
       "section6": {
         "title": "6. Cookies and Analytics",
@@ -424,11 +424,11 @@
       },
       "section7": {
         "title": "7. Contact",
-        "content": "If you have any questions about this Privacy Policy or how we handle your data, please contact us at support@simplifypro.com."
+        "content": "If you have any questions about this Privacy Policy or how we handle your data, please contact us at yoann@simplify-pro.com."
       },
       "section8": {
         "title": "8. GDPR Compliance (European Users)",
-        "content": "If you are located in the European Economic Area (EEA), your personal data is processed in accordance with the General Data Protection Regulation (GDPR). Legal basis for processing: contract performance (providing the Service), legitimate interest (improving the Service), and consent (marketing communications). Your data may be transferred to third-party processors located outside the EEA (Stripe in the USA, Resend in the USA, PostHog in the USA). These transfers are protected by Standard Contractual Clauses (SCCs) approved by the European Commission. You have the right to: access your data, rectify inaccurate data, erase your data (\"right to be forgotten\"), restrict processing, data portability, and object to processing. To exercise any of these rights, contact our Data Protection contact at support@simplifypro.com. If you believe your rights have been violated, you may lodge a complaint with your local data protection authority."
+        "content": "If you are located in the European Economic Area (EEA), your personal data is processed in accordance with the General Data Protection Regulation (GDPR). Legal basis for processing: contract performance (providing the Service), legitimate interest (improving the Service), and consent (marketing communications). Your data may be transferred to third-party processors located outside the EEA (Stripe in the USA, Resend in the USA, PostHog in the USA). These transfers are protected by Standard Contractual Clauses (SCCs) approved by the European Commission. You have the right to: access your data, rectify inaccurate data, erase your data (\"right to be forgotten\"), restrict processing, data portability, and object to processing. To exercise any of these rights, contact our Data Protection contact at yoann@simplify-pro.com. If you believe your rights have been violated, you may lodge a complaint with your local data protection authority."
       },
       "section9": {
         "title": "9. Data Retention",
@@ -630,7 +630,7 @@
       "step3": "Watch our installation tutorial videos",
       "step4": "Browse our trading guides",
       "cta": "Watch Tutorial Videos",
-      "footer": "Questions? Contact us at support@simplifypro.com"
+      "footer": "Questions? Contact us at yoann@simplify-pro.com"
     },
     "accessGranted": {
       "subject": "Your TradingView Access is Now Active!",
@@ -651,7 +651,7 @@
       "message": "We were unable to process your payment for SimplifyPro.",
       "warning": "Please update your payment method within 7 days to avoid losing access to SimplifyPro and your TradingView indicator.",
       "cta": "Update Payment Method",
-      "footer": "If you need help, contact us at support@simplifypro.com"
+      "footer": "If you need help, contact us at yoann@simplify-pro.com"
     },
     "trialReminder": {
       "subject": "Your SimplifyPro trial ends in 2 days",

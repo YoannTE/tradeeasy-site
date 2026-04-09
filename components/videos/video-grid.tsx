@@ -4,9 +4,20 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { CategoryFilter } from "./category-filter";
 import { VideoCard } from "./video-card";
-import { videos } from "./video-data";
 
-export function VideoGrid() {
+export interface VideoItem {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  youtubeUrl: string;
+}
+
+interface VideoGridProps {
+  videos: VideoItem[];
+}
+
+export function VideoGrid({ videos }: VideoGridProps) {
   const t = useTranslations("videos");
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -25,9 +36,11 @@ export function VideoGrid() {
         {filteredVideos.map((video) => (
           <VideoCard
             key={video.id}
-            title={t(video.titleKey)}
-            description={t(video.descriptionKey)}
-            categoryLabel={t(video.categoryKey)}
+            title={video.title}
+            description={video.description}
+            categoryLabel={t(
+              `categories.${video.category === "trading_live" ? "tradingLive" : video.category}`,
+            )}
             youtubeUrl={video.youtubeUrl}
             watchLabel={t("watchOnYouTube")}
           />

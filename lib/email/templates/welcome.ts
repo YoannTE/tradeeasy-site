@@ -16,7 +16,7 @@ const translations = {
     step3: "Watch our installation tutorial videos",
     step4: "Browse our trading guides",
     cta: "Watch Tutorial Videos",
-    footer: "Questions? Contact us at support@simplifypro.com",
+    footer: "Questions? Contact us at yoann@simplify-pro.com",
   },
   fr: {
     subject: "Bienvenue sur SimplifyPro ! Votre acces est en route",
@@ -30,7 +30,7 @@ const translations = {
     step3: "Regardez nos tutoriels video d'installation",
     step4: "Parcourez nos guides de trading",
     cta: "Voir les tutoriels video",
-    footer: "Des questions ? Contactez-nous a support@simplifypro.com",
+    footer: "Des questions ? Contactez-nous a yoann@simplify-pro.com",
   },
 } as const;
 

@@ -1,26 +1,26 @@
-import { getTranslations } from "next-intl/server";
-
-const faqKeys = [
-  "trial",
-  "afterTrial",
-  "cancel",
-  "access",
-  "markets",
-  "advice",
-] as const;
+import { getPayload } from "payload";
+import config from "@payload-config";
 
 export async function FaqJsonLd() {
-  const t = await getTranslations("pricing.faq.items");
+  const payload = await getPayload({ config });
+
+  const { docs: faqs } = await payload.find({
+    collection: "faqs",
+    limit: 50,
+    sort: "displayOrder",
+  });
+
+  if (faqs.length === 0) return null;
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqKeys.map((key) => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: t(`${key}.question`),
+      name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: t(`${key}.answer`),
+        text: faq.answer,
       },
     })),
   };

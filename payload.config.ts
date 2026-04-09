@@ -12,6 +12,8 @@ import { TradeScreenshot } from "@/collections/TradeScreenshot";
 import { PromoCode } from "@/collections/PromoCode";
 import { Guide } from "@/collections/Guide";
 import { DailyPerformance } from "@/collections/DailyPerformance";
+import { Faq } from "@/collections/Faq";
+import { seedDatabase } from "@/lib/seed";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -33,6 +35,7 @@ export default buildConfig({
     PromoCode,
     Guide,
     DailyPerformance,
+    Faq,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
@@ -61,5 +64,7 @@ export default buildConfig({
         },
       });
     }
+
+    await seedDatabase(payload);
   },
 });

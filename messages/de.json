@@ -333,7 +333,7 @@
     "info": {
       "email": {
         "title": "E-Mail",
-        "description": "support@simplifypro.com",
+        "description": "yoann@simplify-pro.com",
         "detail": "Schreiben Sie uns jederzeit eine E-Mail"
       },
       "responseTime": {
@@ -393,7 +393,7 @@
       },
       "section12": {
         "title": "12. Widerrufsrecht (EU)",
-        "content": "Wenn Sie ein Verbraucher mit Wohnsitz in der Europäischen Union sind, haben Sie das Recht, innerhalb von 14 Tagen nach Ihrem ersten Kauf ohne Angabe von Gründen von Ihrem Abonnement zurückzutreten. Um dieses Recht auszuüben, kontaktieren Sie uns unter support@simplifypro.com. Wenn Sie den Dienst während des Widerrufszeitraums aktiv genutzt haben, kann ein anteiliger Betrag für die erhaltene Leistung berechnet werden. Dieses Widerrufsrecht gilt nicht für den kostenlosen Testzeitraum."
+        "content": "Wenn Sie ein Verbraucher mit Wohnsitz in der Europäischen Union sind, haben Sie das Recht, innerhalb von 14 Tagen nach Ihrem ersten Kauf ohne Angabe von Gründen von Ihrem Abonnement zurückzutreten. Um dieses Recht auszuüben, kontaktieren Sie uns unter yoann@simplify-pro.com. Wenn Sie den Dienst während des Widerrufszeitraums aktiv genutzt haben, kann ein anteiliger Betrag für die erhaltene Leistung berechnet werden. Dieses Widerrufsrecht gilt nicht für den kostenlosen Testzeitraum."
       }
     },
     "privacy": {
@@ -416,7 +416,7 @@
       },
       "section5": {
         "title": "5. Ihre Rechte",
-        "content": "Sie haben das Recht, Ihre personenbezogenen Daten jederzeit einzusehen, zu korrigieren oder zu löschen. Sie können eine Kopie Ihrer Daten anfordern oder uns bitten, Ihr Konto zu löschen, indem Sie uns unter support@simplifypro.com kontaktieren. Wir werden Ihre Anfrage innerhalb von 30 Tagen beantworten."
+        "content": "Sie haben das Recht, Ihre personenbezogenen Daten jederzeit einzusehen, zu korrigieren oder zu löschen. Sie können eine Kopie Ihrer Daten anfordern oder uns bitten, Ihr Konto zu löschen, indem Sie uns unter yoann@simplify-pro.com kontaktieren. Wir werden Ihre Anfrage innerhalb von 30 Tagen beantworten."
       },
       "section6": {
         "title": "6. Cookies und Analysen",
@@ -424,11 +424,11 @@
       },
       "section7": {
         "title": "7. Kontakt",
-        "content": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zum Umgang mit Ihren Daten haben, kontaktieren Sie uns bitte unter support@simplifypro.com."
+        "content": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zum Umgang mit Ihren Daten haben, kontaktieren Sie uns bitte unter yoann@simplify-pro.com."
       },
       "section8": {
         "title": "8. DSGVO-Konformität (europäische Nutzer)",
-        "content": "Wenn Sie sich im Europäischen Wirtschaftsraum (EWR) befinden, werden Ihre personenbezogenen Daten gemäß der Datenschutz-Grundverordnung (DSGVO) verarbeitet. Rechtsgrundlage der Verarbeitung: Vertragserfüllung (Bereitstellung des Dienstes), berechtigtes Interesse (Verbesserung des Dienstes) und Einwilligung (Marketingkommunikation). Ihre Daten können an Drittverarbeiter außerhalb des EWR übermittelt werden (Stripe in den USA, Resend in den USA, PostHog in den USA). Diese Übermittlungen sind durch von der Europäischen Kommission genehmigte Standardvertragsklauseln (SCCs) geschützt. Sie haben das Recht auf: Zugang zu Ihren Daten, Berichtigung unrichtiger Daten, Löschung Ihrer Daten (\"Recht auf Vergessenwerden\"), Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung. Um eines dieser Rechte auszuüben, kontaktieren Sie unseren Datenschutzbeauftragten unter support@simplifypro.com. Wenn Sie der Meinung sind, dass Ihre Rechte verletzt wurden, können Sie eine Beschwerde bei Ihrer zuständigen Datenschutzbehörde einreichen."
+        "content": "Wenn Sie sich im Europäischen Wirtschaftsraum (EWR) befinden, werden Ihre personenbezogenen Daten gemäß der Datenschutz-Grundverordnung (DSGVO) verarbeitet. Rechtsgrundlage der Verarbeitung: Vertragserfüllung (Bereitstellung des Dienstes), berechtigtes Interesse (Verbesserung des Dienstes) und Einwilligung (Marketingkommunikation). Ihre Daten können an Drittverarbeiter außerhalb des EWR übermittelt werden (Stripe in den USA, Resend in den USA, PostHog in den USA). Diese Übermittlungen sind durch von der Europäischen Kommission genehmigte Standardvertragsklauseln (SCCs) geschützt. Sie haben das Recht auf: Zugang zu Ihren Daten, Berichtigung unrichtiger Daten, Löschung Ihrer Daten (\"Recht auf Vergessenwerden\"), Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung. Um eines dieser Rechte auszuüben, kontaktieren Sie unseren Datenschutzbeauftragten unter yoann@simplify-pro.com. Wenn Sie der Meinung sind, dass Ihre Rechte verletzt wurden, können Sie eine Beschwerde bei Ihrer zuständigen Datenschutzbehörde einreichen."
       },
       "section9": {
         "title": "9. Datenaufbewahrung",
@@ -634,7 +634,7 @@
       "step3": "Sehen Sie sich unsere Installations-Tutorials an",
       "step4": "Durchstöbern Sie unsere Trading-Anleitungen",
       "cta": "Tutorial-Videos ansehen",
-      "footer": "Fragen? Kontaktieren Sie uns unter support@simplifypro.com"
+      "footer": "Fragen? Kontaktieren Sie uns unter yoann@simplify-pro.com"
     },
     "accessGranted": {
       "subject": "Ihr TradingView-Zugang ist jetzt aktiv!",
@@ -655,7 +655,7 @@
       "message": "Wir konnten Ihre Zahlung für SimplifyPro nicht verarbeiten.",
       "warning": "Bitte aktualisieren Sie Ihre Zahlungsmethode innerhalb von 7 Tagen, um den Verlust Ihres Zugangs zu SimplifyPro und Ihrem TradingView-Indikator zu vermeiden.",
       "cta": "Zahlungsmethode aktualisieren",
-      "footer": "Benötigen Sie Hilfe? Kontaktieren Sie uns unter support@simplifypro.com"
+      "footer": "Benötigen Sie Hilfe? Kontaktieren Sie uns unter yoann@simplify-pro.com"
     },
     "trialReminder": {
       "subject": "Ihre SimplifyPro-Testphase endet in 2 Tagen",

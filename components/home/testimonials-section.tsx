@@ -1,9 +1,18 @@
+import { getPayload } from "payload";
+import config from "@payload-config";
 import { getTranslations } from "next-intl/server";
-
-const testimonialKeys = ["marcus", "sarah", "david"] as const;
 
 export async function TestimonialsSection() {
   const t = await getTranslations("testimonials");
+  const payload = await getPayload({ config });
+
+  const { docs: testimonials } = await payload.find({
+    collection: "testimonials",
+    limit: 10,
+    sort: "createdAt",
+  });
+
+  if (testimonials.length === 0) return null;
 
   return (
     <section className="py-20">
@@ -13,26 +22,22 @@ export async function TestimonialsSection() {
         </h2>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonialKeys.map((key) => (
+          {testimonials.map((item) => (
             <div
-              key={key}
+              key={item.id}
               className="rounded-xl border border-zinc-800 bg-zinc-900 p-6"
             >
               <span className="text-4xl text-zinc-700 leading-none">
                 &ldquo;
               </span>
               <p className="mt-2 text-zinc-300 italic leading-relaxed">
-                {t(`items.${key}.quote`)}
+                {item.content}
               </p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="h-10 w-10 rounded-full bg-zinc-700" />
                 <div>
-                  <p className="font-semibold text-white">
-                    {t(`items.${key}.name`)}
-                  </p>
-                  <p className="text-sm text-zinc-400">
-                    {t(`items.${key}.role`)}
-                  </p>
+                  <p className="font-semibold text-white">{item.clientName}</p>
+                  <p className="text-sm text-zinc-400">{item.role}</p>
                 </div>
               </div>
             </div>

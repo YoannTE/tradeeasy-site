@@ -1,67 +1,44 @@
+import { getPayload } from "payload";
+import config from "@payload-config";
 import { getTranslations } from "next-intl/server";
 import { DailyPerformanceGrid } from "@/components/home/daily-performance-grid";
 
-const staticScreenshots = [
-  {
-    asset: "nasdaq",
-    image: {
-      url: "/images/daily-performance/nasdaq.png",
-      alt: "Nasdaq daily performance",
-    },
-  },
-  {
-    asset: "dowjones",
-    image: {
-      url: "/images/daily-performance/dow-jones.png",
-      alt: "Dow Jones daily performance",
-    },
-  },
-  {
-    asset: "sp500",
-    image: {
-      url: "/images/daily-performance/s-p500.png",
-      alt: "S&P 500 daily performance",
-    },
-  },
-  {
-    asset: "gold",
-    image: {
-      url: "/images/daily-performance/gold.png",
-      alt: "Gold daily performance",
-    },
-  },
-  {
-    asset: "dax40",
-    image: {
-      url: "/images/daily-performance/dax40.png",
-      alt: "DAX 40 daily performance",
-    },
-  },
-  {
-    asset: "eurusd",
-    image: {
-      url: "/images/daily-performance/eur-usd.png",
-      alt: "EUR/USD daily performance",
-    },
-  },
-  {
-    asset: "bitcoin",
-    image: {
-      url: "/images/daily-performance/bitcoin.png",
-      alt: "Bitcoin daily performance",
-    },
-  },
-  {
-    asset: "solana",
-    image: {
-      url: "/images/daily-performance/solana.png",
-      alt: "Solana daily performance",
-    },
-  },
-];
+interface MediaDoc {
+  url?: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+}
 
 export async function LivePerformanceSection() {
   const t = await getTranslations("performance");
+  const payload = await getPayload({ config });
+
+  const { docs } = await payload.find({
+    collection: "daily-performance",
+    limit: 1,
+    sort: "-date",
+    depth: 2,
+  });
+
+  const entry = docs[0];
+  if (!entry || !entry.screenshots) return null;
+
+  const screenshots = entry.screenshots.map(
+    (item: { asset: string; image: MediaDoc | string }) => {
+      const media =
+        typeof item.image === "object" ? (item.image as MediaDoc) : null;
+      return {
+        asset: item.asset,
+        image: {
+          url: media?.url ?? "",
+          alt: media?.alt ?? item.asset,
+          width: media?.width,
+          height: media?.height,
+        },
+      };
+    },
+  );
 
   return (
     <section className="py-12 md:py-20">
@@ -73,7 +50,7 @@ export async function LivePerformanceSection() {
           {t("subtitle")}
         </p>
 
-        <DailyPerformanceGrid screenshots={staticScreenshots} />
+        <DailyPerformanceGrid screenshots={screenshots} />
       </div>
     </section>
   );

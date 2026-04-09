@@ -11,7 +11,7 @@ const translations = {
     warning:
       "<strong>Please update your payment method within 7 days</strong> to avoid losing access to SimplifyPro and your TradingView indicator.",
     cta: "Update Payment Method",
-    footer: "If you need help, contact us at support@simplifypro.com",
+    footer: "If you need help, contact us at yoann@simplify-pro.com",
   },
   fr: {
     subject: "Action requise : echec du paiement SimplifyPro",
@@ -20,7 +20,7 @@ const translations = {
     warning:
       "<strong>Veuillez mettre a jour votre moyen de paiement sous 7 jours</strong> pour eviter de perdre l'acces a SimplifyPro et a votre indicateur TradingView.",
     cta: "Mettre a jour le moyen de paiement",
-    footer: "Besoin d'aide ? Contactez-nous a support@simplifypro.com",
+    footer: "Besoin d'aide ? Contactez-nous a yoann@simplify-pro.com",
   },
 } as const;
 
