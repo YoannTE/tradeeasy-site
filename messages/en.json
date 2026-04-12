@@ -112,24 +112,8 @@
     }
   },
   "testimonials": {
-    "title": "Voices of the Community",
-    "items": {
-      "marcus": {
-        "quote": "I've tried dozens of indicators... This is the first one that actually stays consistent.",
-        "name": "Marcus T.",
-        "role": "Full-time Crypto Trader"
-      },
-      "sarah": {
-        "quote": "SimplifyPro simplified my workflow. I no longer spend 8 hours staring at candles.",
-        "name": "Sarah Jenkins",
-        "role": "Swing Trader"
-      },
-      "david": {
-        "quote": "The transparency is what got me. They don't hide their losing trades.",
-        "name": "David L.",
-        "role": "Forex Specialist"
-      }
-    }
+    "title": "What Traders Say",
+    "subtitle": "Real feedback from real traders using SimplifyPro every day."
   },
   "pricingPreview": {
     "title": "Invest in Your Trading",

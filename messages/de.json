@@ -112,24 +112,8 @@
     }
   },
   "testimonials": {
-    "title": "Stimmen aus der Community",
-    "items": {
-      "marcus": {
-        "quote": "Ich habe Dutzende von Indikatoren ausprobiert... Das ist der erste, der wirklich konstant bleibt.",
-        "name": "Marcus T.",
-        "role": "Vollzeit-Krypto-Trader"
-      },
-      "sarah": {
-        "quote": "SimplifyPro hat meinen Workflow vereinfacht. Ich starre nicht mehr 8 Stunden auf Kerzen.",
-        "name": "Sarah Jenkins",
-        "role": "Swing-Traderin"
-      },
-      "david": {
-        "quote": "Die Transparenz hat mich überzeugt. Sie verstecken ihre Verlust-Trades nicht.",
-        "name": "David L.",
-        "role": "Forex-Spezialist"
-      }
-    }
+    "title": "Was Trader sagen",
+    "subtitle": "Echtes Feedback von echten Tradern, die SimplifyPro täglich nutzen."
   },
   "pricingPreview": {
     "title": "Investieren Sie in Ihr Trading",

@@ -1,6 +1,20 @@
 import { getPayload } from "payload";
 import config from "@payload-config";
 import { getTranslations } from "next-intl/server";
+import { Star } from "lucide-react";
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Star
+          key={i}
+          className={`h-4 w-4 ${i < rating ? "fill-yellow-400 text-yellow-400" : "text-zinc-700"}`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export async function TestimonialsSection() {
   const t = await getTranslations("testimonials");
@@ -16,25 +30,30 @@ export async function TestimonialsSection() {
 
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center text-white md:text-4xl">
           {t("title")}
         </h2>
+        <p className="mt-3 text-center text-zinc-400">
+          {t("subtitle")}
+        </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="rounded-xl border border-zinc-800 bg-zinc-900 p-6"
+              className="flex flex-col justify-between rounded-xl border border-zinc-800 bg-zinc-900/50 p-6"
             >
-              <span className="text-4xl text-zinc-700 leading-none">
-                &ldquo;
-              </span>
-              <p className="mt-2 text-zinc-300 italic leading-relaxed">
-                {item.content}
-              </p>
-              <div className="mt-6 flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-700" />
+              <div>
+                <StarRating rating={(item.rating as number) ?? 5} />
+                <p className="mt-4 text-zinc-300 leading-relaxed">
+                  &ldquo;{item.content}&rdquo;
+                </p>
+              </div>
+              <div className="mt-6 flex items-center gap-3 border-t border-zinc-800 pt-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-sm font-bold text-white">
+                  {(item.clientName as string)?.charAt(0)}
+                </div>
                 <div>
                   <p className="font-semibold text-white">{item.clientName}</p>
                   <p className="text-sm text-zinc-400">{item.role}</p>

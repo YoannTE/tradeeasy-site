@@ -4,6 +4,7 @@ import { FeaturesSection } from "@/components/home/features-section";
 import { TradingViewSection } from "@/components/home/tradingview-section";
 import { LivePerformanceSection } from "@/components/home/live-performance-section";
 import { MarketNewsSection } from "@/components/home/market-news-section";
+import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { HowItWorksSection } from "@/components/home/how-it-works-section";
 import { PricingPreviewSection } from "@/components/home/pricing-preview-section";
 import { AffiliatePreviewSection } from "@/components/home/affiliate-preview-section";
@@ -40,6 +41,7 @@ export default function HomePage() {
       <FeaturesSection />
       <TradingViewSection />
       <MarketNewsSection />
+      <TestimonialsSection />
       <LivePerformanceSection />
       <HowItWorksSection />
       <PricingPreviewSection />

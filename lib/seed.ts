@@ -19,25 +19,46 @@ async function seedTestimonials(payload: Payload) {
 
   const testimonials = [
     {
-      clientName: "Marcus T.",
-      role: "Full-time Crypto Trader",
+      clientName: "James R.",
+      role: "Day Trader — Nasdaq & S&P 500",
       content:
-        "I've tried dozens of indicators... This is the first one that actually stays consistent.",
+        "I was skeptical at first, like with every indicator. But after 3 weeks on demo, I subscribed. The signals are clean, no repaint, and the alerts save me from sitting in front of my screen all day. Easily the best money I spend each month.",
       rating: 5,
     },
     {
-      clientName: "Sarah Jenkins",
-      role: "Swing Trader",
+      clientName: "Léa M.",
+      role: "Swing Trader — Forex",
       content:
-        "SimplifyPro simplified my workflow. I no longer spend 8 hours staring at candles.",
+        "I used to rely on 4-5 free indicators stacked on top of each other. SimplifyPro replaced all of them. My charts are cleaner, my entries are better, and I finally stopped second-guessing myself on EUR/USD.",
       rating: 5,
     },
     {
-      clientName: "David L.",
-      role: "Forex Specialist",
+      clientName: "Tom K.",
+      role: "Part-time Trader — Crypto",
       content:
-        "The transparency is what got me. They don't hide their losing trades.",
+        "Not going to lie, it doesn't catch every move — no indicator does. But the win rate is solid and the risk/reward on the signals is usually 1:2 or better. That's all I need to be profitable on BTC and ETH.",
+      rating: 4,
+    },
+    {
+      clientName: "Priya S.",
+      role: "Beginner — Started 6 months ago",
+      content:
+        "I had zero experience with trading when I started. The green and red arrows made it so simple to understand entries and exits. The video tutorials helped a lot too. I'm not rich yet, but I'm learning and actually making consistent small gains.",
       rating: 5,
+    },
+    {
+      clientName: "Daniel W.",
+      role: "Full-time Trader — DAX & Gold",
+      content:
+        "What I appreciate most is the daily performance page. They show every signal, including the losses. That level of transparency is rare in this industry. The indicator itself is solid on 15min and 1H for indices.",
+      rating: 5,
+    },
+    {
+      clientName: "Ana C.",
+      role: "Swing Trader — Stocks & ETFs",
+      content:
+        "I was paying $150/month for another premium indicator that gave me the same results as free ones. Switched to SimplifyPro at $49 and my results actually improved. The alerts on my phone are a game changer for swing trading.",
+      rating: 4,
     },
   ];
 
@@ -45,7 +66,7 @@ async function seedTestimonials(payload: Payload) {
     await payload.create({ collection: "testimonials", data });
   }
 
-  payload.logger.info("Seeded 3 testimonials");
+  payload.logger.info("Seeded 6 testimonials");
 }
 
 // ---------------------------------------------------------------------------
