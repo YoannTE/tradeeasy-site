@@ -1,8 +1,7 @@
 import type { CollectionConfig } from "payload";
 import { adminOnlyReadAccess, adminOnlyAccess } from "./access/admin-only";
 
-// NOTE: currentUses will be incremented atomically in Round 3
-// (raw SQL, not read-then-write) to avoid race conditions.
+// currentUses is incremented in handleCheckoutCompleted webhook handler.
 
 export const PromoCode: CollectionConfig = {
   slug: "promo-codes",
@@ -91,7 +90,7 @@ export const PromoCode: CollectionConfig = {
       admin: {
         readOnly: true,
         description:
-          "Incremented atomically via raw SQL (Round 3) — do not edit manually",
+          "Incremented in webhook handleCheckoutCompleted — do not edit manually",
       },
     },
   ],

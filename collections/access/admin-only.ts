@@ -1,4 +1,4 @@
-import type { Access } from "payload";
+import type { Access, FieldAccess } from "payload";
 
 /**
  * Read access: public (everyone can read)
@@ -46,4 +46,13 @@ export const adminOrOwnUpdateAccess: Access = ({ req: { user } }) => {
   if (!user) return false;
   if (user.role === "admin") return true;
   return { id: { equals: user.id } };
+};
+
+/**
+ * Field-level update access: admin only.
+ * Prevents regular users from modifying sensitive fields on their own record.
+ */
+export const adminOnlyFieldAccess: FieldAccess = ({ req: { user } }) => {
+  if (!user) return false;
+  return (user as { role?: string }).role === "admin";
 };

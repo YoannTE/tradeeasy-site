@@ -1,6 +1,7 @@
 import type { CollectionAfterChangeHook } from "payload";
 import { sendEmail } from "@/lib/email/send-email";
 import { accessGrantedEmail } from "@/lib/email/templates/access-granted";
+import { stripe, isStripeConfigured } from "@/lib/stripe/stripe";
 
 /**
  * afterChange hook for Users collection.
@@ -51,7 +52,8 @@ export const onTradingviewAccessGranted: CollectionAfterChangeHook = async ({
 };
 
 /**
- * Find the user's trial subscription and set trialActivatedAt.
+ * Find the user's trial subscription, set trialActivatedAt,
+ * and align the Stripe trial_end to activation_date + 7 days.
  */
 async function activateTrialForUser(
   payload: Parameters<CollectionAfterChangeHook>[0]["req"]["payload"],
@@ -69,10 +71,35 @@ async function activateTrialForUser(
 
   if (result.docs.length === 0) return;
 
+  const sub = result.docs[0];
+
+  // Calculate the real trial end: activation + 7 days
+  const TRIAL_DAYS = 7;
+  const trialEnd = new Date(activatedAt);
+  trialEnd.setDate(trialEnd.getDate() + TRIAL_DAYS);
+  const trialEndISO = trialEnd.toISOString();
+  const trialEndUnix = Math.floor(trialEnd.getTime() / 1000);
+
+  // Update Stripe subscription trial_end to align with activation
+  if (isStripeConfigured() && sub.stripeSubscriptionId) {
+    try {
+      await stripe.subscriptions.update(sub.stripeSubscriptionId, {
+        trial_end: trialEndUnix,
+      });
+    } catch (error) {
+      console.error("[hook] Failed to update Stripe trial_end:", error);
+    }
+  }
+
+  // Update Payload subscription with activation date and aligned trial end
   await payload.update({
     collection: "subscriptions",
-    id: result.docs[0].id,
+    id: sub.id,
     overrideAccess: true,
-    data: { trialActivatedAt: activatedAt },
+    data: {
+      trialActivatedAt: activatedAt,
+      trialEndDate: trialEndISO,
+      nextRenewalDate: trialEndISO,
+    },
   });
 }

@@ -95,10 +95,24 @@ export const Subscription: CollectionConfig = {
       unique: true,
     },
     {
+      name: "paymentFailedAt",
+      type: "date",
+      label: "Payment Failed At",
+      admin: {
+        readOnly: true,
+        description:
+          "Set when payment first fails — used for grace period tracking",
+      },
+    },
+    {
       name: "stripeEventId",
       type: "text",
-      label: "Last Stripe Event ID",
-      unique: true,
+      label: "Last Stripe Event ID (deprecated)",
+      admin: {
+        readOnly: true,
+        description:
+          "Deprecated — idempotence is now handled by ProcessedStripeEvent collection",
+      },
     },
     {
       name: "promoCodeUsed",

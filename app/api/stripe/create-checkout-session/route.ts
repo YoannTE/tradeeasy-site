@@ -31,6 +31,33 @@ export async function POST(request: Request) {
       );
     }
 
+    // Check for existing active subscription (prevent double subscription)
+    const existingSub = await payload.find({
+      collection: "subscriptions",
+      overrideAccess: true,
+      where: {
+        user: { equals: user.id },
+        status: { in: ["trial", "active", "payment_failed"] },
+      },
+      limit: 1,
+    });
+
+    if (existingSub.docs.length > 0) {
+      return NextResponse.json(
+        { error: "You already have an active subscription." },
+        { status: 409 },
+      );
+    }
+
+    // Check if user has ever had a subscription (no re-trial for returning users)
+    const pastSub = await payload.find({
+      collection: "subscriptions",
+      overrideAccess: true,
+      where: { user: { equals: user.id } },
+      limit: 1,
+    });
+    const isReturningUser = pastSub.docs.length > 0;
+
     const body = await request.json();
     const parsed = requestSchema.safeParse(body);
 
@@ -46,6 +73,7 @@ export async function POST(request: Request) {
       plan: parsed.data.plan,
       userId: String(user.id),
       promoCode: parsed.data.promoCode,
+      skipTrial: isReturningUser,
     });
 
     return NextResponse.json({ data: { url: checkoutUrl } });

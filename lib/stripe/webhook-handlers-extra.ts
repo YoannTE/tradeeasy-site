@@ -25,15 +25,21 @@ export async function handlePaymentFailed(event: Stripe.Event): Promise<void> {
 
   if (result.docs.length === 0) return;
 
+  // Only set paymentFailedAt on the first failure (preserve for grace period tracking)
+  const existingSub = result.docs[0];
+  const updateData: Record<string, unknown> = {
+    status: "payment_failed",
+    lastSyncedAt: new Date().toISOString(),
+  };
+  if (!existingSub.paymentFailedAt) {
+    updateData.paymentFailedAt = new Date().toISOString();
+  }
+
   await payload.update({
     collection: "subscriptions",
-    id: result.docs[0].id,
+    id: existingSub.id,
     overrideAccess: true,
-    data: {
-      status: "payment_failed",
-      stripeEventId: event.id,
-      lastSyncedAt: new Date().toISOString(),
-    },
+    data: updateData,
   });
 
   // Send payment failed email to the user (fire-and-forget)
@@ -78,20 +84,35 @@ export async function handleSubscriptionUpdated(
 
   const newStatus = statusMap[subscription.status] || "active";
 
+  // Determine plan type from the Stripe price ID
+  const priceId = subscription.items?.data?.[0]?.price?.id;
+  const monthlyPriceId = process.env.STRIPE_PRICE_MONTHLY;
+  const annualPriceId = process.env.STRIPE_PRICE_ANNUAL;
+  let planType: string | undefined;
+  if (priceId && monthlyPriceId && priceId === monthlyPriceId) {
+    planType = "monthly";
+  } else if (priceId && annualPriceId && priceId === annualPriceId) {
+    planType = "annual";
+  }
+
+  const updateData: Record<string, unknown> = {
+    status: newStatus,
+    lastSyncedAt: new Date().toISOString(),
+  };
+  if (planType) {
+    updateData.type = planType;
+  }
+
   await payload.update({
     collection: "subscriptions",
     id: result.docs[0].id,
     overrideAccess: true,
-    data: {
-      status: newStatus,
-      stripeEventId: event.id,
-      lastSyncedAt: new Date().toISOString(),
-    },
+    data: updateData,
   });
 }
 
 /**
- * Handle customer.subscription.deleted — cancel subscription.
+ * Handle customer.subscription.deleted — cancel subscription and revoke TradingView access.
  */
 export async function handleSubscriptionDeleted(
   event: Stripe.Event,
@@ -108,14 +129,24 @@ export async function handleSubscriptionDeleted(
 
   if (result.docs.length === 0) return;
 
+  const sub = result.docs[0];
+
   await payload.update({
     collection: "subscriptions",
-    id: result.docs[0].id,
+    id: sub.id,
     overrideAccess: true,
     data: {
       status: "cancelled",
-      stripeEventId: event.id,
       lastSyncedAt: new Date().toISOString(),
     },
+  });
+
+  // Revoke TradingView access for the user
+  const userId = typeof sub.user === "string" ? sub.user : sub.user.id;
+  await payload.update({
+    collection: "users",
+    id: userId,
+    overrideAccess: true,
+    data: { tradingviewAccessStatus: "revoked" },
   });
 }

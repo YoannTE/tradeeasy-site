@@ -8,6 +8,7 @@ interface CheckoutSessionParams {
   plan: "monthly" | "annual";
   userId: string;
   promoCode?: string;
+  skipTrial?: boolean;
 }
 
 /**
@@ -33,14 +34,24 @@ export async function createCheckoutSession(
     );
   }
 
+  // Use a generous trial buffer (14 days). The actual 7-day trial starts
+  // when the admin grants TradingView access — the hook adjusts trial_end
+  // on Stripe to activation_date + 7 days.
+  // Returning users (past subscription) skip the trial entirely.
+  const subscriptionData: Stripe.Checkout.SessionCreateParams["subscription_data"] =
+    {
+      metadata: { userId: params.userId, plan: params.plan },
+    };
+
+  if (!params.skipTrial) {
+    subscriptionData.trial_period_days = 14;
+  }
+
   const sessionConfig: Stripe.Checkout.SessionCreateParams = {
     customer: params.stripeCustomerId,
     mode: "subscription",
     line_items: [{ price: priceId, quantity: 1 }],
-    subscription_data: {
-      trial_period_days: 7,
-      metadata: { userId: params.userId, plan: params.plan },
-    },
+    subscription_data: subscriptionData,
     metadata: { userId: params.userId, plan: params.plan },
     success_url: `${APP_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${APP_URL}/pricing`,

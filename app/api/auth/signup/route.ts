@@ -7,12 +7,17 @@ import { sendEmail } from "@/lib/email/send-email";
 import { welcomeEmail } from "@/lib/email/templates/welcome";
 import { rateLimit } from "@/lib/rate-limit";
 
-const signupBodySchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
-  confirmPassword: z.string(),
-  tradingviewUsername: z.string().min(1),
-});
+const signupBodySchema = z
+  .object({
+    email: z.string().email(),
+    password: z.string().min(8),
+    confirmPassword: z.string(),
+    tradingviewUsername: z.string().min(1),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"],
+  });
 
 const errorMessages = {
   en: {

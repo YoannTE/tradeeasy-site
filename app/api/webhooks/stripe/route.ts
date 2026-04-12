@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { stripe, isStripeConfigured } from "@/lib/stripe/stripe";
 import {
   isEventAlreadyProcessed,
+  markEventProcessed,
   handleCheckoutCompleted,
   handleSubscriptionCreated,
   handlePaymentSucceeded,
@@ -51,6 +52,9 @@ export async function POST(request: Request) {
     console.log(`[webhook] Event ${event.id} already processed — skipping`);
     return NextResponse.json({ received: true });
   }
+
+  // Mark event as processed before handling (prevents re-processing on retries)
+  await markEventProcessed(event.id, event.type);
 
   // Route the event to the appropriate handler
   try {

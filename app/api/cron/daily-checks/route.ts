@@ -33,7 +33,15 @@ export async function GET(request: Request) {
     // --- Check 2: Trial reminders (trials ending in 1-2 days) ---
     const trialReminders = await runTrialReminderCheck(payload, errors);
 
-    return NextResponse.json({ escalations, trialReminders, errors });
+    // --- Check 3: Revoke TradingView access after 7-day grace period ---
+    const revocations = await runGracePeriodRevoke(payload, errors);
+
+    return NextResponse.json({
+      escalations,
+      trialReminders,
+      revocations,
+      errors,
+    });
   } catch {
     return NextResponse.json(
       { escalations: 0, trialReminders: 0, message: "No database" },
@@ -127,6 +135,65 @@ async function runTrialReminderCheck(
       const emailData = trialReminderEmail(trialEndDate, planType);
       await sendEmail({ to: user.email, ...emailData });
       count++;
+    } catch (err) {
+      errors.push(err instanceof Error ? err.message : String(err));
+    }
+  }
+  return count;
+}
+
+/**
+ * Revoke TradingView access for subscriptions in payment_failed state
+ * for more than 7 days (grace period expired).
+ */
+async function runGracePeriodRevoke(
+  payload: Awaited<ReturnType<typeof getPayload>>,
+  errors: string[],
+): Promise<number> {
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+
+  const expiredSubs = await payload.find({
+    collection: "subscriptions",
+    overrideAccess: true,
+    where: {
+      status: { equals: "payment_failed" },
+      paymentFailedAt: { less_than: sevenDaysAgo.toISOString() },
+    },
+    limit: 100,
+    depth: 1,
+  });
+
+  let count = 0;
+  for (const sub of expiredSubs.docs) {
+    try {
+      const user =
+        typeof sub.user === "object" && sub.user !== null
+          ? sub.user
+          : await payload.findByID({
+              collection: "users",
+              id: typeof sub.user === "string" ? sub.user : sub.user.id,
+              overrideAccess: true,
+            });
+
+      if (
+        (user as Record<string, unknown>).tradingviewAccessStatus === "granted"
+      ) {
+        await payload.update({
+          collection: "users",
+          id: user.id,
+          overrideAccess: true,
+          data: { tradingviewAccessStatus: "revoked" },
+        });
+
+        await payload.update({
+          collection: "subscriptions",
+          id: sub.id,
+          overrideAccess: true,
+          data: { status: "expired" },
+        });
+
+        count++;
+      }
     } catch (err) {
       errors.push(err instanceof Error ? err.message : String(err));
     }

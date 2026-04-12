@@ -3,6 +3,7 @@ import {
   adminOrOwnReadAccess,
   adminOrOwnUpdateAccess,
   adminOnlyAccess,
+  adminOnlyFieldAccess,
 } from "./access/admin-only";
 import { onTradingviewAccessGranted } from "./hooks/on-tradingview-access-granted";
 import { onNewUserCreated } from "./hooks/on-new-user-created";
@@ -45,6 +46,9 @@ export const Users: CollectionConfig = {
         { label: "Admin", value: "admin" },
         { label: "Editor", value: "editor" },
       ],
+      access: {
+        update: adminOnlyFieldAccess,
+      },
     },
     {
       name: "firstName",
@@ -73,11 +77,17 @@ export const Users: CollectionConfig = {
         { label: "Granted", value: "granted" },
         { label: "Revoked", value: "revoked" },
       ],
+      access: {
+        update: adminOnlyFieldAccess,
+      },
     },
     {
       name: "tradingviewAccessGrantedAt",
       type: "date",
       label: "TradingView Access Granted At",
+      access: {
+        update: adminOnlyFieldAccess,
+      },
     },
     {
       name: "stripeCustomerId",
@@ -85,6 +95,9 @@ export const Users: CollectionConfig = {
       label: "Stripe Customer ID",
       admin: {
         position: "sidebar",
+      },
+      access: {
+        update: adminOnlyFieldAccess,
       },
     },
     {
@@ -95,12 +108,18 @@ export const Users: CollectionConfig = {
       admin: {
         description: "Auto-generated on creation if left empty",
       },
+      access: {
+        update: adminOnlyFieldAccess,
+      },
     },
     {
       name: "referredBy",
       type: "relationship",
       relationTo: "users",
       label: "Referred By",
+      access: {
+        update: adminOnlyFieldAccess,
+      },
     },
     {
       name: "lastLoginAt",
@@ -109,6 +128,9 @@ export const Users: CollectionConfig = {
       admin: {
         readOnly: true,
         position: "sidebar",
+      },
+      access: {
+        update: adminOnlyFieldAccess,
       },
     },
   ],

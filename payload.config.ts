@@ -13,6 +13,7 @@ import { PromoCode } from "@/collections/PromoCode";
 import { Guide } from "@/collections/Guide";
 import { DailyPerformance } from "@/collections/DailyPerformance";
 import { Faq } from "@/collections/Faq";
+import { ProcessedStripeEvent } from "@/collections/ProcessedStripeEvent";
 import { seedDatabase } from "@/lib/seed";
 
 const filename = fileURLToPath(import.meta.url);
@@ -36,6 +37,7 @@ export default buildConfig({
     Guide,
     DailyPerformance,
     Faq,
+    ProcessedStripeEvent,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
