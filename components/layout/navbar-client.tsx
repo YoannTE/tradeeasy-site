@@ -35,7 +35,7 @@ export function NavbarClient({ user }: NavbarClientProps) {
   const ctaHref = user ? "/dashboard" : "/pricing";
 
   return (
-    <header className="sticky top-0 z-50 h-16 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 h-20 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4">
         {/* Logo */}
         <Logo size="sm" />
@@ -46,7 +46,7 @@ export function NavbarClient({ user }: NavbarClientProps) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-400 transition-colors hover:text-white"
+              className="text-base text-zinc-400 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -56,7 +56,12 @@ export function NavbarClient({ user }: NavbarClientProps) {
         {/* Desktop CTA + Language */}
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
-          <Button nativeButton={false} render={<Link href={ctaHref} />}>
+          <Button
+            size="lg"
+            className="text-base px-6"
+            nativeButton={false}
+            render={<Link href={ctaHref} />}
+          >
             {ctaLabel}
           </Button>
         </div>

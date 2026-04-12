@@ -15,7 +15,7 @@ export async function HeroSection() {
         </span>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
+        <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
           <span className="text-white">{t("title1")}</span>
           <br />
           <span className="text-white">{t("title2")} </span>

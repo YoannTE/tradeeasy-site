@@ -41,12 +41,12 @@ export function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-1.5 text-sm text-zinc-300 transition-colors hover:bg-zinc-700"
+        className="flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-base text-zinc-300 transition-colors hover:bg-zinc-700"
         aria-label="Change language"
       >
         <span>{current.flag}</span>
         <span>{current.label}</span>
-        <ChevronDown className="h-3.5 w-3.5 text-zinc-500" />
+        <ChevronDown className="h-4 w-4 text-zinc-500" />
       </button>
 
       {open && (

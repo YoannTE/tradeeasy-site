@@ -1,4 +1,13 @@
 {
+  "promoBanner": {
+    "badge": "Startangebot",
+    "discount": "50% RABATT — Code:",
+    "cta": "Angebot sichern →",
+    "days": "Tage",
+    "hrs": "Std",
+    "min": "Min",
+    "sec": "Sek"
+  },
   "nav": {
     "features": "Funktionen",
     "pricing": "Preise",

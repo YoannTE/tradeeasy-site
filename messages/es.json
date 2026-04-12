@@ -1,4 +1,13 @@
 {
+  "promoBanner": {
+    "badge": "Oferta de lanzamiento",
+    "discount": "50% DE DESCUENTO — Código:",
+    "cta": "Aprovechar oferta →",
+    "days": "Días",
+    "hrs": "Hrs",
+    "min": "Min",
+    "sec": "Seg"
+  },
   "nav": {
     "features": "Características",
     "pricing": "Precios",

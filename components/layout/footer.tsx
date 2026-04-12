@@ -29,7 +29,7 @@ export async function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div>
-            <Logo />
+            <Logo size="sm" />
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
               {t("tagline")}
             </p>

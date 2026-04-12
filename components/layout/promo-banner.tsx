@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const PROMO_END_DATE = new Date("2026-06-30T23:59:59");
 const STORAGE_KEY = "promo-banner-dismissed";
@@ -23,7 +24,7 @@ function getTimeLeft() {
 function TimeBlock({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <span className="rounded bg-white/10 px-1.5 py-0.5 text-sm font-bold tabular-nums md:px-2 md:text-base">
+      <span className="rounded bg-white/10 px-2 py-1 text-base font-bold tabular-nums md:px-2.5 md:text-lg">
         {String(value).padStart(2, "0")}
       </span>
       <span className="mt-0.5 text-[10px] uppercase text-blue-200/70">
@@ -34,6 +35,7 @@ function TimeBlock({ value, label }: { value: number; label: string }) {
 }
 
 export function PromoBanner() {
+  const t = useTranslations("promoBanner");
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
   const [dismissed, setDismissed] = useState(true);
 
@@ -61,36 +63,36 @@ export function PromoBanner() {
   };
 
   return (
-    <div className="relative z-50 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 px-4 py-2.5 text-white">
+    <div className="relative z-50 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 px-4 py-4 text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 md:flex-row md:gap-4">
         {/* Promo text */}
-        <div className="flex items-center gap-2 text-sm font-semibold md:text-base">
-          <span className="rounded bg-white/20 px-2 py-0.5 text-xs font-bold uppercase tracking-wider">
-            Launch Offer
+        <div className="flex items-center gap-2 text-base font-semibold md:text-lg">
+          <span className="rounded bg-white/20 px-2.5 py-1 text-sm md:text-base font-bold uppercase tracking-wider">
+            {t("badge")}
           </span>
-          <span>50% OFF — Code:</span>
-          <span className="rounded bg-white/25 px-2 py-0.5 font-mono font-bold tracking-widest">
+          <span>{t("discount")}</span>
+          <span className="rounded bg-white/25 px-2.5 py-1 font-mono font-bold tracking-widest text-base md:text-lg">
             LAUNCH
           </span>
         </div>
 
         {/* Countdown */}
         <div className="flex items-center gap-1.5">
-          <TimeBlock value={timeLeft.days} label="Days" />
+          <TimeBlock value={timeLeft.days} label={t("days")} />
           <span className="text-sm font-bold text-blue-200">:</span>
-          <TimeBlock value={timeLeft.hours} label="Hrs" />
+          <TimeBlock value={timeLeft.hours} label={t("hrs")} />
           <span className="text-sm font-bold text-blue-200">:</span>
-          <TimeBlock value={timeLeft.minutes} label="Min" />
+          <TimeBlock value={timeLeft.minutes} label={t("min")} />
           <span className="text-sm font-bold text-blue-200">:</span>
-          <TimeBlock value={timeLeft.seconds} label="Sec" />
+          <TimeBlock value={timeLeft.seconds} label={t("sec")} />
         </div>
 
         {/* CTA */}
         <Link
           href="/pricing"
-          className="rounded-full bg-white px-4 py-1.5 text-xs font-bold text-blue-600 transition-colors hover:bg-blue-50 md:text-sm"
+          className="rounded-full bg-white px-5 py-2 text-sm font-bold text-blue-600 transition-colors hover:bg-blue-50 md:text-base"
         >
-          Claim Offer →
+          {t("cta")}
         </Link>
       </div>
 

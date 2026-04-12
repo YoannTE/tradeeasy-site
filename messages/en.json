@@ -1,4 +1,13 @@
 {
+  "promoBanner": {
+    "badge": "Launch Offer",
+    "discount": "50% OFF — Code:",
+    "cta": "Claim Offer →",
+    "days": "Days",
+    "hrs": "Hrs",
+    "min": "Min",
+    "sec": "Sec"
+  },
   "nav": {
     "features": "Features",
     "pricing": "Pricing",
