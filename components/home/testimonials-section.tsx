@@ -1,5 +1,3 @@
-import { getPayload } from "payload";
-import config from "@payload-config";
 import { getTranslations } from "next-intl/server";
 import { Star } from "lucide-react";
 
@@ -16,17 +14,22 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
+interface TestimonialItem {
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+}
+
 export async function TestimonialsSection() {
   const t = await getTranslations("testimonials");
-  const payload = await getPayload({ config });
 
-  const { docs: testimonials } = await payload.find({
-    collection: "testimonials",
-    limit: 10,
-    sort: "createdAt",
-  });
-
-  if (testimonials.length === 0) return null;
+  const items: TestimonialItem[] = [0, 1, 2, 3, 4, 5].map((i) => ({
+    name: t(`items.${i}.name`),
+    role: t(`items.${i}.role`),
+    content: t(`items.${i}.content`),
+    rating: Number(t.raw(`items.${i}.rating`)),
+  }));
 
   return (
     <section className="py-20">
@@ -39,23 +42,23 @@ export async function TestimonialsSection() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((item) => (
+          {items.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="flex flex-col justify-between rounded-xl border border-zinc-800 bg-zinc-900/50 p-6"
             >
               <div>
-                <StarRating rating={(item.rating as number) ?? 5} />
+                <StarRating rating={item.rating} />
                 <p className="mt-4 text-zinc-300 leading-relaxed">
                   &ldquo;{item.content}&rdquo;
                 </p>
               </div>
               <div className="mt-6 flex items-center gap-3 border-t border-zinc-800 pt-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-sm font-bold text-white">
-                  {(item.clientName as string)?.charAt(0)}
+                  {item.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-white">{item.clientName}</p>
+                  <p className="font-semibold text-white">{item.name}</p>
                   <p className="text-sm text-zinc-400">{item.role}</p>
                 </div>
               </div>

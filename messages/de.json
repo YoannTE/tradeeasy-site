@@ -113,7 +113,45 @@
   },
   "testimonials": {
     "title": "Was Trader sagen",
-    "subtitle": "Echtes Feedback von echten Tradern, die SimplifyPro täglich nutzen."
+    "subtitle": "Echtes Feedback von echten Tradern, die SimplifyPro täglich nutzen.",
+    "items": [
+      {
+        "name": "James R.",
+        "role": "Day Trader — Nasdaq & S&P 500",
+        "content": "Ich war anfangs skeptisch, wie bei jedem Indikator. Aber nach 3 Wochen im Demo habe ich abonniert. Die Signale sind sauber, kein Repaint, und die Alarme ersparen mir, den ganzen Tag vor dem Bildschirm zu sitzen. Das beste Geld, das ich jeden Monat ausgebe.",
+        "rating": 5
+      },
+      {
+        "name": "Léa M.",
+        "role": "Swing Traderin — Forex",
+        "content": "Früher habe ich 4-5 kostenlose Indikatoren übereinander gestapelt. SimplifyPro hat sie alle ersetzt. Meine Charts sind übersichtlicher, meine Einstiege besser, und ich habe endlich aufgehört, mich bei EUR/USD ständig zu hinterfragen.",
+        "rating": 5
+      },
+      {
+        "name": "Tom K.",
+        "role": "Teilzeit-Trader — Krypto",
+        "content": "Ich will ehrlich sein, er erwischt nicht jede Bewegung — das schafft kein Indikator. Aber die Trefferquote ist solide und das Risiko-Gewinn-Verhältnis liegt meist bei 1:2 oder besser. Das reicht mir, um mit BTC und ETH profitabel zu sein.",
+        "rating": 4
+      },
+      {
+        "name": "Priya S.",
+        "role": "Anfängerin — Seit 6 Monaten dabei",
+        "content": "Ich hatte null Erfahrung mit Trading, als ich angefangen habe. Die grünen und roten Pfeile machen Ein- und Ausstiege so einfach zu verstehen. Die Video-Tutorials haben mir sehr geholfen. Ich bin noch nicht reich, aber ich lerne und mache konstant kleine Gewinne.",
+        "rating": 5
+      },
+      {
+        "name": "Daniel W.",
+        "role": "Vollzeit-Trader — DAX & Gold",
+        "content": "Was ich am meisten schätze, ist die tägliche Performance-Seite. Sie zeigen jedes Signal, einschließlich der Verluste. Dieses Maß an Transparenz ist selten in dieser Branche. Der Indikator selbst ist solide auf 15min und 1H für Indizes.",
+        "rating": 5
+      },
+      {
+        "name": "Ana C.",
+        "role": "Swing Traderin — Aktien & ETFs",
+        "content": "Ich habe 150$/Monat für einen anderen Premium-Indikator bezahlt, der mir die gleichen Ergebnisse wie kostenlose lieferte. Auf SimplifyPro für 49$ gewechselt und meine Ergebnisse haben sich sogar verbessert. Die Alarme auf dem Handy sind ein Gamechanger fürs Swing Trading.",
+        "rating": 4
+      }
+    ]
   },
   "pricingPreview": {
     "title": "Investieren Sie in Ihr Trading",

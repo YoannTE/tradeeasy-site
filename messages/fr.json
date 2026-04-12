@@ -113,7 +113,45 @@
   },
   "testimonials": {
     "title": "Ce que disent les traders",
-    "subtitle": "Des retours réels de traders qui utilisent SimplifyPro au quotidien."
+    "subtitle": "Des retours réels de traders qui utilisent SimplifyPro au quotidien.",
+    "items": [
+      {
+        "name": "James R.",
+        "role": "Day Trader — Nasdaq & S&P 500",
+        "content": "J'étais sceptique au début, comme avec chaque indicateur. Mais après 3 semaines en démo, je me suis abonné. Les signaux sont propres, pas de repaint, et les alertes m'évitent de rester devant l'écran toute la journée. Le meilleur investissement que je fais chaque mois.",
+        "rating": 5
+      },
+      {
+        "name": "Léa M.",
+        "role": "Swing Trader — Forex",
+        "content": "Avant, j'utilisais 4-5 indicateurs gratuits empilés les uns sur les autres. SimplifyPro les a tous remplacés. Mes graphiques sont plus lisibles, mes entrées sont meilleures, et j'ai enfin arrêté de douter de moi sur EUR/USD.",
+        "rating": 5
+      },
+      {
+        "name": "Tom K.",
+        "role": "Trader à temps partiel — Crypto",
+        "content": "Je ne vais pas mentir, il ne capte pas chaque mouvement — aucun indicateur ne le fait. Mais le taux de réussite est solide et le ratio risque/gain sur les signaux est généralement de 1:2 ou mieux. C'est tout ce qu'il me faut pour être rentable sur BTC et ETH.",
+        "rating": 4
+      },
+      {
+        "name": "Priya S.",
+        "role": "Débutante — A commencé il y a 6 mois",
+        "content": "Je n'avais aucune expérience en trading quand j'ai commencé. Les flèches vertes et rouges rendent les entrées et sorties tellement simples à comprendre. Les tutoriels vidéo m'ont beaucoup aidée. Je ne suis pas encore riche, mais j'apprends et je fais des petits gains réguliers.",
+        "rating": 5
+      },
+      {
+        "name": "Daniel W.",
+        "role": "Trader à temps plein — DAX & Or",
+        "content": "Ce que j'apprécie le plus, c'est la page de performance quotidienne. Ils montrent chaque signal, y compris les pertes. Ce niveau de transparence est rare dans cette industrie. L'indicateur lui-même est solide en 15min et 1H sur les indices.",
+        "rating": 5
+      },
+      {
+        "name": "Ana C.",
+        "role": "Swing Trader — Actions & ETFs",
+        "content": "Je payais 150$/mois pour un autre indicateur premium qui me donnait les mêmes résultats que les gratuits. J'ai changé pour SimplifyPro à 49$ et mes résultats se sont même améliorés. Les alertes sur mon téléphone sont un vrai atout pour le swing trading.",
+        "rating": 4
+      }
+    ]
   },
   "pricingPreview": {
     "title": "Investissez dans votre trading",
