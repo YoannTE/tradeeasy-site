@@ -618,7 +618,8 @@
       "cancelTitle": "¿Cancelar tu suscripción?",
       "cancelDescription": "Perderás el acceso a SimplifyPro al final de tu período de facturación actual. Tu acceso al indicador de TradingView será revocado.",
       "keepSubscription": "Mantener Suscripción",
-      "yesCancel": "Sí, Cancelar"
+      "yesCancel": "Sí, Cancelar",
+      "logout": "Cerrar sesión"
     }
   },
   "common": {

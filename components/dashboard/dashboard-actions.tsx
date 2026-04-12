@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Loader2, LogOut } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,7 +19,9 @@ import {
 
 export function DashboardActions() {
   const t = useTranslations("dashboard.actions");
+  const router = useRouter();
   const [billingLoading, setBillingLoading] = useState(false);
+  const [logoutLoading, setLogoutLoading] = useState(false);
 
   async function handleManageBilling() {
     setBillingLoading(true);
@@ -40,6 +43,20 @@ export function DashboardActions() {
 
   async function handleCancelSubscription() {
     await handleManageBilling();
+  }
+
+  async function handleLogout() {
+    setLogoutLoading(true);
+    try {
+      await fetch("/api/users/logout", {
+        method: "POST",
+        credentials: "include",
+      });
+      router.push("/");
+      router.refresh();
+    } catch {
+      setLogoutLoading(false);
+    }
   }
 
   return (
@@ -86,6 +103,22 @@ export function DashboardActions() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <Button
+        onClick={handleLogout}
+        disabled={logoutLoading}
+        variant="ghost"
+        className="text-zinc-400 hover:text-white"
+      >
+        {logoutLoading ? (
+          <Loader2 className="animate-spin" />
+        ) : (
+          <>
+            <LogOut className="mr-2 h-4 w-4" />
+            {t("logout")}
+          </>
+        )}
+      </Button>
     </div>
   );
 }

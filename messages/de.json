@@ -622,7 +622,8 @@
       "cancelTitle": "Abonnement kündigen?",
       "cancelDescription": "Sie verlieren den Zugang zu SimplifyPro am Ende Ihres aktuellen Abrechnungszeitraums. Ihr TradingView-Indikatorzugang wird widerrufen.",
       "keepSubscription": "Abonnement behalten",
-      "yesCancel": "Ja, kündigen"
+      "yesCancel": "Ja, kündigen",
+      "logout": "Abmelden"
     }
   },
   "common": {
