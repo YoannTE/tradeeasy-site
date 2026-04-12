@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
@@ -5,7 +6,7 @@ interface LogoProps {
 }
 
 export function Logo({ size = "md" }: LogoProps) {
-  const iconHeight = size === "sm" ? 24 : 28;
+  const iconSize = size === "sm" ? 28 : 34;
   const textClass =
     size === "sm"
       ? "text-3xl font-black tracking-tight"
@@ -13,19 +14,14 @@ export function Logo({ size = "md" }: LogoProps) {
 
   return (
     <Link href="/" className="flex items-center gap-2 group">
-      {/* 3 ascending bars icon */}
-      <svg
-        viewBox="0 0 46 72"
-        fill="none"
-        style={{ height: `${iconHeight}px`, width: "auto" }}
-        aria-hidden="true"
-      >
-        <rect x="0" y="43" width="13" height="29" rx="2" fill="white" />
-        <rect x="17" y="22" width="13" height="50" rx="2" fill="white" />
-        <rect x="34" y="0" width="13" height="72" rx="2" fill="white" />
-      </svg>
-
-      {/* Wordmark */}
+      <Image
+        src="/images/logo-simplifypro.png"
+        alt="SimplifyPro"
+        width={iconSize}
+        height={iconSize}
+        className="object-contain"
+        priority
+      />
       <span className={`${textClass} leading-none text-white`}>
         SimplifyPro
       </span>

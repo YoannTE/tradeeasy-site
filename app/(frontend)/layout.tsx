@@ -3,6 +3,7 @@ import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
 import { PostHogProvider } from "@/components/analytics/posthog-provider";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { PromoBanner } from "@/components/layout/promo-banner";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -33,6 +34,7 @@ export default async function FrontendLayout({
       <body
         className={`${inter.variable} ${exo2.variable} ${inter.className} antialiased`}
       >
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <PostHogProvider>
             <PromoBanner />
