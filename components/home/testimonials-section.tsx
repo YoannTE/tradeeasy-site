@@ -37,9 +37,7 @@ export async function TestimonialsSection() {
         <h2 className="text-3xl font-bold text-center text-white md:text-4xl">
           {t("title")}
         </h2>
-        <p className="mt-3 text-center text-zinc-400">
-          {t("subtitle")}
-        </p>
+        <p className="mt-3 text-center text-zinc-400">{t("subtitle")}</p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => (
