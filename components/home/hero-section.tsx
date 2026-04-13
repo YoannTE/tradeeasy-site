@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 
@@ -53,13 +52,15 @@ export async function HeroSection() {
 
         {/* Chart Preview */}
         <div className="mt-8 md:mt-16 w-full max-w-5xl mx-auto rounded-xl border border-zinc-800 overflow-hidden shadow-2xl shadow-black/50">
-          <Image
-            src="/images/simplifypro-chart.png"
-            alt="SimplifyPro V6.3 indicator on TradingView chart"
-            width={1920}
-            height={1080}
-            className="w-full h-auto"
-            priority
+          <video
+            src="/videos/simplifypro-demo.mp4"
+            poster="/videos/simplifypro-demo-poster.jpg"
+            className="w-full h-auto block"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
           />
         </div>
       </div>
