@@ -62,16 +62,6 @@ export const DailyPerformance: CollectionConfig = {
           options: assetOptions,
         },
         {
-          name: "timeframe",
-          type: "text",
-          label: "Chart timeframe",
-          admin: {
-            placeholder: "e.g. 1 minute Chart",
-            description:
-              "Optional. If left empty, a default timeframe will be shown for the selected asset.",
-          },
-        },
-        {
           name: "image",
           type: "upload",
           relationTo: "media",

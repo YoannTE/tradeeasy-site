@@ -3,20 +3,19 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const assetMeta: Record<string, { name: string; defaultTimeframe: string }> = {
-  dax40: { name: "DAX 40", defaultTimeframe: "1 minute Chart" },
-  bitcoin: { name: "Bitcoin", defaultTimeframe: "1 hour Chart" },
-  eurusd: { name: "EUR/USD", defaultTimeframe: "15 minutes Chart" },
-  gold: { name: "Gold", defaultTimeframe: "3 minutes Chart" },
-  dowjones: { name: "Dow Jones", defaultTimeframe: "5 minutes Chart" },
-  nasdaq: { name: "Nasdaq", defaultTimeframe: "1 minute Chart" },
-  sp500: { name: "S&P 500", defaultTimeframe: "" },
-  solana: { name: "Solana", defaultTimeframe: "" },
+const assetMeta: Record<string, { name: string; timeframe: string }> = {
+  dax40: { name: "DAX 40", timeframe: "1 minute Chart" },
+  bitcoin: { name: "Bitcoin", timeframe: "1 hour Chart" },
+  eurusd: { name: "EUR/USD", timeframe: "15 minutes Chart" },
+  gold: { name: "Gold", timeframe: "3 minutes Chart" },
+  dowjones: { name: "Dow Jones", timeframe: "5 minutes Chart" },
+  nasdaq: { name: "Nasdaq", timeframe: "1 minute Chart" },
+  sp500: { name: "S&P 500", timeframe: "" },
+  solana: { name: "Solana", timeframe: "" },
 };
 
 interface Screenshot {
   asset: string;
-  timeframe?: string;
   image: {
     url: string;
     alt: string;
@@ -33,8 +32,8 @@ function getAssetName(asset: string) {
   return assetMeta[asset]?.name ?? asset;
 }
 
-function getTimeframe(item: Screenshot) {
-  return item.timeframe ?? assetMeta[item.asset]?.defaultTimeframe ?? "";
+function getTimeframe(asset: string) {
+  return assetMeta[asset]?.timeframe ?? "";
 }
 
 export function DailyPerformanceGrid({
@@ -47,7 +46,7 @@ export function DailyPerformanceGrid({
       <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {screenshots.map((item) => {
           const name = getAssetName(item.asset);
-          const timeframe = getTimeframe(item);
+          const timeframe = getTimeframe(item.asset);
 
           return (
             <button
@@ -93,9 +92,9 @@ export function DailyPerformanceGrid({
             <div className="absolute -top-10 left-0 right-0 flex items-center justify-between">
               <span className="text-lg font-semibold text-white">
                 {getAssetName(selectedImage.asset)}
-                {getTimeframe(selectedImage) && (
+                {getTimeframe(selectedImage.asset) && (
                   <span className="ml-2 text-sm font-normal text-zinc-400">
-                    · {getTimeframe(selectedImage)}
+                    · {getTimeframe(selectedImage.asset)}
                   </span>
                 )}
               </span>

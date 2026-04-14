@@ -251,11 +251,7 @@ async function seedDailyPerformance(payload: Payload) {
   });
   if (existing.docs.length > 0) return;
 
-  const screenshots: {
-    asset: string;
-    timeframe?: string;
-    image: number | string;
-  }[] = [];
+  const screenshots: { asset: string; image: number | string }[] = [];
 
   for (const img of performanceImages) {
     const filePath = path.resolve(
@@ -282,11 +278,7 @@ async function seedDailyPerformance(payload: Payload) {
       },
     });
 
-    screenshots.push({
-      asset: img.asset,
-      timeframe: img.timeframe,
-      image: media.id,
-    });
+    screenshots.push({ asset: img.asset, image: media.id });
   }
 
   if (screenshots.length > 0) {
