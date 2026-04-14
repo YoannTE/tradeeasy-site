@@ -25,11 +25,16 @@ export async function LivePerformanceSection() {
   if (!entry || !entry.screenshots) return null;
 
   const screenshots = entry.screenshots.map(
-    (item: { asset: string; image: MediaDoc | string }) => {
+    (item: {
+      asset: string;
+      timeframe?: string;
+      image: MediaDoc | string;
+    }) => {
       const media =
         typeof item.image === "object" ? (item.image as MediaDoc) : null;
       return {
         asset: item.asset,
+        timeframe: item.timeframe,
         image: {
           url: media?.url ?? "",
           alt: media?.alt ?? item.asset,

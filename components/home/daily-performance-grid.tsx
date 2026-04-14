@@ -2,21 +2,21 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Play } from "lucide-react";
 
-const assetLabels: Record<string, string> = {
-  nasdaq: "Nasdaq",
-  dowjones: "Dow Jones",
-  sp500: "S&P 500",
-  gold: "Gold",
-  dax40: "DAX 40",
-  eurusd: "EUR/USD",
-  bitcoin: "Bitcoin",
-  solana: "Solana",
+const assetMeta: Record<string, { name: string; defaultTimeframe: string }> = {
+  dax40: { name: "DAX 40", defaultTimeframe: "1 minute Chart" },
+  bitcoin: { name: "Bitcoin", defaultTimeframe: "1 hour Chart" },
+  eurusd: { name: "EUR/USD", defaultTimeframe: "15 minutes Chart" },
+  gold: { name: "Gold", defaultTimeframe: "3 minutes Chart" },
+  dowjones: { name: "Dow Jones", defaultTimeframe: "5 minutes Chart" },
+  nasdaq: { name: "Nasdaq", defaultTimeframe: "1 minute Chart" },
+  sp500: { name: "S&P 500", defaultTimeframe: "" },
+  solana: { name: "Solana", defaultTimeframe: "" },
 };
 
 interface Screenshot {
   asset: string;
+  timeframe?: string;
   image: {
     url: string;
     alt: string;
@@ -29,6 +29,14 @@ interface DailyPerformanceGridProps {
   screenshots: Screenshot[];
 }
 
+function getAssetName(asset: string) {
+  return assetMeta[asset]?.name ?? asset;
+}
+
+function getTimeframe(item: Screenshot) {
+  return item.timeframe ?? assetMeta[item.asset]?.defaultTimeframe ?? "";
+}
+
 export function DailyPerformanceGrid({
   screenshots,
 }: DailyPerformanceGridProps) {
@@ -36,39 +44,40 @@ export function DailyPerformanceGrid({
 
   return (
     <>
-      <div className="mt-6 md:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
-        {screenshots.map((item) => (
-          <button
-            key={item.asset}
-            type="button"
-            onClick={() => setSelectedImage(item)}
-            className="group rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden transition-all hover:border-zinc-600 hover:shadow-lg hover:shadow-blue-500/5 text-left"
-          >
-            <div className="relative aspect-[16/10] w-full">
-              <Image
-                src={item.image.url}
-                alt={item.image.alt || assetLabels[item.asset] || item.asset}
-                fill
-                className="object-cover transition-transform group-hover:scale-[1.02]"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              {/* Play icon overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-black/60 text-white transition-transform group-hover:scale-110">
-                  <Play
-                    className="h-5 w-5 md:h-6 md:w-6 ml-0.5"
-                    fill="currentColor"
-                  />
-                </div>
+      <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {screenshots.map((item) => {
+          const name = getAssetName(item.asset);
+          const timeframe = getTimeframe(item);
+
+          return (
+            <button
+              key={item.asset}
+              type="button"
+              onClick={() => setSelectedImage(item)}
+              className="group rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden transition-all hover:border-zinc-600 hover:shadow-lg hover:shadow-blue-500/5 text-left"
+            >
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  src={item.image.url}
+                  alt={item.image.alt || name}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-[1.02]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
-            </div>
-            <div className="px-3 py-2 md:px-4 md:py-3">
-              <span className="text-xs md:text-sm font-medium text-white">
-                {assetLabels[item.asset] || item.asset}
-              </span>
-            </div>
-          </button>
-        ))}
+              <div className="px-4 py-3">
+                <p className="text-sm md:text-base font-semibold text-white">
+                  {name}
+                </p>
+                {timeframe && (
+                  <p className="mt-0.5 text-xs md:text-sm text-zinc-400">
+                    {timeframe}
+                  </p>
+                )}
+              </div>
+            </button>
+          );
+        })}
       </div>
 
       {selectedImage && (
@@ -78,12 +87,17 @@ export function DailyPerformanceGrid({
           onKeyDown={(e) => e.key === "Escape" && setSelectedImage(null)}
           role="dialog"
           aria-modal="true"
-          aria-label={assetLabels[selectedImage.asset] || selectedImage.asset}
+          aria-label={getAssetName(selectedImage.asset)}
         >
           <div className="relative max-w-5xl w-full max-h-[90vh]">
             <div className="absolute -top-10 left-0 right-0 flex items-center justify-between">
               <span className="text-lg font-semibold text-white">
-                {assetLabels[selectedImage.asset] || selectedImage.asset}
+                {getAssetName(selectedImage.asset)}
+                {getTimeframe(selectedImage) && (
+                  <span className="ml-2 text-sm font-normal text-zinc-400">
+                    · {getTimeframe(selectedImage)}
+                  </span>
+                )}
               </span>
               <button
                 type="button"
@@ -95,11 +109,7 @@ export function DailyPerformanceGrid({
             </div>
             <Image
               src={selectedImage.image.url}
-              alt={
-                selectedImage.image.alt ||
-                assetLabels[selectedImage.asset] ||
-                selectedImage.asset
-              }
+              alt={selectedImage.image.alt || getAssetName(selectedImage.asset)}
               width={selectedImage.image.width || 1920}
               height={selectedImage.image.height || 1080}
               className="rounded-lg w-full h-auto max-h-[85vh] object-contain"

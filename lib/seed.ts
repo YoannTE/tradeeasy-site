@@ -206,18 +206,42 @@ async function seedFaqs(payload: Payload) {
 // ---------------------------------------------------------------------------
 
 const performanceImages = [
-  { asset: "nasdaq", file: "nasdaq.png", alt: "Nasdaq daily performance" },
+  {
+    asset: "dax40",
+    file: "dax40.png",
+    alt: "DAX 40 daily performance",
+    timeframe: "1 minute Chart",
+  },
+  {
+    asset: "bitcoin",
+    file: "bitcoin.png",
+    alt: "Bitcoin daily performance",
+    timeframe: "1 hour Chart",
+  },
+  {
+    asset: "eurusd",
+    file: "eur-usd.png",
+    alt: "EUR/USD daily performance",
+    timeframe: "15 minutes Chart",
+  },
+  {
+    asset: "gold",
+    file: "gold.png",
+    alt: "Gold daily performance",
+    timeframe: "3 minutes Chart",
+  },
   {
     asset: "dowjones",
     file: "dow-jones.png",
     alt: "Dow Jones daily performance",
+    timeframe: "5 minutes Chart",
   },
-  { asset: "sp500", file: "s-p500.png", alt: "S&P 500 daily performance" },
-  { asset: "gold", file: "gold.png", alt: "Gold daily performance" },
-  { asset: "dax40", file: "dax40.png", alt: "DAX 40 daily performance" },
-  { asset: "eurusd", file: "eur-usd.png", alt: "EUR/USD daily performance" },
-  { asset: "bitcoin", file: "bitcoin.png", alt: "Bitcoin daily performance" },
-  { asset: "solana", file: "solana.png", alt: "Solana daily performance" },
+  {
+    asset: "nasdaq",
+    file: "nasdaq.png",
+    alt: "Nasdaq daily performance",
+    timeframe: "1 minute Chart",
+  },
 ];
 
 async function seedDailyPerformance(payload: Payload) {
@@ -227,7 +251,11 @@ async function seedDailyPerformance(payload: Payload) {
   });
   if (existing.docs.length > 0) return;
 
-  const screenshots: { asset: string; image: number | string }[] = [];
+  const screenshots: {
+    asset: string;
+    timeframe?: string;
+    image: number | string;
+  }[] = [];
 
   for (const img of performanceImages) {
     const filePath = path.resolve(
@@ -254,7 +282,11 @@ async function seedDailyPerformance(payload: Payload) {
       },
     });
 
-    screenshots.push({ asset: img.asset, image: media.id });
+    screenshots.push({
+      asset: img.asset,
+      timeframe: img.timeframe,
+      image: media.id,
+    });
   }
 
   if (screenshots.length > 0) {

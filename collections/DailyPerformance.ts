@@ -2,13 +2,13 @@ import type { CollectionConfig } from "payload";
 import { publicReadAccess, adminOnlyAccess } from "./access/admin-only";
 
 const assetOptions = [
-  { label: "Nasdaq", value: "nasdaq" },
-  { label: "Dow Jones", value: "dowjones" },
-  { label: "S&P 500", value: "sp500" },
-  { label: "Gold", value: "gold" },
   { label: "DAX 40", value: "dax40" },
-  { label: "EUR/USD", value: "eurusd" },
   { label: "Bitcoin", value: "bitcoin" },
+  { label: "EUR/USD", value: "eurusd" },
+  { label: "Gold", value: "gold" },
+  { label: "Dow Jones", value: "dowjones" },
+  { label: "Nasdaq", value: "nasdaq" },
+  { label: "S&P 500", value: "sp500" },
   { label: "Solana", value: "solana" },
 ];
 
@@ -48,9 +48,10 @@ export const DailyPerformance: CollectionConfig = {
       label: "Screenshots",
       required: true,
       minRows: 1,
-      maxRows: 8,
+      maxRows: 6,
       admin: {
-        description: "Add one screenshot per asset (up to 8).",
+        description:
+          "Add up to 6 screenshots (3 per row, 2 rows) — one per asset.",
       },
       fields: [
         {
@@ -59,6 +60,16 @@ export const DailyPerformance: CollectionConfig = {
           label: "Asset",
           required: true,
           options: assetOptions,
+        },
+        {
+          name: "timeframe",
+          type: "text",
+          label: "Chart timeframe",
+          admin: {
+            placeholder: "e.g. 1 minute Chart",
+            description:
+              "Optional. If left empty, a default timeframe will be shown for the selected asset.",
+          },
         },
         {
           name: "image",
