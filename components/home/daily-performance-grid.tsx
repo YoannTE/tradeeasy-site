@@ -55,12 +55,12 @@ export function DailyPerformanceGrid({
               onClick={() => setSelectedImage(item)}
               className="group rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden transition-all hover:border-zinc-600 hover:shadow-lg hover:shadow-blue-500/5 text-left"
             >
-              <div className="relative aspect-[16/10] w-full">
+              <div className="relative aspect-[3/2] w-full bg-zinc-950">
                 <Image
                   src={item.image.url}
                   alt={item.image.alt || name}
                   fill
-                  className="object-cover transition-transform group-hover:scale-[1.02]"
+                  className="object-contain transition-transform group-hover:scale-[1.02]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
