@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const assetMeta: Record<string, { name: string; timeframe: string }> = {
-  dax40: { name: "DAX 40", timeframe: "1 minute Chart" },
+  dax40: { name: "Dax", timeframe: "1 minute Chart" },
   bitcoin: { name: "Bitcoin", timeframe: "1 hour Chart" },
   eurusd: { name: "EUR/USD", timeframe: "15 minutes Chart" },
   gold: { name: "Gold", timeframe: "3 minutes Chart" },
