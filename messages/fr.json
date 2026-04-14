@@ -83,6 +83,14 @@
     "poweredBy": "Sources d'actualités publiques · Les liens redirigent vers les articles originaux",
     "timePrefix": "il y a",
     "timeSuffix": "",
+    "dailyBrief": {
+      "title": "Brief du jour",
+      "catalystLabel": "Le catalyseur du jour",
+      "catalystBody": "CPI US à 14h30 🔥 C'est LE rendez-vous. Attendez-vous à une volatilité élevée sur SP500, Nasdaq, dollar et crypto dans les minutes qui suivent la publication. Pas de position agressive sans stop serré avant 14h30.",
+      "contextLabel": "Contexte géopolitique",
+      "contextSubtitle": "toile de fond dominante",
+      "contextBody": "L'armée américaine a commencé à bloquer les ports iraniens après l'échec des pourparlers du week-end à Islamabad, mais Washington maintient la porte du dialogue ouverte. Résultat : optimisme prudent, recul du pétrole, légère baisse du dollar et stabilité des rendements obligataires. Le Brent était au-dessus de 100 $ lundi, il redescend ce matin. Tout titre énergie / transport / luxe reste hypersensible à chaque headline sur Ormuz."
+    },
     "news1": "La Fed signale de possibles ajustements de taux face à l'incertitude économique",
     "news2": "L'EUR/USD se consolide près d'un support clé alors que le dollar se renforce",
     "news3": "Le Bitcoin dépasse les 95 000 $ porté par les achats institutionnels",

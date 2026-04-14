@@ -18,8 +18,8 @@ export async function TradingViewSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Text */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-4 py-1 text-sm text-amber-400 mb-4">
-              <Bell className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-5 py-1.5 text-base md:text-lg font-medium text-amber-400 mb-4">
+              <Bell className="h-5 w-5" />
               Real-Time Alerts
             </div>
             <h2 className="text-2xl md:text-4xl font-bold text-white">

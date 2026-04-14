@@ -12,8 +12,8 @@ export async function AffiliatePreviewSection() {
     <section className="py-12 md:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-amber-500/20 bg-gradient-to-br from-zinc-900 to-zinc-800 p-8 md:p-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-4 py-1 text-sm text-amber-400 mb-4">
-            <DollarSign className="h-4 w-4" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-5 py-1.5 text-base md:text-lg font-medium text-amber-400 mb-4">
+            <DollarSign className="h-5 w-5" />
             {t("badge")}
           </div>
 

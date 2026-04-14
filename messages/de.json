@@ -83,6 +83,14 @@
     "poweredBy": "Bereitgestellt von öffentlichen Nachrichtenquellen · Links führen zu den Originalartikeln",
     "timePrefix": "vor ",
     "timeSuffix": "",
+    "dailyBrief": {
+      "title": "Briefing des Tages",
+      "catalystLabel": "Der Katalysator des Tages",
+      "catalystBody": "US-VPI um 14:30 Uhr 🔥 DAS Ereignis. Erwarten Sie hohe Volatilität bei SP500, Nasdaq, Dollar und Krypto in den Minuten nach der Veröffentlichung. Keine aggressiven Positionen ohne engen Stop vor 14:30 Uhr.",
+      "contextLabel": "Geopolitischer Kontext",
+      "contextSubtitle": "dominante Rahmenbedingung",
+      "contextBody": "Das US-Militär hat nach dem Scheitern der Wochenendgespräche in Islamabad begonnen, iranische Häfen zu blockieren, doch Washington hält die Tür zum Dialog offen. Ergebnis: vorsichtiger Optimismus, fallender Ölpreis, leichte Dollarschwäche und stabile Anleiherenditen. Brent lag am Montag über 100 $ und gibt heute Morgen nach. Jeder Titel aus den Bereichen Energie / Transport / Luxus bleibt hochsensibel auf jede Schlagzeile zu Hormus."
+    },
     "news1": "Fed signalisiert mögliche Zinsanpassungen bei wirtschaftlicher Unsicherheit",
     "news2": "EUR/USD konsolidiert nahe wichtiger Unterstützung bei stärkerem Dollar",
     "news3": "Bitcoin steigt über $95K durch institutionellen Kaufdruck",

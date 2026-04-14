@@ -83,6 +83,14 @@
     "poweredBy": "Impulsado por fuentes de noticias públicas · Los enlaces redirigen a los artículos originales",
     "timePrefix": "hace ",
     "timeSuffix": "",
+    "dailyBrief": {
+      "title": "Resumen del día",
+      "catalystLabel": "El catalizador del día",
+      "catalystBody": "IPC de EE. UU. a las 14:30 🔥 LA cita clave. Espera alta volatilidad en SP500, Nasdaq, dólar y cripto en los minutos posteriores a la publicación. Nada de posiciones agresivas sin stop ajustado antes de las 14:30.",
+      "contextLabel": "Contexto geopolítico",
+      "contextSubtitle": "telón de fondo dominante",
+      "contextBody": "El ejército de EE. UU. ha comenzado a bloquear puertos iraníes tras el fracaso de las conversaciones del fin de semana en Islamabad, pero Washington mantiene abierta la puerta al diálogo. Resultado: optimismo prudente, retroceso del petróleo, ligera caída del dólar y estabilidad en los rendimientos de los bonos. El Brent estaba por encima de 100 $ el lunes y retrocede esta mañana. Cualquier valor de energía / transporte / lujo sigue siendo hipersensible a cada titular sobre Ormuz."
+    },
     "news1": "La Fed señala posibles ajustes de tasas en medio de incertidumbre económica",
     "news2": "EUR/USD se consolida cerca de soporte clave mientras el dólar se fortalece",
     "news3": "Bitcoin supera los $95K impulsado por compras institucionales",

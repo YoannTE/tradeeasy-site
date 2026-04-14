@@ -83,6 +83,14 @@
     "poweredBy": "Powered by public news sources · Links redirect to original articles",
     "timePrefix": "",
     "timeSuffix": "ago",
+    "dailyBrief": {
+      "title": "Today's Brief",
+      "catalystLabel": "Today's catalyst",
+      "catalystBody": "US CPI at 2:30 PM 🔥 THE key event. Expect high volatility on SP500, Nasdaq, dollar and crypto in the minutes following the release. No aggressive positions without tight stops before 2:30 PM.",
+      "contextLabel": "Geopolitical context",
+      "contextSubtitle": "dominant backdrop",
+      "contextBody": "The US military has begun blockading Iranian ports after the weekend talks in Islamabad failed, but Washington keeps the door to dialogue open. Result: cautious optimism, oil pulling back, mild dollar weakness and stable bond yields. Brent was above $100 Monday and is easing this morning. Any energy / transport / luxury name remains hypersensitive to every headline on Hormuz."
+    },
     "news1": "Fed Signals Potential Rate Adjustments Amid Economic Uncertainty",
     "news2": "EUR/USD Consolidates Near Key Support as Dollar Strengthens",
     "news3": "Bitcoin Surges Past $95K on Institutional Buying Momentum",

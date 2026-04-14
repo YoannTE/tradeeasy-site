@@ -38,14 +38,14 @@ export default function HomePage() {
     <>
       <ProductJsonLd />
       <HeroSection />
-      <FeaturesSection />
-      <TradingViewSection />
       <MarketNewsSection />
+      <FeaturesSection />
+      <AffiliatePreviewSection />
+      <TradingViewSection />
       <TestimonialsSection />
       <LivePerformanceSection />
       <HowItWorksSection />
       <PricingPreviewSection />
-      <AffiliatePreviewSection />
       <CtaSection />
     </>
   );

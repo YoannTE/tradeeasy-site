@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Newspaper } from "lucide-react";
 import { placeholderNews } from "./market-news-data";
 import { NewsItem } from "./news-item";
+import { DailyBriefCard } from "./daily-brief-card";
 
 export async function MarketNewsSection() {
   const t = await getTranslations("marketNews");
@@ -18,6 +19,8 @@ export async function MarketNewsSection() {
         <p className="mt-4 text-center text-zinc-400 max-w-2xl mx-auto">
           {t("subtitle")}
         </p>
+
+        <DailyBriefCard />
 
         <div className="mt-10 max-w-4xl mx-auto rounded-xl border border-zinc-800 bg-zinc-900 p-6">
           <div className="flex flex-col">
