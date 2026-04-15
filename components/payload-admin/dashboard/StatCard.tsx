@@ -4,28 +4,33 @@ interface StatCardProps {
   label: string;
   value: string | number;
   hint?: string;
-  tone?: "default" | "success" | "warning" | "danger";
+  trend?: string;
+  icon: React.ReactNode;
+  tone?: "indigo" | "emerald" | "amber" | "rose" | "sky";
 }
-
-const toneColors: Record<NonNullable<StatCardProps["tone"]>, string> = {
-  default: "var(--theme-elevation-800)",
-  success: "#16a34a",
-  warning: "#d97706",
-  danger: "#dc2626",
-};
 
 export const StatCard: React.FC<StatCardProps> = ({
   label,
   value,
   hint,
-  tone = "default",
+  trend,
+  icon,
+  tone = "indigo",
 }) => (
   <div className="sp-stat-card">
-    <div className="sp-stat-card__label">{label}</div>
-    <div className="sp-stat-card__value" style={{ color: toneColors[tone] }}>
-      {value}
+    <div className={`sp-stat-card__icon sp-stat-card__icon--${tone}`}>
+      {icon}
     </div>
-    {hint ? <div className="sp-stat-card__hint">{hint}</div> : null}
+    <div className="sp-stat-card__body">
+      <div className="sp-stat-card__label">{label}</div>
+      <div className="sp-stat-card__value">{value}</div>
+      {trend ? (
+        <div className={`sp-stat-card__trend sp-stat-card__trend--${tone}`}>
+          {trend}
+        </div>
+      ) : null}
+      {hint ? <div className="sp-stat-card__hint">{hint}</div> : null}
+    </div>
   </div>
 );
 
