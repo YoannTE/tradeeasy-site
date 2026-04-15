@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import type { DashboardStats } from "./stats";
 
 interface RecentUsersTableProps {
@@ -38,9 +39,9 @@ export const RecentUsersTable: React.FC<RecentUsersTableProps> = ({
     <div className="sp-panel">
       <div className="sp-panel__header">
         <h3 className="sp-panel__title">Dernières inscriptions</h3>
-        <a href="/admin/collections/users" className="sp-panel__link">
+        <Link href="/admin/collections/users" className="sp-panel__link">
           Voir tous
-        </a>
+        </Link>
       </div>
       <div className="sp-table">
         <div className="sp-table__row sp-table__row--head">
@@ -49,7 +50,7 @@ export const RecentUsersTable: React.FC<RecentUsersTableProps> = ({
           <div>Inscrit le</div>
         </div>
         {users.map((user) => (
-          <a
+          <Link
             key={user.id}
             href={`/admin/collections/users/${user.id}`}
             className="sp-table__row sp-table__row--link"
@@ -57,7 +58,7 @@ export const RecentUsersTable: React.FC<RecentUsersTableProps> = ({
             <div>{displayName(user)}</div>
             <div className="sp-table__email">{user.email}</div>
             <div className="sp-table__muted">{formatDate(user.createdAt)}</div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
