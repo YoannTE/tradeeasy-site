@@ -15,7 +15,12 @@
 
 # next.js
 /.next/
+/.next-old-*/
 /out/
+
+# claude code local state
+/.claude/agent-memory/
+/.claude/scheduled_tasks.lock
 
 # production
 /build
