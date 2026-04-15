@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: "https://simplifypro.com/login",
+      url: "https://simplify-pro.com/login",
       siteName: "SimplifyPro",
       type: "website",
     },

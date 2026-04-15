@@ -1,7 +1,7 @@
 {
   "promoBanner": {
     "badge": "Offre de lancement",
-    "discount": "50% DE RÉDUCTION — Code :",
+    "discount": "50% DE RÉDUCTION",
     "cta": "Profiter de l'offre →",
     "days": "Jours",
     "hrs": "Hrs",
@@ -166,14 +166,18 @@
     "subtitle": "Pas de frais cachés. Résiliation à tout moment.",
     "monthly": {
       "name": "Mensuel",
-      "price": "49 $",
+      "originalPrice": "49 $",
+      "price": "24,50 $",
       "period": "/mois",
+      "discountBadge": "-50%",
       "cta": "Choisir le mensuel"
     },
     "annual": {
       "name": "Annuel",
-      "price": "349 $",
+      "originalPrice": "349 $",
+      "price": "174,50 $",
       "period": "/an",
+      "discountBadge": "-50%",
       "save": "Économisez 40 % vs le mensuel",
       "badge": "MEILLEUR CHOIX",
       "bonus": "2 mois offerts",
@@ -227,17 +231,21 @@
     "subtitle": "Essai gratuit de 7 jours. Résiliation à tout moment.",
     "monthly": {
       "name": "Mensuel",
-      "price": "49 $",
+      "originalPrice": "49 $",
+      "price": "24,50 $",
       "period": "/mois",
+      "discountBadge": "-50%",
       "billing": "Facturation mensuelle",
       "cta": "Essai gratuit de 7 jours",
       "note": "Carte bancaire requise. Résiliation à tout moment."
     },
     "annual": {
       "name": "Annuel",
-      "price": "349 $",
+      "originalPrice": "349 $",
+      "price": "174,50 $",
       "period": "/an",
-      "perMonth": "29 $/mois",
+      "perMonth": "14,50 $/mois",
+      "discountBadge": "-50%",
       "save": "Économisez 40 %",
       "badge": "MEILLEUR CHOIX",
       "billing": "Facturation annuelle",
@@ -258,12 +266,6 @@
       "text": "Garantie satisfait ou remboursé 14 jours",
       "subtext": "Pas satisfait ? Obtenez un remboursement intégral dans les 14 jours suivant votre premier paiement. Sans condition."
     },
-    "promo": {
-      "label": "Vous avez un code promo ?",
-      "placeholder": "Entrez votre code promo",
-      "apply": "Appliquer",
-      "toast": "Les codes promo seront bientôt disponibles"
-    },
     "faq": {
       "title": "Questions fréquentes",
       "items": {
@@ -273,7 +275,7 @@
         },
         "afterTrial": {
           "question": "Que se passe-t-il après la fin de l'essai ?",
-          "answer": "Votre carte est automatiquement débitée de 49 $/mois ou 349 $/an selon la formule choisie. Vous pouvez résilier à tout moment avant la fin de l'essai pour ne rien payer."
+          "answer": "Votre carte est automatiquement débitée de 24,50 $/mois ou 174,50 $/an selon la formule choisie. Vous pouvez résilier à tout moment avant la fin de l'essai pour ne rien payer."
         },
         "guarantee": {
           "question": "Y a-t-il une garantie satisfait ou remboursé ?",
@@ -396,7 +398,7 @@
       },
       "section3": {
         "title": "3. Abonnement et paiement",
-        "content": "SimplifyPro propose deux formules d'abonnement : Mensuel à 49 $/mois et Annuel à 349 $/an. Tous les nouveaux abonnements incluent un essai gratuit de 7 jours. Une carte bancaire valide est requise pour commencer l'essai. Vous serez débité automatiquement à la fin de la période d'essai sauf si vous annulez avant."
+        "content": "SimplifyPro propose deux formules d'abonnement : Mensuel à 24,50 $/mois et Annuel à 174,50 $/an. Tous les nouveaux abonnements incluent un essai gratuit de 7 jours. Une carte bancaire valide est requise pour commencer l'essai. Vous serez débité automatiquement à la fin de la période d'essai sauf si vous annulez avant."
       },
       "section4": {
         "title": "4. Résiliation et remboursements",
@@ -612,8 +614,8 @@
       "noSubscription": "Aucun abonnement actif.",
       "viewPlans": "Voir les formules →",
       "planLabel": "Formule :",
-      "monthly": "Mensuel — 49 $/mois",
-      "annual": "Annuel — 349 $/an",
+      "monthly": "Mensuel — 24,50 $/mois",
+      "annual": "Annuel — 174,50 $/an",
       "trialEnds": "Fin de l'essai :",
       "daysRemaining": "{count} jours restants",
       "nextRenewal": "Prochain renouvellement :",
@@ -799,7 +801,7 @@
     },
     "pricing": {
       "title": "Tarifs — SimplifyPro",
-      "description": "Choisissez votre formule SimplifyPro. Essai gratuit de 7 jours. Mensuel à 49 $/mois ou Annuel à 349 $/an avec 40 % d'économie."
+      "description": "Choisissez votre formule SimplifyPro. Essai gratuit de 7 jours. Mensuel à 24,50 $/mois ou Annuel à 174,50 $/an avec 40 % d'économie."
     },
     "videos": {
       "title": "Vidéos et tutoriels — SimplifyPro",

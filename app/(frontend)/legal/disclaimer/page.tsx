@@ -16,7 +16,7 @@ export async function generateMetadata() {
     openGraph: {
       title,
       description,
-      url: "https://simplifypro.com/legal/disclaimer",
+      url: "https://simplify-pro.com/legal/disclaimer",
       siteName: "SimplifyPro",
       type: "website",
     },

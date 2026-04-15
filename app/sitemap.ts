@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://simplifypro.com";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://simplify-pro.com";
 
   return [
     {

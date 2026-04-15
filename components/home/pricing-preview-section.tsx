@@ -31,11 +31,19 @@ export async function PricingPreviewSection() {
 
         <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           {/* Monthly Card */}
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-5 md:p-8">
-            <h3 className="text-xl font-semibold text-white">
-              {t("monthly.name")}
-            </h3>
-            <div className="mt-4">
+          <div className="relative rounded-2xl border border-zinc-800 bg-zinc-900 p-5 md:p-8">
+            <div className="flex items-center justify-between gap-2">
+              <h3 className="text-xl font-semibold text-white">
+                {t("monthly.name")}
+              </h3>
+              <span className="rounded-full bg-red-500/15 px-4 py-1.5 text-base md:text-lg font-bold text-red-400 ring-1 ring-red-500/40">
+                {t("monthly.discountBadge")}
+              </span>
+            </div>
+            <div className="mt-4 flex items-baseline gap-3 flex-wrap">
+              <span className="text-xl md:text-2xl font-semibold text-zinc-500 line-through">
+                {t("monthly.originalPrice")}
+              </span>
               <span className="text-3xl md:text-4xl font-extrabold text-white">
                 {t("monthly.price")}
               </span>
@@ -64,16 +72,24 @@ export async function PricingPreviewSection() {
             <span className="absolute -top-3 right-6 rotate-12 rounded-full bg-blue-500 px-3 py-1 text-xs font-bold text-white">
               {t("annual.badge")}
             </span>
-            <h3 className="text-xl font-semibold text-white">
-              {t("annual.name")}
-            </h3>
-            <div className="mt-4">
+            <div className="flex items-center justify-between gap-2">
+              <h3 className="text-xl font-semibold text-white">
+                {t("annual.name")}
+              </h3>
+              <span className="rounded-full bg-red-500/15 px-4 py-1.5 text-base md:text-lg font-bold text-red-400 ring-1 ring-red-500/40">
+                {t("annual.discountBadge")}
+              </span>
+            </div>
+            <div className="mt-4 flex items-baseline gap-3 flex-wrap">
+              <span className="text-xl md:text-2xl font-semibold text-zinc-500 line-through">
+                {t("annual.originalPrice")}
+              </span>
               <span className="text-3xl md:text-4xl font-extrabold text-white">
                 {t("annual.price")}
               </span>
               <span className="text-zinc-400">{t("annual.period")}</span>
             </div>
-            <p className="mt-1 text-sm text-blue-400">{t("annual.save")}</p>
+            <p className="mt-2 text-sm text-blue-400">{t("annual.save")}</p>
             <ul className="mt-6 space-y-3">
               {annualFeatureKeys.map((key) => (
                 <li key={key} className="flex items-center gap-3">

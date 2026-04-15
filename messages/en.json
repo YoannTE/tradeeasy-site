@@ -1,7 +1,7 @@
 {
   "promoBanner": {
     "badge": "Launch Offer",
-    "discount": "50% OFF — Code:",
+    "discount": "50% OFF",
     "cta": "Claim Offer →",
     "days": "Days",
     "hrs": "Hrs",
@@ -156,7 +156,7 @@
       {
         "name": "Ana C.",
         "role": "Swing Trader — Stocks & ETFs",
-        "content": "I was paying $150/month for another premium indicator that gave me the same results as free ones. Switched to SimplifyPro at $49 and my results actually improved. The alerts on my phone are a game changer for swing trading.",
+        "content": "I was paying $150/month for another premium indicator that gave me the same results as free ones. Switched to SimplifyPro at $24.50 and my results actually improved. The alerts on my phone are a game changer for swing trading.",
         "rating": 4
       }
     ]
@@ -166,14 +166,18 @@
     "subtitle": "No hidden fees. Cancel anytime.",
     "monthly": {
       "name": "Monthly",
-      "price": "$49",
+      "originalPrice": "$49",
+      "price": "$24.50",
       "period": "/month",
+      "discountBadge": "-50%",
       "cta": "Select Monthly"
     },
     "annual": {
       "name": "Annual",
-      "price": "$349",
+      "originalPrice": "$349",
+      "price": "$174.50",
       "period": "/year",
+      "discountBadge": "-50%",
       "save": "Save 40% vs Monthly",
       "badge": "BEST VALUE",
       "bonus": "2 Months Free",
@@ -227,17 +231,21 @@
     "subtitle": "Start your 7-day free trial. Cancel anytime.",
     "monthly": {
       "name": "Monthly",
-      "price": "$49",
+      "originalPrice": "$49",
+      "price": "$24.50",
       "period": "/month",
+      "discountBadge": "-50%",
       "billing": "Billed monthly",
       "cta": "Start 7-Day Free Trial",
       "note": "Credit card required. Cancel anytime."
     },
     "annual": {
       "name": "Annual",
-      "price": "$349",
+      "originalPrice": "$349",
+      "price": "$174.50",
       "period": "/year",
-      "perMonth": "$29/mo",
+      "perMonth": "$14.50/mo",
+      "discountBadge": "-50%",
       "save": "Save 40%",
       "badge": "BEST VALUE",
       "billing": "Billed annually",
@@ -258,12 +266,6 @@
       "text": "14-Day Money-Back Guarantee",
       "subtext": "Not satisfied? Get a full refund within 14 days of your first payment. No questions asked."
     },
-    "promo": {
-      "label": "Have a promo code?",
-      "placeholder": "Enter promo code",
-      "apply": "Apply",
-      "toast": "Promo codes will be available soon"
-    },
     "faq": {
       "title": "Frequently Asked Questions",
       "items": {
@@ -273,7 +275,7 @@
         },
         "afterTrial": {
           "question": "What happens after my trial ends?",
-          "answer": "Your card is automatically charged $49/mo or $349/year depending on your chosen plan. You can cancel anytime before the trial ends to avoid any charge."
+          "answer": "Your card is automatically charged $24.50/mo or $174.50/year depending on your chosen plan. You can cancel anytime before the trial ends to avoid any charge."
         },
         "guarantee": {
           "question": "Is there a money-back guarantee?",
@@ -396,7 +398,7 @@
       },
       "section3": {
         "title": "3. Subscription and Payment",
-        "content": "SimplifyPro offers two subscription plans: Monthly at $49/month and Annual at $349/year. All new subscriptions include a 7-day free trial. A valid credit card is required to start the trial. You will be charged automatically at the end of the trial period unless you cancel before it ends."
+        "content": "SimplifyPro offers two subscription plans: Monthly at $24.50/month and Annual at $174.50/year. All new subscriptions include a 7-day free trial. A valid credit card is required to start the trial. You will be charged automatically at the end of the trial period unless you cancel before it ends."
       },
       "section4": {
         "title": "4. Cancellation and Refunds",
@@ -608,8 +610,8 @@
       "noSubscription": "No active subscription.",
       "viewPlans": "View plans →",
       "planLabel": "Plan:",
-      "monthly": "Monthly — $49/mo",
-      "annual": "Annual — $349/year",
+      "monthly": "Monthly — $24.50/mo",
+      "annual": "Annual — $174.50/year",
       "trialEnds": "Trial ends:",
       "daysRemaining": "{count} days remaining",
       "nextRenewal": "Next renewal:",
@@ -794,7 +796,7 @@
     },
     "pricing": {
       "title": "Pricing — SimplifyPro",
-      "description": "Choose your SimplifyPro plan. Start with a 7-day free trial. Monthly at $49/mo or Annual at $349/year with 40% savings."
+      "description": "Choose your SimplifyPro plan. Start with a 7-day free trial. Monthly at $24.50/mo or Annual at $174.50/year with 40% savings."
     },
     "videos": {
       "title": "Videos & Tutorials — SimplifyPro",

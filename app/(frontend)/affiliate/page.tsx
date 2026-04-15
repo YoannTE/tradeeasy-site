@@ -14,7 +14,7 @@ export async function generateMetadata() {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "https://simplifypro.com/affiliate",
+      url: "https://simplify-pro.com/affiliate",
       siteName: "SimplifyPro",
       type: "website",
     },

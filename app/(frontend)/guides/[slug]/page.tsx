@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps) {
     openGraph: {
       title,
       description,
-      url: `https://simplifypro.com/guides/${slug}`,
+      url: `https://simplify-pro.com/guides/${slug}`,
       siteName: "SimplifyPro",
       type: "article",
     },

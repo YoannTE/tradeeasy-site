@@ -12,9 +12,9 @@ export async function ProductJsonLd() {
     operatingSystem: "Web",
     offers: {
       "@type": "Offer",
-      price: "49",
+      price: "24.50",
       priceCurrency: "USD",
-      url: "https://simplifypro.com/pricing",
+      url: "https://simplify-pro.com/pricing",
     },
   };
 

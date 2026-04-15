@@ -71,9 +71,6 @@ export function PromoBanner() {
             {t("badge")}
           </span>
           <span>{t("discount")}</span>
-          <span className="rounded bg-white/25 px-2.5 py-1 font-mono font-bold tracking-widest text-base md:text-lg">
-            LAUNCH
-          </span>
         </div>
 
         {/* Countdown */}

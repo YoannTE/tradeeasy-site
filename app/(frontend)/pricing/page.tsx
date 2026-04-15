@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { PricingCards } from "@/components/pricing/pricing-cards";
 import { GuaranteeBadge } from "@/components/pricing/guarantee-badge";
-import { PromoCodeInput } from "@/components/pricing/promo-code-input";
 import { PricingFaq } from "@/components/pricing/pricing-faq";
 import { FaqJsonLd } from "@/components/seo/faq-json-ld";
 
@@ -15,7 +14,7 @@ export async function generateMetadata() {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "https://simplifypro.com/pricing",
+      url: "https://simplify-pro.com/pricing",
       siteName: "SimplifyPro",
       type: "website",
     },
@@ -42,7 +41,6 @@ export default async function PricingPage() {
 
       <PricingCards />
       <GuaranteeBadge />
-      <PromoCodeInput />
       <PricingFaq />
     </section>
   );

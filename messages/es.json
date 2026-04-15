@@ -1,7 +1,7 @@
 {
   "promoBanner": {
     "badge": "Oferta de lanzamiento",
-    "discount": "50% DE DESCUENTO — Código:",
+    "discount": "50% DE DESCUENTO",
     "cta": "Aprovechar oferta →",
     "days": "Días",
     "hrs": "Hrs",
@@ -156,7 +156,7 @@
       {
         "name": "Ana C.",
         "role": "Swing Trader — Acciones & ETFs",
-        "content": "Pagaba $150/mes por otro indicador premium que me daba los mismos resultados que los gratuitos. Cambié a SimplifyPro por $49 y mis resultados mejoraron. Las alertas en el móvil son clave para el swing trading.",
+        "content": "Pagaba $150/mes por otro indicador premium que me daba los mismos resultados que los gratuitos. Cambié a SimplifyPro por $24.50 y mis resultados mejoraron. Las alertas en el móvil son clave para el swing trading.",
         "rating": 4
       }
     ]
@@ -166,14 +166,18 @@
     "subtitle": "Sin comisiones ocultas. Cancela en cualquier momento.",
     "monthly": {
       "name": "Mensual",
-      "price": "$49",
+      "originalPrice": "$49",
+      "price": "$24.50",
       "period": "/mes",
+      "discountBadge": "-50%",
       "cta": "Seleccionar Mensual"
     },
     "annual": {
       "name": "Anual",
-      "price": "$349",
+      "originalPrice": "$349",
+      "price": "$174.50",
       "period": "/año",
+      "discountBadge": "-50%",
       "save": "Ahorra 40% vs Mensual",
       "badge": "MEJOR VALOR",
       "bonus": "2 Meses Gratis",
@@ -227,17 +231,21 @@
     "subtitle": "Comienza tu prueba gratuita de 7 días. Cancela en cualquier momento.",
     "monthly": {
       "name": "Mensual",
-      "price": "$49",
+      "originalPrice": "$49",
+      "price": "$24.50",
       "period": "/mes",
+      "discountBadge": "-50%",
       "billing": "Facturación mensual",
       "cta": "Comenzar Prueba Gratuita de 7 Días",
       "note": "Se requiere tarjeta de crédito. Cancela en cualquier momento."
     },
     "annual": {
       "name": "Anual",
-      "price": "$349",
+      "originalPrice": "$349",
+      "price": "$174.50",
       "period": "/año",
-      "perMonth": "$29/mes",
+      "perMonth": "$14.50/mes",
+      "discountBadge": "-50%",
       "save": "Ahorra 40%",
       "badge": "MEJOR VALOR",
       "billing": "Facturación anual",
@@ -258,12 +266,6 @@
       "text": "Garantía de Reembolso de 14 Días",
       "subtext": "¿No estás satisfecho? Obtén un reembolso completo dentro de los 14 días posteriores a tu primer pago. Sin preguntas."
     },
-    "promo": {
-      "label": "¿Tienes un código promocional?",
-      "placeholder": "Ingresa el código promocional",
-      "apply": "Aplicar",
-      "toast": "Los códigos promocionales estarán disponibles pronto"
-    },
     "faq": {
       "title": "Preguntas Frecuentes",
       "items": {
@@ -273,7 +275,7 @@
         },
         "afterTrial": {
           "question": "¿Qué sucede después de que termina mi prueba?",
-          "answer": "Se cargará automáticamente $49/mes o $349/año a tu tarjeta, según el plan que hayas elegido. Puedes cancelar en cualquier momento antes de que termine la prueba para evitar cualquier cargo."
+          "answer": "Se cargará automáticamente $24.50/mes o $174.50/año a tu tarjeta, según el plan que hayas elegido. Puedes cancelar en cualquier momento antes de que termine la prueba para evitar cualquier cargo."
         },
         "guarantee": {
           "question": "¿Hay garantía de reembolso?",
@@ -396,7 +398,7 @@
       },
       "section3": {
         "title": "3. Suscripción y Pago",
-        "content": "SimplifyPro ofrece dos planes de suscripción: Mensual a $49/mes y Anual a $349/año. Todas las nuevas suscripciones incluyen una prueba gratuita de 7 días. Se requiere una tarjeta de crédito válida para iniciar la prueba. Se te cobrará automáticamente al final del período de prueba a menos que canceles antes de que termine."
+        "content": "SimplifyPro ofrece dos planes de suscripción: Mensual a $24.50/mes y Anual a $174.50/año. Todas las nuevas suscripciones incluyen una prueba gratuita de 7 días. Se requiere una tarjeta de crédito válida para iniciar la prueba. Se te cobrará automáticamente al final del período de prueba a menos que canceles antes de que termine."
       },
       "section4": {
         "title": "4. Cancelación y Reembolsos",
@@ -608,8 +610,8 @@
       "noSubscription": "Sin suscripción activa.",
       "viewPlans": "Ver planes →",
       "planLabel": "Plan:",
-      "monthly": "Mensual — $49/mes",
-      "annual": "Anual — $349/año",
+      "monthly": "Mensual — $24.50/mes",
+      "annual": "Anual — $174.50/año",
       "trialEnds": "La prueba termina:",
       "daysRemaining": "{count} días restantes",
       "nextRenewal": "Próxima renovación:",
@@ -794,7 +796,7 @@
     },
     "pricing": {
       "title": "Precios — SimplifyPro",
-      "description": "Elige tu plan de SimplifyPro. Comienza con una prueba gratuita de 7 días. Mensual a $49/mes o Anual a $349/año con un 40% de ahorro."
+      "description": "Elige tu plan de SimplifyPro. Comienza con una prueba gratuita de 7 días. Mensual a $24.50/mes o Anual a $174.50/año con un 40% de ahorro."
     },
     "videos": {
       "title": "Videos y Tutoriales — SimplifyPro",

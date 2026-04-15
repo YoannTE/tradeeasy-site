@@ -21,7 +21,7 @@ export async function generateMetadata() {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "https://simplifypro.com",
+      url: "https://simplify-pro.com",
       siteName: "SimplifyPro",
       type: "website",
     },
@@ -38,12 +38,12 @@ export default function HomePage() {
     <>
       <ProductJsonLd />
       <HeroSection />
+      <LivePerformanceSection />
       <MarketNewsSection />
       <FeaturesSection />
       <AffiliatePreviewSection />
       <TradingViewSection />
       <TestimonialsSection />
-      <LivePerformanceSection />
       <HowItWorksSection />
       <PricingPreviewSection />
       <CtaSection />

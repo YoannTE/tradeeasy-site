@@ -1,7 +1,7 @@
 {
   "promoBanner": {
     "badge": "Startangebot",
-    "discount": "50% RABATT — Code:",
+    "discount": "50% RABATT",
     "cta": "Angebot sichern →",
     "days": "Tage",
     "hrs": "Std",
@@ -166,14 +166,18 @@
     "subtitle": "Keine versteckten Gebühren. Jederzeit kündbar.",
     "monthly": {
       "name": "Monatlich",
-      "price": "$49",
+      "originalPrice": "$49",
+      "price": "$24.50",
       "period": "/Monat",
+      "discountBadge": "-50%",
       "cta": "Monatlich wählen"
     },
     "annual": {
       "name": "Jährlich",
-      "price": "$349",
+      "originalPrice": "$349",
+      "price": "$174.50",
       "period": "/Jahr",
+      "discountBadge": "-50%",
       "save": "40 % sparen ggü. Monatlich",
       "badge": "BESTES ANGEBOT",
       "bonus": "2 Monate gratis",
@@ -227,17 +231,21 @@
     "subtitle": "Starten Sie Ihre 7-tägige kostenlose Testphase. Jederzeit kündbar.",
     "monthly": {
       "name": "Monatlich",
-      "price": "$49",
+      "originalPrice": "$49",
+      "price": "$24.50",
       "period": "/Monat",
+      "discountBadge": "-50%",
       "billing": "Monatliche Abrechnung",
       "cta": "7 Tage kostenlos testen",
       "note": "Kreditkarte erforderlich. Jederzeit kündbar."
     },
     "annual": {
       "name": "Jährlich",
-      "price": "$349",
+      "originalPrice": "$349",
+      "price": "$174.50",
       "period": "/Jahr",
-      "perMonth": "$29/Mo.",
+      "perMonth": "$14.50/Mo.",
+      "discountBadge": "-50%",
       "save": "40 % sparen",
       "badge": "BESTES ANGEBOT",
       "billing": "Jährliche Abrechnung",
@@ -258,12 +266,6 @@
       "text": "14-Tage-Geld-zurück-Garantie",
       "subtext": "Nicht zufrieden? Erhalten Sie innerhalb von 14 Tagen nach Ihrer ersten Zahlung eine vollständige Rückerstattung. Ohne Wenn und Aber."
     },
-    "promo": {
-      "label": "Haben Sie einen Promo-Code?",
-      "placeholder": "Promo-Code eingeben",
-      "apply": "Einlösen",
-      "toast": "Promo-Codes sind bald verfügbar"
-    },
     "faq": {
       "title": "Häufig gestellte Fragen",
       "items": {
@@ -273,7 +275,7 @@
         },
         "afterTrial": {
           "question": "Was passiert nach Ende der Testphase?",
-          "answer": "Ihre Karte wird automatisch mit $49/Monat oder $349/Jahr belastet, je nach gewähltem Plan. Sie können jederzeit vor Ablauf der Testphase kündigen, um eine Belastung zu vermeiden."
+          "answer": "Ihre Karte wird automatisch mit $24.50/Monat oder $174.50/Jahr belastet, je nach gewähltem Plan. Sie können jederzeit vor Ablauf der Testphase kündigen, um eine Belastung zu vermeiden."
         },
         "guarantee": {
           "question": "Gibt es eine Geld-zurück-Garantie?",
@@ -396,7 +398,7 @@
       },
       "section3": {
         "title": "3. Abonnement und Zahlung",
-        "content": "SimplifyPro bietet zwei Abonnementpläne an: Monatlich zu $49/Monat und Jährlich zu $349/Jahr. Alle neuen Abonnements beinhalten eine 7-tägige kostenlose Testphase. Für den Beginn der Testphase ist eine gültige Kreditkarte erforderlich. Wenn Sie nicht vor Ablauf der Testphase kündigen, wird Ihre Karte automatisch belastet."
+        "content": "SimplifyPro bietet zwei Abonnementpläne an: Monatlich zu $24.50/Monat und Jährlich zu $174.50/Jahr. Alle neuen Abonnements beinhalten eine 7-tägige kostenlose Testphase. Für den Beginn der Testphase ist eine gültige Kreditkarte erforderlich. Wenn Sie nicht vor Ablauf der Testphase kündigen, wird Ihre Karte automatisch belastet."
       },
       "section4": {
         "title": "4. Kündigung und Rückerstattung",
@@ -612,8 +614,8 @@
       "noSubscription": "Kein aktives Abonnement.",
       "viewPlans": "Pläne ansehen →",
       "planLabel": "Plan:",
-      "monthly": "Monatlich — $49/Mo.",
-      "annual": "Jährlich — $349/Jahr",
+      "monthly": "Monatlich — $24.50/Mo.",
+      "annual": "Jährlich — $174.50/Jahr",
       "trialEnds": "Testphase endet:",
       "daysRemaining": "{count} Tage verbleibend",
       "nextRenewal": "Nächste Verlängerung:",
@@ -798,7 +800,7 @@
     },
     "pricing": {
       "title": "Preise — SimplifyPro",
-      "description": "Wählen Sie Ihren SimplifyPro-Plan. Starten Sie mit einer 7-tägigen kostenlosen Testphase. Monatlich ab $49/Mo. oder Jährlich ab $349/Jahr mit 40 % Ersparnis."
+      "description": "Wählen Sie Ihren SimplifyPro-Plan. Starten Sie mit einer 7-tägigen kostenlosen Testphase. Monatlich ab $24.50/Mo. oder Jährlich ab $174.50/Jahr mit 40 % Ersparnis."
     },
     "videos": {
       "title": "Videos und Tutorials — SimplifyPro",
