@@ -34,9 +34,9 @@ export async function createCheckoutSession(
     );
   }
 
-  // Use a generous trial buffer (14 days). The actual 7-day trial starts
-  // when the admin grants TradingView access — the hook adjusts trial_end
-  // on Stripe to activation_date + 7 days.
+  // 7-day trial matches the site-wide promise. When the admin grants
+  // TradingView access, the hook resets trial_end to activation + 7 days
+  // (extending the trial so the user gets a full 7 days of actual access).
   // Returning users (past subscription) skip the trial entirely.
   const subscriptionData: Stripe.Checkout.SessionCreateParams["subscription_data"] =
     {
@@ -44,7 +44,7 @@ export async function createCheckoutSession(
     };
 
   if (!params.skipTrial) {
-    subscriptionData.trial_period_days = 14;
+    subscriptionData.trial_period_days = 7;
   }
 
   const sessionConfig: Stripe.Checkout.SessionCreateParams = {

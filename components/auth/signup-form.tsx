@@ -14,7 +14,9 @@ import { createSignupSchema, type SignupFormData } from "./signup-schema";
 
 export function SignupForm() {
   const searchParams = useSearchParams();
-  const plan = searchParams.get("plan") || "monthly";
+  const planParam = searchParams.get("plan");
+  const plan = planParam || "monthly";
+  const loginHref = planParam ? `/login?plan=${planParam}` : "/login";
   const t = useTranslations("auth.signup");
   const tv = useTranslations("auth.validation");
   const [globalError, setGlobalError] = useState<string | null>(null);
@@ -127,7 +129,7 @@ export function SignupForm() {
 
         <p className="text-center text-sm text-zinc-400">
           {t("alreadyHaveAccount")}{" "}
-          <Link href="/login" className="text-blue-400 hover:text-blue-300">
+          <Link href={loginHref} className="text-blue-400 hover:text-blue-300">
             {t("signInLink")}
           </Link>
         </p>

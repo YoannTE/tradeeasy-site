@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -14,6 +14,9 @@ import { createLoginSchema, type LoginFormData } from "./login-schema";
 
 export function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const plan = searchParams.get("plan");
+  const signupHref = plan ? `/signup?plan=${plan}` : "/signup";
   const t = useTranslations("auth.login");
   const tv = useTranslations("auth.validation");
   const [globalError, setGlobalError] = useState<string | null>(null);
@@ -42,6 +45,22 @@ export function LoginForm() {
       if (!response.ok) {
         setGlobalError(t("invalidCredentials"));
         return;
+      }
+
+      if (plan === "monthly" || plan === "annual") {
+        const checkoutRes = await fetch("/api/stripe/create-checkout-session", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ plan }),
+        });
+
+        const checkoutResult = await checkoutRes.json();
+
+        if (checkoutRes.ok && checkoutResult?.data?.url) {
+          window.location.href = checkoutResult.data.url;
+          return;
+        }
       }
 
       router.push("/dashboard");
@@ -103,7 +122,7 @@ export function LoginForm() {
 
         <p className="text-center text-sm text-zinc-400">
           {t("noAccount")}{" "}
-          <Link href="/signup" className="text-blue-400 hover:text-blue-300">
+          <Link href={signupHref} className="text-blue-400 hover:text-blue-300">
             {t("signUpLink")}
           </Link>
         </p>
