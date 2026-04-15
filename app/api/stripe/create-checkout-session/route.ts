@@ -4,6 +4,7 @@ import config from "@payload-config";
 import { headers as getHeaders } from "next/headers";
 import { z } from "zod";
 import { createCheckoutSession } from "@/lib/stripe/create-checkout";
+import { createStripeCustomer, isStripeConfigured } from "@/lib/stripe/stripe";
 
 const requestSchema = z.object({
   plan: z.enum(["monthly", "annual"]),
@@ -23,12 +24,27 @@ export async function POST(request: Request) {
       );
     }
 
-    const stripeCustomerId = user.stripeCustomerId as string | undefined;
+    let stripeCustomerId = user.stripeCustomerId as string | undefined;
     if (!stripeCustomerId) {
-      return NextResponse.json(
-        { error: "No Stripe customer linked to this account." },
-        { status: 400 },
-      );
+      if (!isStripeConfigured()) {
+        return NextResponse.json(
+          { error: "Stripe is not configured." },
+          { status: 500 },
+        );
+      }
+      if (!user.email) {
+        return NextResponse.json(
+          { error: "User has no email on file." },
+          { status: 400 },
+        );
+      }
+      stripeCustomerId = await createStripeCustomer(user.email);
+      await payload.update({
+        collection: "users",
+        id: user.id,
+        data: { stripeCustomerId },
+        overrideAccess: true,
+      });
     }
 
     // Check for existing active subscription (prevent double subscription)
