@@ -53,14 +53,18 @@ export function SignupForm() {
       const checkoutRes = await fetch("/api/stripe/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ plan }),
       });
 
       const checkoutResult = await checkoutRes.json();
 
       if (!checkoutRes.ok || checkoutResult.error) {
-        // Checkout failed but account was created — redirect to onboarding
-        window.location.href = "/onboarding";
+        setGlobalError(
+          checkoutResult?.error
+            ? `${t("genericError")} (${checkoutResult.error})`
+            : t("genericError"),
+        );
         return;
       }
 
