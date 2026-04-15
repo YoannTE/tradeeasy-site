@@ -3,9 +3,15 @@ import { adminOnlyAccess } from "./access/admin-only";
 
 export const Guide: CollectionConfig = {
   slug: "guides",
+  labels: {
+    singular: "Guide",
+    plural: "Guides",
+  },
   admin: {
-    group: "Content",
+    group: "Contenu",
     useAsTitle: "title",
+    description: "Guides pas-à-pas (installation, usage, stratégie…).",
+    defaultColumns: ["title", "category", "difficulty", "published", "order"],
   },
   access: {
     read: ({ req: { user } }) => {
@@ -20,18 +26,18 @@ export const Guide: CollectionConfig = {
     {
       name: "title",
       type: "text",
-      label: "Title",
+      label: "Titre",
       required: true,
     },
     {
       name: "slug",
       type: "text",
-      label: "Slug",
+      label: "Slug (URL)",
       unique: true,
       required: true,
       admin: {
         description:
-          "URL-friendly identifier (e.g. install-simplifypro-tradingview)",
+          "Identifiant pour l'URL (ex : installer-simplifypro-tradingview).",
       },
     },
     {
@@ -42,77 +48,81 @@ export const Guide: CollectionConfig = {
     {
       name: "category",
       type: "select",
-      label: "Category",
+      label: "Catégorie",
       options: [
         { label: "Installation", value: "installation" },
-        { label: "Usage", value: "usage" },
-        { label: "Strategy", value: "strategy" },
-        { label: "Troubleshooting", value: "troubleshooting" },
+        { label: "Utilisation", value: "usage" },
+        { label: "Stratégie", value: "strategy" },
+        { label: "Dépannage", value: "troubleshooting" },
       ],
     },
     {
       name: "difficulty",
       type: "select",
-      label: "Difficulty",
+      label: "Difficulté",
       options: [
-        { label: "Beginner", value: "beginner" },
-        { label: "Intermediate", value: "intermediate" },
-        { label: "Advanced", value: "advanced" },
+        { label: "Débutant", value: "beginner" },
+        { label: "Intermédiaire", value: "intermediate" },
+        { label: "Avancé", value: "advanced" },
       ],
     },
     {
       name: "estimatedTime",
       type: "text",
-      label: "Estimated Time",
+      label: "Temps estimé",
       admin: {
-        description: 'e.g. "5 minutes"',
+        description: 'Exemple : "5 minutes"',
       },
     },
     {
       name: "steps",
       type: "array",
-      label: "Steps",
+      label: "Étapes",
+      labels: {
+        singular: "Étape",
+        plural: "Étapes",
+      },
       fields: [
         {
           name: "stepTitle",
           type: "text",
-          label: "Step Title",
+          label: "Titre de l'étape",
           required: true,
         },
         {
           name: "stepContent",
           type: "textarea",
-          label: "Step Content",
+          label: "Contenu",
           required: true,
         },
         {
           name: "stepImage",
           type: "upload",
-          label: "Step Image",
+          label: "Image",
           relationTo: "media",
         },
         {
           name: "stepTip",
           type: "textarea",
-          label: "Tip / Advice",
+          label: "Astuce / conseil",
         },
       ],
     },
     {
       name: "published",
       type: "checkbox",
-      label: "Published",
+      label: "Publié",
       defaultValue: false,
     },
     {
       name: "publishDate",
       type: "date",
-      label: "Publish Date",
+      label: "Date de publication",
     },
     {
       name: "order",
       type: "number",
-      label: "Display Order",
+      label: "Ordre d'affichage",
     },
   ],
 };

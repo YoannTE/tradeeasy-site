@@ -5,7 +5,7 @@ const assetOptions = [
   { label: "DAX 40", value: "dax40" },
   { label: "Bitcoin", value: "bitcoin" },
   { label: "EUR/USD", value: "eurusd" },
-  { label: "Gold", value: "gold" },
+  { label: "Or", value: "gold" },
   { label: "Dow Jones", value: "dowjones" },
   { label: "Nasdaq", value: "nasdaq" },
   { label: "S&P 500", value: "sp500" },
@@ -14,11 +14,15 @@ const assetOptions = [
 
 export const DailyPerformance: CollectionConfig = {
   slug: "daily-performance",
+  labels: {
+    singular: "Performance quotidienne",
+    plural: "Performances quotidiennes",
+  },
   admin: {
-    group: "Content",
+    group: "Performances",
     useAsTitle: "date",
     defaultColumns: ["date", "updatedAt"],
-    description: "Upload your daily trading screenshots here.",
+    description: "Publie ici les screenshots de trades du jour.",
   },
   access: {
     read: publicReadAccess,
@@ -39,25 +43,29 @@ export const DailyPerformance: CollectionConfig = {
           pickerAppearance: "dayOnly",
           displayFormat: "yyyy-MM-dd",
         },
-        description: "The trading day for these screenshots.",
+        description: "Jour de trading concerné par ces screenshots.",
       },
     },
     {
       name: "screenshots",
       type: "array",
       label: "Screenshots",
+      labels: {
+        singular: "Screenshot",
+        plural: "Screenshots",
+      },
       required: true,
       minRows: 1,
       maxRows: 6,
       admin: {
         description:
-          "Add up to 6 screenshots (3 per row, 2 rows) — one per asset.",
+          "Jusqu'à 6 screenshots (3 par ligne, 2 lignes) — un par actif.",
       },
       fields: [
         {
           name: "asset",
           type: "select",
-          label: "Asset",
+          label: "Actif",
           required: true,
           options: assetOptions,
         },

@@ -5,13 +5,19 @@ import {
 } from "./access/admin-only";
 
 const STRIPE_SYNCED_DESCRIPTION =
-  "Synced from Stripe webhooks — do not edit manually";
+  "Synchronisé depuis Stripe — ne pas modifier manuellement.";
 
 export const Subscription: CollectionConfig = {
   slug: "subscriptions",
+  labels: {
+    singular: "Abonnement",
+    plural: "Abonnements",
+  },
   admin: {
-    group: "Subscribers",
+    group: "Abonnés",
     useAsTitle: "stripeSubscriptionId",
+    description: "Abonnements synchronisés automatiquement depuis Stripe.",
+    defaultColumns: ["user", "type", "status", "nextRenewalDate"],
   },
   access: {
     read: adminOrOwnByUserFieldAccess,
@@ -25,15 +31,15 @@ export const Subscription: CollectionConfig = {
       type: "relationship",
       relationTo: "users",
       required: true,
-      label: "User",
+      label: "Client",
     },
     {
       name: "type",
       type: "select",
-      label: "Plan Type",
+      label: "Formule",
       options: [
-        { label: "Monthly", value: "monthly" },
-        { label: "Annual", value: "annual" },
+        { label: "Mensuel", value: "monthly" },
+        { label: "Annuel", value: "annual" },
       ],
       admin: {
         readOnly: true,
@@ -43,13 +49,13 @@ export const Subscription: CollectionConfig = {
     {
       name: "status",
       type: "select",
-      label: "Status",
+      label: "Statut",
       options: [
-        { label: "Trial", value: "trial" },
-        { label: "Active", value: "active" },
-        { label: "Payment Failed", value: "payment_failed" },
-        { label: "Cancelled", value: "cancelled" },
-        { label: "Expired", value: "expired" },
+        { label: "Essai", value: "trial" },
+        { label: "Actif", value: "active" },
+        { label: "Paiement échoué", value: "payment_failed" },
+        { label: "Annulé", value: "cancelled" },
+        { label: "Expiré", value: "expired" },
       ],
       admin: {
         readOnly: true,
@@ -59,7 +65,7 @@ export const Subscription: CollectionConfig = {
     {
       name: "startDate",
       type: "date",
-      label: "Start Date",
+      label: "Date de début",
       admin: {
         readOnly: true,
         description: STRIPE_SYNCED_DESCRIPTION,
@@ -68,12 +74,12 @@ export const Subscription: CollectionConfig = {
     {
       name: "trialActivatedAt",
       type: "date",
-      label: "Trial Activated At",
+      label: "Essai activé le",
     },
     {
       name: "trialEndDate",
       type: "date",
-      label: "Trial End Date",
+      label: "Fin de l'essai",
       admin: {
         readOnly: true,
         description: STRIPE_SYNCED_DESCRIPTION,
@@ -82,7 +88,7 @@ export const Subscription: CollectionConfig = {
     {
       name: "nextRenewalDate",
       type: "date",
-      label: "Next Renewal Date",
+      label: "Prochain renouvellement",
       admin: {
         readOnly: true,
         description: STRIPE_SYNCED_DESCRIPTION,
@@ -91,39 +97,39 @@ export const Subscription: CollectionConfig = {
     {
       name: "stripeSubscriptionId",
       type: "text",
-      label: "Stripe Subscription ID",
+      label: "ID Abonnement Stripe",
       unique: true,
     },
     {
       name: "paymentFailedAt",
       type: "date",
-      label: "Payment Failed At",
+      label: "Échec de paiement le",
       admin: {
         readOnly: true,
         description:
-          "Set when payment first fails — used for grace period tracking",
+          "Date du premier échec de paiement — utilisé pour la période de grâce.",
       },
     },
     {
       name: "stripeEventId",
       type: "text",
-      label: "Last Stripe Event ID (deprecated)",
+      label: "Dernier ID événement Stripe (obsolète)",
       admin: {
         readOnly: true,
         description:
-          "Deprecated — idempotence is now handled by ProcessedStripeEvent collection",
+          "Obsolète — l'idempotence est gérée par la collection Événements Stripe traités.",
       },
     },
     {
       name: "promoCodeUsed",
       type: "relationship",
       relationTo: "promo-codes",
-      label: "Promo Code Used",
+      label: "Code promo utilisé",
     },
     {
       name: "lastSyncedAt",
       type: "date",
-      label: "Last Synced At",
+      label: "Dernière synchro",
     },
   ],
 };

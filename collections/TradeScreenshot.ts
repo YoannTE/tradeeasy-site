@@ -3,9 +3,15 @@ import { publicReadAccess, adminOnlyAccess } from "./access/admin-only";
 
 export const TradeScreenshot: CollectionConfig = {
   slug: "trade-screenshots",
+  labels: {
+    singular: "Screenshot de trade",
+    plural: "Screenshots de trades",
+  },
   admin: {
-    group: "Content",
+    group: "Performances",
     useAsTitle: "title",
+    description: "Preuves de trades individuelles (galerie).",
+    defaultColumns: ["title", "asset", "result", "tradeDate"],
   },
   access: {
     read: publicReadAccess,
@@ -24,7 +30,7 @@ export const TradeScreenshot: CollectionConfig = {
     {
       name: "title",
       type: "text",
-      label: "Title",
+      label: "Titre",
     },
     {
       name: "description",
@@ -34,23 +40,23 @@ export const TradeScreenshot: CollectionConfig = {
     {
       name: "asset",
       type: "text",
-      label: "Asset",
+      label: "Actif tradé",
       admin: {
-        description: 'e.g. "EUR/USD"',
+        description: 'Exemple : "EUR/USD"',
       },
     },
     {
       name: "result",
       type: "text",
-      label: "Result",
+      label: "Résultat",
       admin: {
-        description: 'e.g. "+120 pips"',
+        description: 'Exemple : "+120 pips"',
       },
     },
     {
       name: "tradeDate",
       type: "date",
-      label: "Trade Date",
+      label: "Date du trade",
     },
   ],
 };

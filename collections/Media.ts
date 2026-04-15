@@ -8,9 +8,14 @@ const dirname = path.dirname(filename);
 
 export const Media: CollectionConfig = {
   slug: "media",
+  labels: {
+    singular: "Média",
+    plural: "Médias",
+  },
   admin: {
-    group: "Content",
+    group: "Contenu",
     useAsTitle: "alt",
+    description: "Bibliothèque d'images du site.",
   },
   access: {
     read: publicReadAccess,
@@ -46,8 +51,11 @@ export const Media: CollectionConfig = {
     {
       name: "alt",
       type: "text",
-      label: "Alt Text",
+      label: "Texte alternatif",
       required: true,
+      admin: {
+        description: "Description courte de l'image (accessibilité et SEO).",
+      },
     },
   ],
 };

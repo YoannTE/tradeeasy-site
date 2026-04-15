@@ -1,1 +1,304 @@
-/* Custom styles for Payload admin panel */
+/* ==========================================================================
+   SimplifyPro — Admin Payload custom styles
+   ========================================================================== */
+
+:root {
+  --sp-radius: 10px;
+  --sp-radius-sm: 6px;
+  --sp-shadow-card:
+    0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
+  --sp-border: var(--theme-elevation-100);
+  --sp-muted: var(--theme-elevation-500);
+}
+
+/* --- Typography & base ---------------------------------------------------- */
+
+body {
+  font-feature-settings: "cv11", "ss01";
+  letter-spacing: -0.005em;
+}
+
+.payload__dashboard,
+.dashboard {
+  padding-top: 1rem;
+}
+
+/* Headings a touch tighter */
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.015em;
+}
+
+/* --- Nav (sidebar) groups ------------------------------------------------- */
+
+.nav-group__toggle,
+.nav-group__label {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--theme-elevation-600);
+}
+
+.nav__link {
+  border-radius: var(--sp-radius-sm);
+  padding: 0.45rem 0.75rem;
+  margin: 1px 0;
+  transition:
+    background-color 0.12s ease,
+    color 0.12s ease;
+
+  &:hover {
+    background-color: var(--theme-elevation-100);
+  }
+
+  &--active,
+  &.active {
+    background-color: var(--theme-elevation-150);
+    font-weight: 600;
+  }
+}
+
+/* --- Lists / tables ------------------------------------------------------- */
+
+.collection-list__header h1,
+.collection-edit__header h1 {
+  font-size: 1.6rem;
+}
+
+.table {
+  thead th {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--theme-elevation-600);
+    font-weight: 600;
+  }
+
+  tbody tr {
+    transition: background-color 0.1s ease;
+
+    &:hover {
+      background-color: var(--theme-elevation-50);
+    }
+  }
+
+  td,
+  th {
+    padding: 0.85rem 0.9rem;
+  }
+}
+
+/* --- Field spacing -------------------------------------------------------- */
+
+.field-type {
+  margin-bottom: 1.25rem;
+}
+
+.field-description {
+  color: var(--theme-elevation-500);
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+.field-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+/* --- Buttons -------------------------------------------------------------- */
+
+.btn {
+  border-radius: var(--sp-radius-sm);
+  font-weight: 600;
+}
+
+/* --- Logo in nav ---------------------------------------------------------- */
+
+.graphic-logo,
+.graphic-icon {
+  color: var(--theme-text);
+}
+
+/* ==========================================================================
+   Custom Dashboard
+   ========================================================================== */
+
+.sp-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 0 2rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: var(--sp-muted);
+    font-size: 0.95rem;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  &--error {
+    color: var(--theme-error-500);
+  }
+}
+
+.sp-stat-card {
+  background: var(--theme-bg);
+  border: 1px solid var(--sp-border);
+  border-radius: var(--sp-radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  box-shadow: var(--sp-shadow-card);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 2px 4px rgba(15, 23, 42, 0.06),
+      0 4px 12px rgba(15, 23, 42, 0.08);
+  }
+
+  &__label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sp-muted);
+    font-weight: 600;
+  }
+
+  &__value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  &__hint {
+    font-size: 0.8rem;
+    color: var(--sp-muted);
+  }
+}
+
+.sp-panel {
+  background: var(--theme-bg);
+  border: 1px solid var(--sp-border);
+  border-radius: var(--sp-radius);
+  padding: 1.25rem;
+  box-shadow: var(--sp-shadow-card);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  &__link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--theme-success-500);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__empty {
+    color: var(--sp-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+.sp-table {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.6fr 1fr;
+    gap: 1rem;
+    padding: 0.7rem 0.5rem;
+    border-top: 1px solid var(--sp-border);
+    align-items: center;
+    font-size: 0.9rem;
+
+    &--head {
+      border-top: 0;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      color: var(--sp-muted);
+      padding-bottom: 0.5rem;
+    }
+
+    &--link {
+      text-decoration: none;
+      color: inherit;
+      border-radius: var(--sp-radius-sm);
+      transition: background-color 0.12s ease;
+
+      &:hover {
+        background-color: var(--theme-elevation-50);
+      }
+    }
+  }
+
+  &__email {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.82rem;
+    color: var(--theme-elevation-700);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__muted {
+    color: var(--sp-muted);
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sp-table__row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+
+    &--head {
+      display: none;
+    }
+  }
+}

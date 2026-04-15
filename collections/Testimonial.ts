@@ -3,9 +3,15 @@ import { publicReadAccess, adminOnlyAccess } from "./access/admin-only";
 
 export const Testimonial: CollectionConfig = {
   slug: "testimonials",
+  labels: {
+    singular: "Témoignage",
+    plural: "Témoignages",
+  },
   admin: {
-    group: "Content",
+    group: "Contenu",
     useAsTitle: "clientName",
+    description: "Témoignages clients affichés sur le site.",
+    defaultColumns: ["clientName", "rating", "date"],
   },
   access: {
     read: publicReadAccess,
@@ -17,24 +23,24 @@ export const Testimonial: CollectionConfig = {
     {
       name: "clientName",
       type: "text",
-      label: "Client Name",
+      label: "Nom du client",
       required: true,
     },
     {
       name: "role",
       type: "text",
-      label: "Role",
+      label: "Rôle / métier",
     },
     {
       name: "content",
       type: "textarea",
-      label: "Content",
+      label: "Témoignage",
       required: true,
     },
     {
       name: "rating",
       type: "number",
-      label: "Rating",
+      label: "Note (sur 5)",
       min: 1,
       max: 5,
     },
@@ -42,7 +48,7 @@ export const Testimonial: CollectionConfig = {
       name: "avatar",
       type: "upload",
       relationTo: "media",
-      label: "Avatar",
+      label: "Photo",
     },
     {
       name: "date",

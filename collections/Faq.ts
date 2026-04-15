@@ -3,11 +3,15 @@ import { publicReadAccess, adminOnlyAccess } from "./access/admin-only";
 
 export const Faq: CollectionConfig = {
   slug: "faqs",
+  labels: {
+    singular: "Question fréquente",
+    plural: "Questions fréquentes",
+  },
   admin: {
-    group: "Content",
+    group: "Contenu",
     useAsTitle: "question",
     defaultColumns: ["question", "displayOrder", "updatedAt"],
-    description: "Frequently asked questions displayed on the pricing page.",
+    description: "Questions / réponses affichées sur la page tarifs.",
   },
   access: {
     read: publicReadAccess,
@@ -26,16 +30,16 @@ export const Faq: CollectionConfig = {
     {
       name: "answer",
       type: "textarea",
-      label: "Answer",
+      label: "Réponse",
       required: true,
     },
     {
       name: "displayOrder",
       type: "number",
-      label: "Display Order",
+      label: "Ordre d'affichage",
       defaultValue: 0,
       admin: {
-        description: "Lower numbers appear first.",
+        description: "Les plus petits nombres apparaissent en premier.",
       },
     },
   ],

@@ -10,12 +10,24 @@ import { onNewUserCreated } from "./hooks/on-new-user-created";
 
 export const Users: CollectionConfig = {
   slug: "users",
+  labels: {
+    singular: "Utilisateur",
+    plural: "Utilisateurs",
+  },
   auth: {
     maxLoginAttempts: 0,
   },
   admin: {
-    group: "Subscribers",
+    group: "Abonnés",
     useAsTitle: "email",
+    description: "Les comptes clients et leur accès TradingView.",
+    defaultColumns: [
+      "email",
+      "firstName",
+      "lastName",
+      "tradingviewAccessStatus",
+      "createdAt",
+    ],
   },
   access: {
     read: adminOrOwnReadAccess,
@@ -26,7 +38,6 @@ export const Users: CollectionConfig = {
   hooks: {
     beforeChange: [
       ({ data, operation }) => {
-        // Auto-generate referralCode on creation if not set
         if (operation === "create" && data && !data.referralCode) {
           data.referralCode = crypto.randomUUID().slice(0, 8);
         }
@@ -40,12 +51,16 @@ export const Users: CollectionConfig = {
     {
       name: "role",
       type: "select",
+      label: "Rôle",
       defaultValue: "editor",
       required: true,
       options: [
         { label: "Admin", value: "admin" },
-        { label: "Editor", value: "editor" },
+        { label: "Éditeur", value: "editor" },
       ],
+      admin: {
+        description: "Niveau d'accès au back-office.",
+      },
       access: {
         update: adminOnlyFieldAccess,
       },
@@ -53,30 +68,37 @@ export const Users: CollectionConfig = {
     {
       name: "firstName",
       type: "text",
-      label: "First Name",
+      label: "Prénom",
     },
     {
       name: "lastName",
       type: "text",
-      label: "Last Name",
+      label: "Nom",
     },
     {
       name: "tradingviewUsername",
       type: "text",
-      label: "TradingView Username",
+      label: "Nom d'utilisateur TradingView",
       unique: true,
       required: true,
+      admin: {
+        description:
+          "Identifiant TradingView du client (utilisé pour lui donner accès à l'indicateur).",
+      },
     },
     {
       name: "tradingviewAccessStatus",
       type: "select",
-      label: "TradingView Access Status",
+      label: "Statut accès TradingView",
       defaultValue: "pending",
       options: [
-        { label: "Pending", value: "pending" },
-        { label: "Granted", value: "granted" },
-        { label: "Revoked", value: "revoked" },
+        { label: "En attente", value: "pending" },
+        { label: "Accordé", value: "granted" },
+        { label: "Révoqué", value: "revoked" },
       ],
+      admin: {
+        description: "Est-ce que l'indicateur a été partagé à ce client ?",
+      },
       access: {
         update: adminOnlyFieldAccess,
       },
@@ -84,7 +106,7 @@ export const Users: CollectionConfig = {
     {
       name: "tradingviewAccessGrantedAt",
       type: "date",
-      label: "TradingView Access Granted At",
+      label: "Accès accordé le",
       access: {
         update: adminOnlyFieldAccess,
       },
@@ -92,9 +114,10 @@ export const Users: CollectionConfig = {
     {
       name: "stripeCustomerId",
       type: "text",
-      label: "Stripe Customer ID",
+      label: "ID Client Stripe",
       admin: {
         position: "sidebar",
+        description: "Référence Stripe — ne pas modifier.",
       },
       access: {
         update: adminOnlyFieldAccess,
@@ -103,10 +126,10 @@ export const Users: CollectionConfig = {
     {
       name: "referralCode",
       type: "text",
-      label: "Referral Code",
+      label: "Code de parrainage",
       unique: true,
       admin: {
-        description: "Auto-generated on creation if left empty",
+        description: "Généré automatiquement à la création.",
       },
       access: {
         update: adminOnlyFieldAccess,
@@ -116,7 +139,7 @@ export const Users: CollectionConfig = {
       name: "referredBy",
       type: "relationship",
       relationTo: "users",
-      label: "Referred By",
+      label: "Parrainé par",
       access: {
         update: adminOnlyFieldAccess,
       },
@@ -124,7 +147,7 @@ export const Users: CollectionConfig = {
     {
       name: "lastLoginAt",
       type: "date",
-      label: "Last Login At",
+      label: "Dernière connexion",
       admin: {
         readOnly: true,
         position: "sidebar",

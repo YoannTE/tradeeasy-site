@@ -3,9 +3,15 @@ import { publicReadAccess, adminOnlyAccess } from "./access/admin-only";
 
 export const Video: CollectionConfig = {
   slug: "videos",
+  labels: {
+    singular: "Vidéo",
+    plural: "Vidéos",
+  },
   admin: {
-    group: "Content",
+    group: "Contenu",
     useAsTitle: "title",
+    description: "Vidéos YouTube affichées dans la section tutoriels.",
+    defaultColumns: ["title", "category", "displayOrder", "publishDate"],
   },
   access: {
     read: publicReadAccess,
@@ -17,7 +23,7 @@ export const Video: CollectionConfig = {
     {
       name: "title",
       type: "text",
-      label: "Title",
+      label: "Titre",
       required: true,
     },
     {
@@ -28,29 +34,35 @@ export const Video: CollectionConfig = {
     {
       name: "youtubeUrl",
       type: "text",
-      label: "YouTube URL",
+      label: "URL YouTube",
       required: true,
+      admin: {
+        description: "Lien complet vers la vidéo YouTube.",
+      },
     },
     {
       name: "category",
       type: "select",
-      label: "Category",
+      label: "Catégorie",
       options: [
         { label: "Installation", value: "installation" },
-        { label: "Usage", value: "usage" },
-        { label: "Strategy", value: "strategy" },
-        { label: "Trading Live", value: "trading_live" },
+        { label: "Utilisation", value: "usage" },
+        { label: "Stratégie", value: "strategy" },
+        { label: "Trading en direct", value: "trading_live" },
       ],
     },
     {
       name: "displayOrder",
       type: "number",
-      label: "Display Order",
+      label: "Ordre d'affichage",
+      admin: {
+        description: "Les plus petits nombres apparaissent en premier.",
+      },
     },
     {
       name: "publishDate",
       type: "date",
-      label: "Publish Date",
+      label: "Date de publication",
     },
   ],
 };

@@ -3,9 +3,16 @@ import { adminOnlyAccess } from "./access/admin-only";
 
 export const ProcessedStripeEvent: CollectionConfig = {
   slug: "processed-stripe-events",
+  labels: {
+    singular: "Événement Stripe traité",
+    plural: "Événements Stripe traités",
+  },
   admin: {
-    group: "System",
+    group: "Système",
     useAsTitle: "eventId",
+    description:
+      "Journal interne des événements Stripe (garantit l'idempotence des webhooks).",
+    defaultColumns: ["eventId", "eventType", "processedAt"],
   },
   access: {
     read: adminOnlyAccess,
@@ -17,7 +24,7 @@ export const ProcessedStripeEvent: CollectionConfig = {
     {
       name: "eventId",
       type: "text",
-      label: "Stripe Event ID",
+      label: "ID événement Stripe",
       required: true,
       unique: true,
       index: true,
@@ -25,13 +32,13 @@ export const ProcessedStripeEvent: CollectionConfig = {
     {
       name: "eventType",
       type: "text",
-      label: "Event Type",
+      label: "Type d'événement",
       required: true,
     },
     {
       name: "processedAt",
       type: "date",
-      label: "Processed At",
+      label: "Traité le",
       required: true,
     },
   ],

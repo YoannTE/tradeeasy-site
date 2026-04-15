@@ -1,13 +1,24 @@
 import type { CollectionConfig } from "payload";
 import { adminOnlyReadAccess, adminOnlyAccess } from "./access/admin-only";
 
-// currentUses is incremented in handleCheckoutCompleted webhook handler.
-
 export const PromoCode: CollectionConfig = {
   slug: "promo-codes",
+  labels: {
+    singular: "Code promo",
+    plural: "Codes promo",
+  },
   admin: {
     group: "Marketing",
     useAsTitle: "code",
+    description: "Codes de réduction utilisables au checkout.",
+    defaultColumns: [
+      "code",
+      "discountType",
+      "discountValue",
+      "active",
+      "currentUses",
+      "validUntil",
+    ],
   },
   access: {
     read: adminOnlyReadAccess,
@@ -22,75 +33,81 @@ export const PromoCode: CollectionConfig = {
       label: "Code",
       unique: true,
       required: true,
+      admin: {
+        description: "Le code que le client saisit (ex : BIENVENUE20).",
+      },
     },
     {
       name: "discountType",
       type: "select",
-      label: "Discount Type",
+      label: "Type de remise",
       required: true,
       options: [
-        { label: "Percentage", value: "percentage" },
-        { label: "Fixed Amount", value: "fixed_amount" },
+        { label: "Pourcentage (%)", value: "percentage" },
+        { label: "Montant fixe (€)", value: "fixed_amount" },
       ],
     },
     {
       name: "discountValue",
       type: "number",
-      label: "Discount Value",
+      label: "Valeur de la remise",
       required: true,
     },
     {
       name: "appliesTo",
       type: "select",
-      label: "Applies To",
+      label: "Appliqué à",
       defaultValue: "both",
       options: [
-        { label: "Monthly", value: "monthly" },
-        { label: "Annual", value: "annual" },
-        { label: "Both", value: "both" },
+        { label: "Mensuel", value: "monthly" },
+        { label: "Annuel", value: "annual" },
+        { label: "Les deux", value: "both" },
       ],
     },
     {
       name: "duration",
       type: "select",
-      label: "Duration",
+      label: "Durée",
       defaultValue: "once",
       options: [
-        { label: "Once", value: "once" },
-        { label: "Repeating", value: "repeating" },
-        { label: "Forever", value: "forever" },
+        { label: "Une seule fois", value: "once" },
+        { label: "Plusieurs mois", value: "repeating" },
+        { label: "À vie", value: "forever" },
       ],
     },
     {
       name: "validFrom",
       type: "date",
-      label: "Valid From",
+      label: "Valide à partir du",
     },
     {
       name: "validUntil",
       type: "date",
-      label: "Valid Until",
+      label: "Valide jusqu'au",
     },
     {
       name: "active",
       type: "checkbox",
-      label: "Active",
+      label: "Actif",
       defaultValue: true,
     },
     {
       name: "maxUses",
       type: "number",
-      label: "Max Uses",
+      label: "Nombre d'utilisations maximum",
+      admin: {
+        description: "Laisser vide pour illimité.",
+      },
     },
     {
       name: "currentUses",
       type: "number",
-      label: "Current Uses",
+      label: "Utilisations actuelles",
       defaultValue: 0,
       admin: {
         readOnly: true,
         description:
-          "Incremented in webhook handleCheckoutCompleted — do not edit manually",
+          "Incrémenté automatiquement à chaque paiement réussi — ne pas modifier manuellement.",
       },
     },
   ],

@@ -25,6 +25,25 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    meta: {
+      titleSuffix: " · SimplifyPro Admin",
+      icons: [
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          url: "/simplifypro-app-icon.svg",
+        },
+      ],
+    },
+    components: {
+      graphics: {
+        Logo: "/components/payload-admin/Logo#Logo",
+        Icon: "/components/payload-admin/Icon#Icon",
+      },
+      beforeDashboard: [
+        "/components/payload-admin/BeforeDashboard#BeforeDashboard",
+      ],
+    },
   },
   collections: [
     Users,
