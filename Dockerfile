@@ -1,4 +1,5 @@
 FROM node:22-alpine AS base
+ENV CACHE_BUST=2026-04-16
 
 # Install dependencies
 FROM base AS deps
