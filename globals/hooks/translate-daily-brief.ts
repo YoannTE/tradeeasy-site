@@ -29,15 +29,12 @@ export const translateDailyBriefHook: GlobalAfterChangeHook = async ({
   const hasContent = Object.values(frenchContent).some((v) => v.length > 0);
   if (!hasContent) return doc;
 
+  const translations: Record<string, TranslatableFields> = {};
+
   const results = await Promise.allSettled(
     TARGET_LOCALES.map(async (locale) => {
       const translated = await translateDailyBrief(frenchContent, locale);
-      await req.payload.updateGlobal({
-        slug: "daily-brief",
-        locale,
-        data: translated,
-        context: { skipTranslation: true },
-      });
+      translations[locale] = translated;
     }),
   );
 
@@ -48,6 +45,14 @@ export const translateDailyBriefHook: GlobalAfterChangeHook = async ({
         result.reason,
       );
     }
+  }
+
+  if (Object.keys(translations).length > 0) {
+    await req.payload.updateGlobal({
+      slug: "daily-brief",
+      data: { translations },
+      context: { skipTranslation: true },
+    });
   }
 
   return doc;

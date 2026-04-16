@@ -9,27 +9,62 @@ import {
   BookOpen,
 } from "lucide-react";
 
+type BriefFields = {
+  date: string;
+  recapBody: string;
+  agendaSublabel: string;
+  agendaBody: string;
+  geopoliticsBody: string;
+  tomorrowLabel: string;
+  tomorrowBody: string;
+  readingBody: string;
+};
+
+function getLocalizedBrief(
+  brief: Record<string, unknown> | null,
+  locale: string,
+): BriefFields | null {
+  if (!brief) return null;
+
+  if (locale !== "fr" && brief.translations) {
+    const translations = brief.translations as Record<string, BriefFields>;
+    if (translations[locale]) return translations[locale];
+  }
+
+  return {
+    date: (brief.date as string) || "",
+    recapBody: (brief.recapBody as string) || "",
+    agendaSublabel: (brief.agendaSublabel as string) || "",
+    agendaBody: (brief.agendaBody as string) || "",
+    geopoliticsBody: (brief.geopoliticsBody as string) || "",
+    tomorrowLabel: (brief.tomorrowLabel as string) || "",
+    tomorrowBody: (brief.tomorrowBody as string) || "",
+    readingBody: (brief.readingBody as string) || "",
+  };
+}
+
 export async function DailyBriefCard() {
   const t = await getTranslations("marketNews.dailyBrief");
+  const locale = await getLocale();
+
   let brief: Record<string, unknown> | null = null;
   try {
     const payload = await getPayload({ config });
-    const locale = await getLocale();
-    brief = await payload.findGlobal({ slug: "daily-brief", locale });
+    brief = await payload.findGlobal({ slug: "daily-brief" });
   } catch {
     brief = null;
   }
 
-  const date = (brief?.date as string) || t("date");
-  const recapBody = (brief?.recapBody as string) || t("recapBody");
-  const agendaSublabel =
-    (brief?.agendaSublabel as string) || t("agendaSublabel");
-  const agendaBody = (brief?.agendaBody as string) || t("agendaBody");
-  const geopoliticsBody =
-    (brief?.geopoliticsBody as string) || t("geopoliticsBody");
-  const tomorrowLabel = (brief?.tomorrowLabel as string) || t("tomorrowLabel");
-  const tomorrowBody = (brief?.tomorrowBody as string) || t("tomorrowBody");
-  const readingBody = (brief?.readingBody as string) || t("readingBody");
+  const localized = getLocalizedBrief(brief, locale);
+
+  const date = localized?.date || t("date");
+  const recapBody = localized?.recapBody || t("recapBody");
+  const agendaSublabel = localized?.agendaSublabel || t("agendaSublabel");
+  const agendaBody = localized?.agendaBody || t("agendaBody");
+  const geopoliticsBody = localized?.geopoliticsBody || t("geopoliticsBody");
+  const tomorrowLabel = localized?.tomorrowLabel || t("tomorrowLabel");
+  const tomorrowBody = localized?.tomorrowBody || t("tomorrowBody");
+  const readingBody = localized?.readingBody || t("readingBody");
 
   return (
     <div className="mt-10 max-w-4xl mx-auto rounded-xl border border-zinc-800 bg-zinc-900 p-6">

@@ -11,7 +11,7 @@ export const DailyBrief: GlobalConfig = {
   admin: {
     group: "Contenu",
     description:
-      "Modifie ici le brief quotidien affiché sur la page d'accueil. Les traductions EN/ES/DE sont générées automatiquement.",
+      "Modifie ici le brief quotidien. Les traductions EN/ES/DE sont générées automatiquement à l'enregistrement.",
   },
   access: {
     read: publicReadAccess,
@@ -26,7 +26,6 @@ export const DailyBrief: GlobalConfig = {
       type: "text",
       label: "Date",
       required: true,
-      localized: true,
       admin: {
         description:
           'Écris la date en toutes lettres, ex: "Jeudi 17 avril 2026".',
@@ -37,67 +36,54 @@ export const DailyBrief: GlobalConfig = {
       type: "textarea",
       label: "Recap d'hier",
       required: true,
-      localized: true,
-      admin: {
-        description: "Section rouge. Résumé de la veille.",
-      },
+      admin: { description: "Section rouge. Résumé de la veille." },
     },
     {
       name: "agendaSublabel",
       type: "text",
       label: "Agenda — Sous-titre",
-      localized: true,
-      admin: {
-        description: 'Ex: "Journée piège", "Journée calme", etc.',
-      },
+      admin: { description: 'Ex: "Journée piège", "Journée calme", etc.' },
     },
     {
       name: "agendaBody",
       type: "textarea",
       label: "Agenda du jour",
       required: true,
-      localized: true,
-      admin: {
-        description: "Section orange. Les événements clés de la journée.",
-      },
+      admin: { description: "Section orange. Les événements clés." },
     },
     {
       name: "geopoliticsBody",
       type: "textarea",
       label: "Contexte géopolitique",
       required: true,
-      localized: true,
-      admin: {
-        description: "Section bleue. La toile de fond géopolitique.",
-      },
+      admin: { description: "Section bleue. La toile de fond." },
     },
     {
       name: "tomorrowLabel",
       type: "text",
       label: "Demain — Titre",
-      localized: true,
-      admin: {
-        description: 'Ex: "Demain — Vendredi 17 avril".',
-      },
+      admin: { description: 'Ex: "Demain — Vendredi 17 avril".' },
     },
     {
       name: "tomorrowBody",
       type: "textarea",
       label: "Demain — Contenu",
       required: true,
-      localized: true,
-      admin: {
-        description: "Section grise. Ce qui arrive demain.",
-      },
+      admin: { description: "Section grise. Ce qui arrive demain." },
     },
     {
       name: "readingBody",
       type: "textarea",
       label: "Lecture rapide",
       required: true,
-      localized: true,
+      admin: { description: "Section verte. Ton analyse et tes conseils." },
+    },
+    {
+      name: "translations",
+      type: "json",
       admin: {
-        description: "Section verte. Ton analyse et tes conseils.",
+        hidden: true,
+        description: "Traductions auto-générées (ne pas modifier).",
       },
     },
   ],

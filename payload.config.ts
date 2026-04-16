@@ -60,16 +60,6 @@ export default buildConfig({
     ProcessedStripeEvent,
   ],
   globals: [DailyBrief],
-  localization: {
-    locales: [
-      { label: "Français", code: "fr" },
-      { label: "English", code: "en" },
-      { label: "Español", code: "es" },
-      { label: "Deutsch", code: "de" },
-    ],
-    defaultLocale: "fr",
-    fallback: true,
-  },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
