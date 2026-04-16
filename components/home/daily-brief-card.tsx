@@ -11,17 +11,22 @@ import {
 
 export async function DailyBriefCard() {
   const t = await getTranslations("marketNews.dailyBrief");
-  const payload = await getPayload({ config });
-  const brief = await payload.findGlobal({ slug: "daily-brief" });
+  let brief: Record<string, unknown> | null = null;
+  try {
+    const payload = await getPayload({ config });
+    brief = await payload.findGlobal({ slug: "daily-brief" });
+  } catch {
+    brief = null;
+  }
 
-  const date = brief?.date || t("date");
-  const recapBody = brief?.recapBody || t("recapBody");
-  const agendaSublabel = brief?.agendaSublabel || t("agendaSublabel");
-  const agendaBody = brief?.agendaBody || t("agendaBody");
-  const geopoliticsBody = brief?.geopoliticsBody || t("geopoliticsBody");
-  const tomorrowLabel = brief?.tomorrowLabel || t("tomorrowLabel");
-  const tomorrowBody = brief?.tomorrowBody || t("tomorrowBody");
-  const readingBody = brief?.readingBody || t("readingBody");
+  const date = (brief?.date as string) || t("date");
+  const recapBody = (brief?.recapBody as string) || t("recapBody");
+  const agendaSublabel = (brief?.agendaSublabel as string) || t("agendaSublabel");
+  const agendaBody = (brief?.agendaBody as string) || t("agendaBody");
+  const geopoliticsBody = (brief?.geopoliticsBody as string) || t("geopoliticsBody");
+  const tomorrowLabel = (brief?.tomorrowLabel as string) || t("tomorrowLabel");
+  const tomorrowBody = (brief?.tomorrowBody as string) || t("tomorrowBody");
+  const readingBody = (brief?.readingBody as string) || t("readingBody");
 
   return (
     <div className="mt-10 max-w-4xl mx-auto rounded-xl border border-zinc-800 bg-zinc-900 p-6">
