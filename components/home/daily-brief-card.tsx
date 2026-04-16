@@ -1,6 +1,6 @@
 import { getPayload } from "payload";
 import config from "@payload-config";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import {
   TrendingDown,
   AlertTriangle,
@@ -14,16 +14,19 @@ export async function DailyBriefCard() {
   let brief: Record<string, unknown> | null = null;
   try {
     const payload = await getPayload({ config });
-    brief = await payload.findGlobal({ slug: "daily-brief" });
+    const locale = await getLocale();
+    brief = await payload.findGlobal({ slug: "daily-brief", locale });
   } catch {
     brief = null;
   }
 
   const date = (brief?.date as string) || t("date");
   const recapBody = (brief?.recapBody as string) || t("recapBody");
-  const agendaSublabel = (brief?.agendaSublabel as string) || t("agendaSublabel");
+  const agendaSublabel =
+    (brief?.agendaSublabel as string) || t("agendaSublabel");
   const agendaBody = (brief?.agendaBody as string) || t("agendaBody");
-  const geopoliticsBody = (brief?.geopoliticsBody as string) || t("geopoliticsBody");
+  const geopoliticsBody =
+    (brief?.geopoliticsBody as string) || t("geopoliticsBody");
   const tomorrowLabel = (brief?.tomorrowLabel as string) || t("tomorrowLabel");
   const tomorrowBody = (brief?.tomorrowBody as string) || t("tomorrowBody");
   const readingBody = (brief?.readingBody as string) || t("readingBody");

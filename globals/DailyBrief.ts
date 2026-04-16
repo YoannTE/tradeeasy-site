@@ -3,6 +3,7 @@ import {
   publicReadAccess,
   adminOnlyAccess,
 } from "@/collections/access/admin-only";
+import { translateDailyBriefHook } from "./hooks/translate-daily-brief";
 
 export const DailyBrief: GlobalConfig = {
   slug: "daily-brief",
@@ -10,11 +11,14 @@ export const DailyBrief: GlobalConfig = {
   admin: {
     group: "Contenu",
     description:
-      "Modifie ici le brief quotidien affiché sur la page d'accueil.",
+      "Modifie ici le brief quotidien affiché sur la page d'accueil. Les traductions EN/ES/DE sont générées automatiquement.",
   },
   access: {
     read: publicReadAccess,
     update: adminOnlyAccess,
+  },
+  hooks: {
+    afterChange: [translateDailyBriefHook],
   },
   fields: [
     {
@@ -22,6 +26,7 @@ export const DailyBrief: GlobalConfig = {
       type: "text",
       label: "Date",
       required: true,
+      localized: true,
       admin: {
         description:
           'Écris la date en toutes lettres, ex: "Jeudi 17 avril 2026".',
@@ -32,6 +37,7 @@ export const DailyBrief: GlobalConfig = {
       type: "textarea",
       label: "Recap d'hier",
       required: true,
+      localized: true,
       admin: {
         description: "Section rouge. Résumé de la veille.",
       },
@@ -40,6 +46,7 @@ export const DailyBrief: GlobalConfig = {
       name: "agendaSublabel",
       type: "text",
       label: "Agenda — Sous-titre",
+      localized: true,
       admin: {
         description: 'Ex: "Journée piège", "Journée calme", etc.',
       },
@@ -49,6 +56,7 @@ export const DailyBrief: GlobalConfig = {
       type: "textarea",
       label: "Agenda du jour",
       required: true,
+      localized: true,
       admin: {
         description: "Section orange. Les événements clés de la journée.",
       },
@@ -58,6 +66,7 @@ export const DailyBrief: GlobalConfig = {
       type: "textarea",
       label: "Contexte géopolitique",
       required: true,
+      localized: true,
       admin: {
         description: "Section bleue. La toile de fond géopolitique.",
       },
@@ -66,6 +75,7 @@ export const DailyBrief: GlobalConfig = {
       name: "tomorrowLabel",
       type: "text",
       label: "Demain — Titre",
+      localized: true,
       admin: {
         description: 'Ex: "Demain — Vendredi 17 avril".',
       },
@@ -75,6 +85,7 @@ export const DailyBrief: GlobalConfig = {
       type: "textarea",
       label: "Demain — Contenu",
       required: true,
+      localized: true,
       admin: {
         description: "Section grise. Ce qui arrive demain.",
       },
@@ -84,6 +95,7 @@ export const DailyBrief: GlobalConfig = {
       type: "textarea",
       label: "Lecture rapide",
       required: true,
+      localized: true,
       admin: {
         description: "Section verte. Ton analyse et tes conseils.",
       },
