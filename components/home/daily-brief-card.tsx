@@ -1,3 +1,5 @@
+import { getPayload } from "payload";
+import config from "@payload-config";
 import { getTranslations } from "next-intl/server";
 import {
   TrendingDown,
@@ -9,13 +11,24 @@ import {
 
 export async function DailyBriefCard() {
   const t = await getTranslations("marketNews.dailyBrief");
+  const payload = await getPayload({ config });
+  const brief = await payload.findGlobal({ slug: "daily-brief" });
+
+  const date = brief?.date || t("date");
+  const recapBody = brief?.recapBody || t("recapBody");
+  const agendaSublabel = brief?.agendaSublabel || t("agendaSublabel");
+  const agendaBody = brief?.agendaBody || t("agendaBody");
+  const geopoliticsBody = brief?.geopoliticsBody || t("geopoliticsBody");
+  const tomorrowLabel = brief?.tomorrowLabel || t("tomorrowLabel");
+  const tomorrowBody = brief?.tomorrowBody || t("tomorrowBody");
+  const readingBody = brief?.readingBody || t("readingBody");
 
   return (
     <div className="mt-10 max-w-4xl mx-auto rounded-xl border border-zinc-800 bg-zinc-900 p-6">
       <div className="flex items-center gap-2 border-b border-zinc-800 pb-4">
         <span className="text-lg">📰</span>
         <h3 className="text-lg font-semibold text-white">{t("title")}</h3>
-        <span className="text-xs text-zinc-500">· {t("date")}</span>
+        <span className="text-xs text-zinc-500">· {date}</span>
       </div>
 
       <div className="mt-5 space-y-5">
@@ -27,7 +40,7 @@ export async function DailyBriefCard() {
             </span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
-            {t("recapBody")}
+            {recapBody}
           </p>
         </div>
 
@@ -37,12 +50,14 @@ export async function DailyBriefCard() {
             <span className="text-xs font-semibold uppercase tracking-wide text-amber-400">
               {t("agendaLabel")}
             </span>
-            <span className="text-xs text-amber-300/70">
-              · {t("agendaSublabel")}
-            </span>
+            {agendaSublabel && (
+              <span className="text-xs text-amber-300/70">
+                · {agendaSublabel}
+              </span>
+            )}
           </div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
-            {t("agendaBody")}
+            {agendaBody}
           </p>
         </div>
 
@@ -54,7 +69,7 @@ export async function DailyBriefCard() {
             </span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
-            {t("geopoliticsBody")}
+            {geopoliticsBody}
           </p>
         </div>
 
@@ -62,11 +77,11 @@ export async function DailyBriefCard() {
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4 text-zinc-400" />
             <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
-              {t("tomorrowLabel")}
+              {tomorrowLabel}
             </span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
-            {t("tomorrowBody")}
+            {tomorrowBody}
           </p>
         </div>
 
@@ -78,7 +93,7 @@ export async function DailyBriefCard() {
             </span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
-            {t("readingBody")}
+            {readingBody}
           </p>
         </div>
       </div>
