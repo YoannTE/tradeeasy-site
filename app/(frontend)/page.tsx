@@ -42,13 +42,13 @@ export default function HomePage() {
       <LivePerformanceSection />
       <FeaturesSection />
       <ComparisonSection />
-      <AffiliatePreviewSection />
       <TradingViewSection />
       <TestimonialsSection />
       <HowItWorksSection />
       <PricingPreviewSection />
       <CtaSection />
       <MarketNewsSection />
+      <AffiliatePreviewSection />
     </>
   );
 }
