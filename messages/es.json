@@ -153,6 +153,42 @@
       }
     ]
   },
+  "comparison": {
+    "title": "¿Por qué elegir SimplifyPro?",
+    "subtitle": "Lo que nos diferencia de otros servicios de señales del mercado.",
+    "headers": {
+      "feature": "Comparación",
+      "others": "Otros servicios de señales",
+      "simplify": "SimplifyPro"
+    },
+    "rows": {
+      "signals": {
+        "feature": "Señales",
+        "others": "Numerosas y difíciles de interpretar",
+        "simplify": "Pocas pero muy precisas"
+      },
+      "exits": {
+        "feature": "Salidas",
+        "others": "Vagas, a cargo del trader",
+        "simplify": "Claras y exactas"
+      },
+      "learning": {
+        "feature": "Aprendizaje",
+        "others": "Largo y complejo",
+        "simplify": "Inmediato, desde el primer día"
+      },
+      "price": {
+        "feature": "Precio",
+        "others": "Desde 49 $/mes",
+        "simplify": "Desde 24,50 $/mes"
+      },
+      "method": {
+        "feature": "Método",
+        "others": "Caja de herramientas por configurar",
+        "simplify": "Un método único y probado"
+      }
+    }
+  },
   "pricingPreview": {
     "title": "Invierte en Tu Trading",
     "subtitle": "Sin comisiones ocultas. Cancela en cualquier momento.",

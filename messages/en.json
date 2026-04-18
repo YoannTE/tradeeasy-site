@@ -153,6 +153,42 @@
       }
     ]
   },
+  "comparison": {
+    "title": "Why choose SimplifyPro?",
+    "subtitle": "What sets us apart from other signal services on the market.",
+    "headers": {
+      "feature": "Comparison",
+      "others": "Other signal services",
+      "simplify": "SimplifyPro"
+    },
+    "rows": {
+      "signals": {
+        "feature": "Signals",
+        "others": "Too many, hard to interpret",
+        "simplify": "Few but highly precise"
+      },
+      "exits": {
+        "feature": "Exits",
+        "others": "Vague, left to the trader",
+        "simplify": "Clear and exact"
+      },
+      "learning": {
+        "feature": "Getting started",
+        "others": "Long and complex",
+        "simplify": "Immediate, from day one"
+      },
+      "price": {
+        "feature": "Price",
+        "others": "Starting at $49/month",
+        "simplify": "Starting at $24.50/month"
+      },
+      "method": {
+        "feature": "Method",
+        "others": "Toolkit to configure",
+        "simplify": "One unique, proven method"
+      }
+    }
+  },
   "pricingPreview": {
     "title": "Invest in Your Trading",
     "subtitle": "No hidden fees. Cancel anytime.",

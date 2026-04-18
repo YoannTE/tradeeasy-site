@@ -153,6 +153,42 @@
       }
     ]
   },
+  "comparison": {
+    "title": "Pourquoi choisir SimplifyPro ?",
+    "subtitle": "Ce qui nous différencie des autres services de signaux sur le marché.",
+    "headers": {
+      "feature": "Comparaison",
+      "others": "Autres services de signaux",
+      "simplify": "SimplifyPro"
+    },
+    "rows": {
+      "signals": {
+        "feature": "Signaux",
+        "others": "Nombreux et à interpréter",
+        "simplify": "Peu mais très précis"
+      },
+      "exits": {
+        "feature": "Sorties de position",
+        "others": "Floues, laissées au trader",
+        "simplify": "Claires et exactes"
+      },
+      "learning": {
+        "feature": "Prise en main",
+        "others": "Longue et complexe",
+        "simplify": "Immédiate, dès le 1er jour"
+      },
+      "price": {
+        "feature": "Prix",
+        "others": "À partir de 49 $/mois",
+        "simplify": "À partir de 24,50 $/mois"
+      },
+      "method": {
+        "feature": "Méthode",
+        "others": "Boîte à outils à configurer",
+        "simplify": "Méthode unique et testée"
+      }
+    }
+  },
   "pricingPreview": {
     "title": "Investissez dans votre trading",
     "subtitle": "Pas de frais cachés. Résiliation à tout moment.",
