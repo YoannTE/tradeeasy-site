@@ -79,22 +79,7 @@
   },
   "marketNews": {
     "title": "Marktnachrichten",
-    "subtitle": "Ihr tägliches Briefing für informiertes Trading.",
-    "dailyBrief": {
-      "title": "Briefing des Tages",
-      "date": "Mittwoch, 16. April 2026",
-      "recapLabel": "Rückblick gestern",
-      "recapBody": "CAC 40 -0,64 % (8 274 Pkt.). Luxus-Massaker: Hermès -13 %, Kering -8,6 %. Publicis +2,88 % (beste CAC-Performance). Wall Street auf Rekorden (S&P 500, Nasdaq). Euro stabil bei 1,1801 $. US Retail Sales beruhigend, Kern-CPI und PPI unter Erwartungen.",
-      "agendaLabel": "Agenda des Tages",
-      "agendaSublabel": "Falle-Tag",
-      "agendaBody": "• 13:45 — EZB-Zinsentscheidung 🔥 (aktuell 2,15 % Refi / 2,00 % Einlage). Gouverneur Kazaks bestätigte 2 Erhöhungen ab Juni. Hawkishes Signal = stärkerer Euro, CAC/DAX unter Druck.\n• 14:30 — Lagarde-PK + US Jobless Claims gleichzeitig. Doppelte Volatilität. Keine Position ohne engen Stop.\n• 14:30 auch: Empire State Manufacturing + US-Importpreise.\n• 16:00: NAHB-Index (US-Bauherrenvertrauen).",
-      "geopoliticsLabel": "Geopolitischer Kontext",
-      "geopoliticsBody": "US-Blockade iranischer Häfen weiter aktiv. Trump erwähnt Gespräche in Pakistan innerhalb von 2 Tagen. Wall Street handelt auf Hoffnung. Luxus bleibt schwer: Hermès -40 % Aktivität im März im Nahen Osten, LVMH -30 bis -50 % in Dubai.",
-      "tomorrowLabel": "Morgen — Freitag, 17. April",
-      "tomorrowBody": "16:00 — Michigan (Verbrauchervertrauen) + Inflationserwartungen. Wichtiger Wochenschluss.",
-      "readingLabel": "Schnellübersicht",
-      "readingBody": "Europa/USA-Diskrepanz: Wall Street auf Rekorden, Paris durch Luxus belastet. Alles hängt an der EZB um 13:45. Hawkish = Euro hoch, CAC runter. Neutral = Erholung möglich. Kein Richtungshandel zwischen 13:45-15:00."
-    },
+    "subtitle": "Die neuesten Schlagzeilen der wichtigsten Finanzmedien.",
     "poweredBy": "Bereitgestellt von öffentlichen Nachrichtenquellen · Links führen zu den Originalartikeln",
     "timePrefix": "vor ",
     "timeSuffix": "",

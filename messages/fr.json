@@ -79,22 +79,7 @@
   },
   "marketNews": {
     "title": "Actualités des marchés",
-    "subtitle": "Votre brief quotidien pour trader en connaissance de cause.",
-    "dailyBrief": {
-      "title": "Brief du jour",
-      "date": "Mercredi 16 avril 2026",
-      "recapLabel": "Recap d'hier",
-      "recapBody": "CAC 40 -0,64 % (8 274 pts). Luxe en carnage : Hermès -13 %, Kering -8,6 %. Publicis +2,88 % (meilleure perf du CAC). Wall Street en records (S&P 500, Nasdaq). Euro stable à 1,1801 $. Retail Sales US rassurantes, CPI core et PPI sous les attentes.",
-      "agendaLabel": "L'agenda du jour",
-      "agendaSublabel": "Journée piège",
-      "agendaBody": "• 13h45 — Décision BCE sur les taux 🔥 (actuellement 2,15 % refi / 2,00 % dépôt). Kazaks (BCE) a validé 2 hausses dès juin. Signal hawkish = euro fort, CAC/DAX sous pression.\n• 14h30 — Conf Lagarde + Jobless Claims US simultanés. Double volatilité. Pas de position sans stop serré.\n• 14h30 aussi : Empire State Manufacturing + Prix à l'importation US.\n• 16h00 : Indice NAHB (promoteurs immobiliers US).",
-      "geopoliticsLabel": "Contexte géopolitique",
-      "geopoliticsBody": "Blocus US des ports iraniens toujours actif. Trump évoque des discussions au Pakistan dans les 2 prochains jours. Wall Street trade le narratif d'espoir. Luxe reste lourd : Hermès -40 % d'activité en mars au Moyen-Orient, LVMH -30 à -50 % à Dubaï.",
-      "tomorrowLabel": "Demain — Vendredi 17 avril",
-      "tomorrowBody": "16h00 — Michigan (confiance consommateur) + anticipations d'inflation. Clôture hebdo importante.",
-      "readingLabel": "Lecture rapide",
-      "readingBody": "Décalage Europe/USA : Wall Street fait des records, Paris plombé par le luxe. Tout se joue à 13h45 (BCE). Hawkish = euro up, CAC down. Neutre = rebond possible. Évite le directionnel entre 13h45 et 15h00."
-    },
+    "subtitle": "Les derniers titres des principaux médias financiers.",
     "poweredBy": "Sources d'actualités publiques · Les liens redirigent vers les articles originaux",
     "timePrefix": "il y a",
     "timeSuffix": "",

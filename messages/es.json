@@ -79,22 +79,7 @@
   },
   "marketNews": {
     "title": "Noticias del Mercado",
-    "subtitle": "Tu brief diario para operar con conocimiento de causa.",
-    "dailyBrief": {
-      "title": "Resumen del día",
-      "date": "Miércoles 16 de abril de 2026",
-      "recapLabel": "Resumen de ayer",
-      "recapBody": "CAC 40 -0,64 % (8 274 pts). Masacre del lujo: Hermès -13 %, Kering -8,6 %. Publicis +2,88 % (mejor del CAC). Wall Street en récords (S&P 500, Nasdaq). Euro estable en 1,1801 $. Retail Sales US tranquilizadoras, IPC subyacente y PPI por debajo de expectativas.",
-      "agendaLabel": "Agenda del día",
-      "agendaSublabel": "Día trampa",
-      "agendaBody": "• 13:45 — Decisión BCE sobre tipos 🔥 (actualmente 2,15 % refi / 2,00 % depósito). Kazaks (BCE) validó 2 subidas desde junio. Señal hawkish = euro fuerte, CAC/DAX bajo presión.\n• 14:30 — Conf Lagarde + Jobless Claims US simultáneos. Doble volatilidad. Sin posiciones sin stop ajustado.\n• 14:30 también: Empire State Manufacturing + Precios importación US.\n• 16:00: Índice NAHB (promotores inmobiliarios US).",
-      "geopoliticsLabel": "Contexto geopolítico",
-      "geopoliticsBody": "Bloqueo US de puertos iraníes sigue activo. Trump menciona discusiones en Pakistán en 2 días. Wall Street opera con narrativa de esperanza. Lujo pesado: Hermès -40 % actividad en marzo en Oriente Medio, LVMH -30 a -50 % en Dubái.",
-      "tomorrowLabel": "Mañana — Viernes 17 de abril",
-      "tomorrowBody": "16:00 — Michigan (confianza consumidor) + expectativas de inflación. Cierre semanal importante.",
-      "readingLabel": "Lectura rápida",
-      "readingBody": "Desconexión Europa/USA: Wall Street en récords, París lastrado por el lujo. Todo se juega a las 13:45 (BCE). Hawkish = euro sube, CAC baja. Neutra = rebote posible. Evita el direccional entre 13:45 y 15:00."
-    },
+    "subtitle": "Los últimos titulares de los principales medios financieros.",
     "poweredBy": "Impulsado por fuentes de noticias públicas · Los enlaces redirigen a los artículos originales",
     "timePrefix": "hace ",
     "timeSuffix": "",

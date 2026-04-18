@@ -15,7 +15,6 @@ import { DailyPerformance } from "@/collections/DailyPerformance";
 import { Faq } from "@/collections/Faq";
 import { ProcessedStripeEvent } from "@/collections/ProcessedStripeEvent";
 import { seedDatabase } from "@/lib/seed";
-import { DailyBrief } from "@/globals/DailyBrief";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -59,7 +58,6 @@ export default buildConfig({
     Faq,
     ProcessedStripeEvent,
   ],
-  globals: [DailyBrief],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

@@ -79,22 +79,7 @@
   },
   "marketNews": {
     "title": "Market News",
-    "subtitle": "Your daily brief to trade with full awareness.",
-    "dailyBrief": {
-      "title": "Today's Brief",
-      "date": "Wednesday, April 16, 2026",
-      "recapLabel": "Yesterday's recap",
-      "recapBody": "CAC 40 -0.64% (8,274 pts). Luxury bloodbath: Hermès -13%, Kering -8.6%. Publicis +2.88% (best CAC performer). Wall Street hit new records (S&P 500, Nasdaq). Euro stable at $1.1801. US Retail Sales reassuring, core CPI and PPI below expectations.",
-      "agendaLabel": "Today's agenda",
-      "agendaSublabel": "Trap day",
-      "agendaBody": "• 1:45 PM — ECB Rate Decision 🔥 (currently 2.15% refi / 2.00% deposit). Governor Kazaks validated 2 hikes from June. Hawkish signal = stronger euro, CAC/DAX under pressure.\n• 2:30 PM — Lagarde press conf + US Jobless Claims simultaneous. Double volatility. No position without tight stops.\n• 2:30 PM also: Empire State Manufacturing + US Import Prices.\n• 4:00 PM: NAHB Index (US homebuilder confidence).",
-      "geopoliticsLabel": "Geopolitical context",
-      "geopoliticsBody": "US blockade of Iranian ports still active. Trump mentions talks in Pakistan within 2 days. Wall Street trading the hope narrative. Luxury stays heavy: Hermès -40% activity in March in Middle East, LVMH -30 to -50% in Dubai.",
-      "tomorrowLabel": "Tomorrow — Friday, April 17",
-      "tomorrowBody": "4:00 PM — Michigan (consumer confidence) + inflation expectations. Important weekly close.",
-      "readingLabel": "Quick read",
-      "readingBody": "Europe/US disconnect: Wall Street making records, Paris weighed down by luxury. Everything hinges on ECB at 1:45 PM. Hawkish = euro up, CAC down. Neutral = possible bounce. Avoid directional between 1:45-3:00 PM."
-    },
+    "subtitle": "Latest headlines from major financial media.",
     "poweredBy": "Powered by public news sources · Links redirect to original articles",
     "timePrefix": "",
     "timeSuffix": "ago",

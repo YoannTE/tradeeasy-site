@@ -39,7 +39,6 @@ export default function HomePage() {
       <ProductJsonLd />
       <HeroSection />
       <LivePerformanceSection />
-      <MarketNewsSection />
       <FeaturesSection />
       <AffiliatePreviewSection />
       <TradingViewSection />
@@ -47,6 +46,7 @@ export default function HomePage() {
       <HowItWorksSection />
       <PricingPreviewSection />
       <CtaSection />
+      <MarketNewsSection />
     </>
   );
 }
