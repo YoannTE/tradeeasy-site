@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { getPayload } from "payload";
-import config from "@payload-config";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { VideoGrid } from "@/components/videos/video-grid";
 import type { VideoItem } from "@/components/videos/video-grid";
+import { videos as videoSources } from "@/components/videos/video-data";
 
 export const revalidate = 3600;
 
@@ -30,20 +29,13 @@ export async function generateMetadata() {
 
 export default async function VideosPage() {
   const t = await getTranslations("videos");
-  const payload = await getPayload({ config });
 
-  const { docs } = await payload.find({
-    collection: "videos",
-    limit: 50,
-    sort: "displayOrder",
-  });
-
-  const videos: VideoItem[] = docs.map((doc) => ({
-    id: String(doc.id),
-    title: doc.title,
-    description: doc.description ?? "",
-    category: doc.category ?? "usage",
-    youtubeUrl: doc.youtubeUrl,
+  const videos: VideoItem[] = videoSources.map((video) => ({
+    id: video.id,
+    title: t(video.titleKey),
+    description: t(video.descriptionKey),
+    category: video.category,
+    youtubeUrl: video.youtubeUrl,
   }));
 
   return (

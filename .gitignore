@@ -17,6 +17,7 @@
 /.next/
 /.next-old-*/
 /.next-corrupted-*/
+/.next-stomped-*/
 /out/
 
 # claude code local state
