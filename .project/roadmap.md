@@ -8,7 +8,7 @@
 - [x] Collections contenu : Video, Testimonial, TradeScreenshot, PromoCode (avec champs alignes Stripe Coupons)
 - [x] Seed admin (admin@admin.com / password) via hook onInit
 - [x] Layout principal : navbar (logo, liens, CTA "Start Free Trial") + footer (4 colonnes, disclaimer legal, copyright)
-- [ ] Creation Discord communautaire : 3 salons (annonces, discussion, support) + lien d'invitation permanent _(a faire manuellement)_
+- [~] Creation Discord communautaire : reporte (pas prioritaire au lancement)
 
 ## Round 2 — Pages publiques — DONE
 

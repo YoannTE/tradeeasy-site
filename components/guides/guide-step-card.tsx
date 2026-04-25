@@ -1,11 +1,12 @@
-import Image from "next/image";
+import { GuideStepImage } from "./guide-step-image";
 
 interface GuideStepCardProps {
   stepNumber: number;
   title: string;
-  content: string;
+  content?: string;
   imageUrl?: string | null;
   imageAlt?: string;
+  subSteps?: string[];
   tip?: string | null;
   tipLabel: string;
 }
@@ -16,6 +17,7 @@ export function GuideStepCard({
   content,
   imageUrl,
   imageAlt,
+  subSteps,
   tip,
   tipLabel,
 }: GuideStepCardProps) {
@@ -32,23 +34,31 @@ export function GuideStepCard({
           <h3 className="font-semibold text-white">{title}</h3>
 
           {/* Content */}
-          <p className="leading-relaxed text-zinc-300">{content}</p>
+          {content && (
+            <p className="leading-relaxed text-zinc-300">{content}</p>
+          )}
 
           {/* Image */}
           {imageUrl ? (
-            <div className="overflow-hidden rounded-xl border border-zinc-800">
-              <Image
-                src={imageUrl}
-                alt={imageAlt || title}
-                width={800}
-                height={400}
-                className="w-full object-cover"
-              />
-            </div>
+            <GuideStepImage src={imageUrl} alt={imageAlt || title} />
           ) : (
             <div className="flex h-[200px] items-center justify-center rounded-xl bg-zinc-800 text-sm text-zinc-600">
               Screenshot placeholder
             </div>
+          )}
+
+          {/* Sub-steps (numbered, matching arrow numbers in the screenshot) */}
+          {subSteps && subSteps.length > 0 && (
+            <ol className="space-y-3">
+              {subSteps.map((sub, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-semibold text-blue-400">
+                    {idx + 1}
+                  </span>
+                  <span className="leading-relaxed text-zinc-300">{sub}</span>
+                </li>
+              ))}
+            </ol>
           )}
 
           {/* Tip */}

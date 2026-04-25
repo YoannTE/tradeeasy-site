@@ -1,8 +1,9 @@
 export interface PlaceholderStep {
   stepTitle: string;
-  stepContent: string;
+  stepContent?: string;
   stepTip?: string;
   stepImage?: string;
+  subSteps?: string[];
 }
 
 export interface PlaceholderGuide {
@@ -15,9 +16,17 @@ export interface PlaceholderGuide {
   steps: PlaceholderStep[];
 }
 
-export function getPlaceholderGuides(
-  t: (key: string) => string,
-): PlaceholderGuide[] {
+type Translator = (key: string) => string;
+
+function buildSubSteps(
+  t: Translator,
+  baseKey: string,
+  count: number,
+): string[] {
+  return Array.from({ length: count }, (_, i) => t(`${baseKey}.${i}`));
+}
+
+export function getPlaceholderGuides(t: Translator): PlaceholderGuide[] {
   return [
     {
       title: t("placeholder.guide1.title"),
@@ -31,27 +40,25 @@ export function getPlaceholderGuides(
           stepTitle: t("placeholder.guide1.steps.0.title"),
           stepContent: t("placeholder.guide1.steps.0.content"),
           stepImage: "/images/guides/step1-open-tradingview.png",
+          subSteps: buildSubSteps(t, "placeholder.guide1.steps.0.subSteps", 2),
         },
         {
           stepTitle: t("placeholder.guide1.steps.1.title"),
           stepContent: t("placeholder.guide1.steps.1.content"),
           stepImage: "/images/guides/step2-indicators.png",
+          subSteps: buildSubSteps(t, "placeholder.guide1.steps.1.subSteps", 3),
         },
         {
           stepTitle: t("placeholder.guide1.steps.2.title"),
           stepContent: t("placeholder.guide1.steps.2.content"),
+          stepImage: "/images/guides/step3-configure.png",
+          subSteps: buildSubSteps(t, "placeholder.guide1.steps.2.subSteps", 3),
         },
         {
           stepTitle: t("placeholder.guide1.steps.3.title"),
           stepContent: t("placeholder.guide1.steps.3.content"),
-        },
-        {
-          stepTitle: t("placeholder.guide1.steps.4.title"),
-          stepContent: t("placeholder.guide1.steps.4.content"),
-        },
-        {
-          stepTitle: t("placeholder.guide1.steps.5.title"),
-          stepContent: t("placeholder.guide1.steps.5.content"),
+          stepImage: "/images/guides/step4-start-trading.png",
+          stepTip: t("placeholder.guide1.steps.3.tip"),
         },
       ],
     },

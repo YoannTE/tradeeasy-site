@@ -55,6 +55,7 @@ async function fetchGuide(slug: string): Promise<PlaceholderGuide | null> {
         stepContent: s.stepContent,
         stepTip: s.stepTip || undefined,
         stepImage: s.stepImage?.url || undefined,
+        subSteps: undefined,
       })),
     };
   } catch {
@@ -120,6 +121,7 @@ export async function GuideDetail({ slug }: GuideDetailProps) {
             title={step.stepTitle}
             content={step.stepContent}
             imageUrl={step.stepImage}
+            subSteps={step.subSteps}
             tip={step.stepTip}
             tipLabel={t("tip")}
           />

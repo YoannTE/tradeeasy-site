@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { GuideCard } from "./guide-card";
-import { GuideInstallIcon } from "./guide-install-icon";
 import {
   getPlaceholderGuides,
   type PlaceholderGuide,
@@ -71,9 +70,6 @@ export async function GuideList() {
           readGuideLabel={t("readGuide")}
           stepsLabel={t("steps")}
           minLabel={t("minutes")}
-          customIcon={
-            guide.category === "installation" ? <GuideInstallIcon /> : undefined
-          }
         />
       ))}
     </div>

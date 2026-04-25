@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { BookOpen, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface GuideCardProps {
   title: string;
@@ -14,7 +13,6 @@ interface GuideCardProps {
   readGuideLabel: string;
   stepsLabel: string;
   minLabel: string;
-  customIcon?: React.ReactNode;
 }
 
 export function GuideCard({
@@ -29,7 +27,6 @@ export function GuideCard({
   readGuideLabel,
   stepsLabel,
   minLabel,
-  customIcon,
 }: GuideCardProps) {
   const difficultyColor =
     difficulty === "beginner"
@@ -40,25 +37,6 @@ export function GuideCard({
 
   return (
     <div className="flex flex-col overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900 transition-colors hover:border-zinc-700">
-      {/* Icon header */}
-      <div className="relative flex h-32 items-center justify-center overflow-hidden bg-zinc-800/50">
-        {customIcon ? (
-          customIcon
-        ) : (
-          <>
-            <Image
-              src="/images/chart-placeholder.png"
-              alt=""
-              fill
-              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-black/50" />
-            <BookOpen className="relative h-10 w-10 text-white/90" />
-          </>
-        )}
-      </div>
-
       {/* Content */}
       <div className="flex flex-1 flex-col p-5">
         {/* Badges */}

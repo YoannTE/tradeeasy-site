@@ -885,28 +885,35 @@
         "description": "Un guide complet étape par étape pour ajouter SimplifyPro V6.3 à vos graphiques TradingView en moins de 5 minutes.",
         "steps": [
           {
-            "title": "Ouvrir TradingView",
-            "content": "Rendez-vous sur tradingview.com et connectez-vous à votre compte. Si vous n'en avez pas, créez d'abord un compte gratuit."
+            "title": "Ouvrir TradingView et accéder aux Supercharts",
+            "content": "Rendez-vous sur tradingview.com et connectez-vous à votre compte (créez-en un gratuitement si vous n'en avez pas encore). Puis suivez les étapes ci-dessous :",
+            "subSteps": [
+              "Cliquez sur Produits dans la barre de navigation en haut",
+              "Sélectionnez Supercharts dans le menu déroulant pour ouvrir l'interface de graphique"
+            ]
           },
           {
-            "title": "Ouvrir le panneau des indicateurs",
-            "content": "Cliquez sur le bouton 'Indicateurs' en haut de votre graphique, ou utilisez le raccourci '/' pour ouvrir la recherche."
-          },
-          {
-            "title": "Rechercher SimplifyPro",
-            "content": "Dans la barre de recherche, tapez 'SimplifyPro V6.3'. Comme c'est un indicateur sur invitation, il apparaîtra sous 'Scripts sur invitation'."
-          },
-          {
-            "title": "Ajouter au graphique",
-            "content": "Cliquez sur 'SimplifyPro V6.3' pour l'ajouter à votre graphique. L'indicateur apparaîtra avec des flèches d'achat (vertes) et de vente (rouges)."
+            "title": "Ajouter SimplifyPro à votre graphique",
+            "content": "Une fois sur le graphique, suivez les étapes ci-dessous pour ajouter l'indicateur :",
+            "subSteps": [
+              "Cliquez sur le bouton Indicateurs dans la barre du haut",
+              "Tapez SimplifyPro dans la barre de recherche (il apparaît dans Favoris ou Sur invitation une fois votre accès accordé)",
+              "Cliquez sur l'indicateur dans les résultats pour l'ajouter à votre graphique"
+            ]
           },
           {
             "title": "Configurer vos préférences",
-            "content": "Cliquez sur l'icône de réglages à côté du nom de l'indicateur pour personnaliser les couleurs, les timeframes et les paramètres d'alertes."
+            "content": "Ouvrez les réglages de l'indicateur pour adapter SimplifyPro à votre style de trading :",
+            "subSteps": [
+              "Cliquez sur l'icône de réglages à côté du nom SimplifyPro en haut à gauche de votre graphique (ou double-cliquez sur le nom)",
+              "Dans l'onglet Entrées, ajustez les paramètres que vous souhaitez personnaliser (mode de signal, filtres de timeframe, filtre de tendance, niveau de risque, etc.)",
+              "Passez à l'onglet Style pour personnaliser les couleurs et les éléments visuels (flèches de signaux, couleurs des bougies, lignes de l'indicateur)"
+            ]
           },
           {
-            "title": "Commencer à trader",
-            "content": "Vous êtes prêt ! Suivez les flèches vertes pour les signaux d'achat et les flèches rouges pour les signaux de vente. N'oubliez jamais de gérer votre risque."
+            "title": "Commencer à trader avec SimplifyPro",
+            "content": "Vous êtes prêt ! SimplifyPro affiche maintenant directement sur votre graphique les signaux d'achat (flèches vertes sous les bougies haussières) et les signaux de vente (flèches rouges au-dessus des bougies baissières), en temps réel. Chaque flèche indique un point d'entrée à forte probabilité repéré par l'algorithme.",
+            "tip": "Gérez toujours votre risque à chaque trade et utilisez systématiquement un stop-loss. SimplifyPro vous donne le signal d'entrée ; c'est la discipline et la gestion du risque qui transforment ces signaux en rentabilité sur le long terme."
           }
         ]
       },

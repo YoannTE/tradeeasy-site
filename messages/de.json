@@ -884,28 +884,35 @@
         "description": "Eine vollständige Schritt-für-Schritt-Anleitung zum Hinzufügen von SimplifyPro V6.3 zu Ihren TradingView-Charts in unter 5 Minuten.",
         "steps": [
           {
-            "title": "TradingView öffnen",
-            "content": "Gehen Sie zu tradingview.com und melden Sie sich bei Ihrem Konto an. Wenn Sie noch keines haben, erstellen Sie zuerst ein kostenloses Konto."
+            "title": "TradingView öffnen und zu Supercharts gehen",
+            "content": "Gehen Sie zu tradingview.com und melden Sie sich an (erstellen Sie ein kostenloses Konto, falls Sie noch keines haben). Folgen Sie dann den unten stehenden Schritten:",
+            "subSteps": [
+              "Klicken Sie auf Produkte in der oberen Navigationsleiste",
+              "Wählen Sie Supercharts aus dem Dropdown-Menü, um die Chart-Oberfläche zu öffnen"
+            ]
           },
           {
-            "title": "Indikatoren-Bereich öffnen",
-            "content": "Klicken Sie auf die Schaltfläche 'Indikatoren' oben in Ihrem Chart oder verwenden Sie die Tastenkombination '/', um die Suche zu öffnen."
-          },
-          {
-            "title": "SimplifyPro suchen",
-            "content": "Geben Sie in der Suchleiste 'SimplifyPro V6.3' ein. Da es sich um einen Invite-Only-Indikator handelt, erscheint er unter 'Nur auf Einladung'."
-          },
-          {
-            "title": "Zum Chart hinzufügen",
-            "content": "Klicken Sie auf 'SimplifyPro V6.3', um ihn zu Ihrem Chart hinzuzufügen. Der Indikator wird mit Kauf- (grün) und Verkaufspfeilen (rot) angezeigt."
+            "title": "SimplifyPro zu Ihrem Chart hinzufügen",
+            "content": "Sobald Sie im Chart sind, folgen Sie den unten stehenden Schritten, um den Indikator hinzuzufügen:",
+            "subSteps": [
+              "Klicken Sie auf die Schaltfläche Indikatoren in der oberen Symbolleiste",
+              "Geben Sie SimplifyPro in die Suchleiste ein (er erscheint unter Favoriten oder Nur auf Einladung, sobald Ihr Zugang gewährt wurde)",
+              "Klicken Sie in den Ergebnissen auf den Indikator, um ihn zu Ihrem Chart hinzuzufügen"
+            ]
           },
           {
             "title": "Einstellungen anpassen",
-            "content": "Klicken Sie auf das Zahnrad-Symbol neben dem Indikatornamen, um Farben, Zeitrahmen und Alarm-Einstellungen anzupassen."
+            "content": "Öffnen Sie die Indikator-Einstellungen, um SimplifyPro an Ihren Trading-Stil anzupassen:",
+            "subSteps": [
+              "Klicken Sie auf das Zahnrad-Symbol neben dem Namen SimplifyPro oben links in Ihrem Chart (oder doppelklicken Sie auf den Namen)",
+              "Passen Sie im Reiter Eingaben die Parameter an, die Sie personalisieren möchten (Signal-Modus, Zeitrahmen-Filter, Trend-Filter, Risikoniveau usw.)",
+              "Wechseln Sie zum Reiter Stil, um Farben und visuelle Elemente anzupassen (Signalpfeile, Kerzenfarben, Indikatorlinien)"
+            ]
           },
           {
-            "title": "Mit dem Traden beginnen",
-            "content": "Fertig! Folgen Sie den grünen Pfeilen für Kaufsignale und den roten Pfeilen für Verkaufssignale. Denken Sie immer daran, Ihr Risiko zu managen."
+            "title": "Mit SimplifyPro zu traden beginnen",
+            "content": "Alles bereit! SimplifyPro zeigt nun direkt auf Ihrem Chart Kaufsignale (grüne Pfeile unter bullischen Kerzen) und Verkaufssignale (rote Pfeile über bärischen Kerzen) in Echtzeit an. Jeder Pfeil markiert einen Einstiegspunkt mit hoher Wahrscheinlichkeit, der vom Algorithmus erkannt wurde.",
+            "tip": "Managen Sie immer Ihr Risiko bei jedem Trade und verwenden Sie systematisch einen Stop-Loss. SimplifyPro liefert Ihnen das Einstiegssignal; Disziplin und Risikomanagement sind das, was diese Signale in langfristige Profitabilität verwandeln."
           }
         ]
       },

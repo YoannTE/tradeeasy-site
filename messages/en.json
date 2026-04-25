@@ -880,28 +880,35 @@
         "description": "A complete step-by-step guide to adding SimplifyPro V6.3 to your TradingView charts in under 5 minutes.",
         "steps": [
           {
-            "title": "Open TradingView",
-            "content": "Go to tradingview.com and log in to your account. If you don't have one, create a free account first."
+            "title": "Open TradingView and go to Supercharts",
+            "content": "Head to tradingview.com and log in to your account (create a free one if you don't have one yet). Then follow the steps below:",
+            "subSteps": [
+              "Click on Products in the top navigation bar",
+              "Select Supercharts from the dropdown menu to open the chart interface"
+            ]
           },
           {
-            "title": "Open the Indicators Panel",
-            "content": "Click on the 'Indicators' button at the top of your chart, or use the shortcut key '/' to open the search."
+            "title": "Add SimplifyPro to your chart",
+            "content": "Once you're on the chart, follow the steps below to add the indicator:",
+            "subSteps": [
+              "Click the Indicators button in the top toolbar",
+              "Type SimplifyPro in the search bar (it appears under Favorites or Invite-only once your access is granted)",
+              "Click on the indicator in the results to add it to your chart"
+            ]
           },
           {
-            "title": "Search for SimplifyPro",
-            "content": "In the search bar, type 'SimplifyPro V6.3'. Since it's an invite-only indicator, it will appear under 'Invite-Only Scripts'."
+            "title": "Configure your preferences",
+            "content": "Open the indicator settings to fine-tune SimplifyPro to your trading style:",
+            "subSteps": [
+              "Click the settings icon next to the SimplifyPro name in the top-left of your chart (or double-click the name)",
+              "In the Inputs tab, adjust the parameters you want to customize (signal mode, timeframe filters, trend filter, risk level, etc.)",
+              "Switch to the Style tab to customize colors and visual elements (signal arrows, bar colors, indicator lines)"
+            ]
           },
           {
-            "title": "Add to Chart",
-            "content": "Click on 'SimplifyPro V6.3' to add it to your chart. The indicator will appear with buy (green) and sell (red) arrows."
-          },
-          {
-            "title": "Configure Your Preferences",
-            "content": "Click the settings icon next to the indicator name to customize colors, timeframes, and alert settings."
-          },
-          {
-            "title": "Start Trading",
-            "content": "You're all set! Follow the green arrows for buy signals and red arrows for sell signals. Remember to always manage your risk."
+            "title": "Start trading with SimplifyPro",
+            "content": "You're all set! SimplifyPro will now display buy signals (green arrows under bullish bars) and sell signals (red arrows above bearish bars) directly on your chart, in real time. Each arrow marks a high-probability entry point spotted by the algorithm.",
+            "tip": "Always manage your risk on every trade and use a stop-loss systematically. SimplifyPro gives you the entry signal; discipline and risk management are what turn these signals into long-term profitability."
           }
         ]
       },

@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /.next-old-*/
+/.next-corrupted-*/
 /out/
 
 # claude code local state

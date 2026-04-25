@@ -880,28 +880,35 @@
         "description": "Una guía completa paso a paso para añadir SimplifyPro V6.3 a tus gráficos de TradingView en menos de 5 minutos.",
         "steps": [
           {
-            "title": "Abre TradingView",
-            "content": "Ve a tradingview.com e inicia sesión en tu cuenta. Si no tienes una, crea una cuenta gratuita primero."
+            "title": "Abrir TradingView y acceder a Supercharts",
+            "content": "Ve a tradingview.com e inicia sesión en tu cuenta (crea una cuenta gratuita si aún no tienes una). Después sigue los pasos a continuación:",
+            "subSteps": [
+              "Haz clic en Productos en la barra de navegación superior",
+              "Selecciona Supercharts en el menú desplegable para abrir la interfaz del gráfico"
+            ]
           },
           {
-            "title": "Abre el Panel de Indicadores",
-            "content": "Haz clic en el botón 'Indicadores' en la parte superior de tu gráfico, o usa la tecla de acceso rápido '/' para abrir la búsqueda."
+            "title": "Añadir SimplifyPro a tu gráfico",
+            "content": "Una vez en el gráfico, sigue los pasos a continuación para añadir el indicador:",
+            "subSteps": [
+              "Haz clic en el botón Indicadores en la barra de herramientas superior",
+              "Escribe SimplifyPro en la barra de búsqueda (aparece en Favoritos o Solo invitación una vez que tu acceso ha sido concedido)",
+              "Haz clic en el indicador en los resultados para añadirlo a tu gráfico"
+            ]
           },
           {
-            "title": "Busca SimplifyPro",
-            "content": "En la barra de búsqueda, escribe 'SimplifyPro V6.3'. Como es un indicador solo por invitación, aparecerá en 'Scripts Solo por Invitación'."
+            "title": "Configurar tus preferencias",
+            "content": "Abre los ajustes del indicador para adaptar SimplifyPro a tu estilo de trading:",
+            "subSteps": [
+              "Haz clic en el icono de ajustes junto al nombre SimplifyPro en la parte superior izquierda de tu gráfico (o haz doble clic en el nombre)",
+              "En la pestaña Entradas, ajusta los parámetros que quieras personalizar (modo de señal, filtros de temporalidad, filtro de tendencia, nivel de riesgo, etc.)",
+              "Cambia a la pestaña Estilo para personalizar los colores y elementos visuales (flechas de señales, colores de las velas, líneas del indicador)"
+            ]
           },
           {
-            "title": "Añadir al Gráfico",
-            "content": "Haz clic en 'SimplifyPro V6.3' para añadirlo a tu gráfico. El indicador aparecerá con flechas de compra (verdes) y venta (rojas)."
-          },
-          {
-            "title": "Configura Tus Preferencias",
-            "content": "Haz clic en el icono de configuración junto al nombre del indicador para personalizar colores, temporalidades y ajustes de alertas."
-          },
-          {
-            "title": "Empieza a Operar",
-            "content": "¡Ya está todo listo! Sigue las flechas verdes para señales de compra y las flechas rojas para señales de venta. Recuerda siempre gestionar tu riesgo."
+            "title": "Empezar a operar con SimplifyPro",
+            "content": "¡Ya está todo listo! SimplifyPro mostrará ahora directamente en tu gráfico las señales de compra (flechas verdes bajo las velas alcistas) y las señales de venta (flechas rojas sobre las velas bajistas), en tiempo real. Cada flecha marca un punto de entrada de alta probabilidad detectado por el algoritmo.",
+            "tip": "Gestiona siempre tu riesgo en cada operación y utiliza un stop-loss de forma sistemática. SimplifyPro te da la señal de entrada; la disciplina y la gestión del riesgo son lo que convierte estas señales en rentabilidad a largo plazo."
           }
         ]
       },
