@@ -13,6 +13,10 @@ export async function GuideNavigation({
 }: GuideNavigationProps) {
   const t = await getTranslations("guides");
 
+  // Un seul guide : pas de navigation precedent/suivant ni de retour a la
+  // liste (la page /guides redirige directement vers ce guide).
+  if (allSlugs.length <= 1) return null;
+
   const currentIndex = allSlugs.indexOf(currentSlug);
   const prevSlug = currentIndex > 0 ? allSlugs[currentIndex - 1] : null;
   const nextSlug =
