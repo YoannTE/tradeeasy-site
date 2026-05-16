@@ -55,7 +55,13 @@ export async function GuideList() {
   const guides = dbGuides ?? getPlaceholderGuides(t);
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div
+      className={
+        guides.length > 1
+          ? "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+          : "mx-auto max-w-md"
+      }
+    >
       {guides.map((guide) => (
         <GuideCard
           key={guide.slug}
