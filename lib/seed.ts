@@ -81,7 +81,7 @@ async function seedVideos(payload: Payload) {
     {
       title: "How to Install SimplifyPro on TradingView",
       description:
-        "Step-by-step guide to add SimplifyPro V6.0 to your TradingView chart.",
+        "Step-by-step guide to add SimplifyPro V7.0 to your TradingView chart.",
       youtubeUrl: "#",
       category: "installation" as const,
       displayOrder: 1,

@@ -3,7 +3,7 @@
 ## En bref
 
 Site web en anglais pour promouvoir et vendre l'acces a un indicateur
-de trading TradingView (SimplifyPro V6.0) par abonnement.
+de trading TradingView (SimplifyPro V7.0) par abonnement.
 
 ## Stack technique
 

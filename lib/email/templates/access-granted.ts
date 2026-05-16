@@ -7,13 +7,13 @@ const translations = {
     subject: "Your TradingView Access is Now Active!",
     heading: "Your TradingView access is now active!",
     message: (username: string) =>
-      `Great news! The SimplifyPro V6.0 indicator has been activated on your TradingView account <strong style="color:#ffffff;">${username}</strong>.`,
+      `Great news! The SimplifyPro V7.0 indicator has been activated on your TradingView account <strong style="color:#ffffff;">${username}</strong>.`,
     howToStart: "How to get started:",
     step1:
       'Open <a href="https://www.tradingview.com" style="color:#22c55e;">TradingView</a>',
     step2: "Go to Indicators &amp; Strategies",
     step3:
-      'Search for <strong style="color:#ffffff;">SimplifyPro V6.0</strong> under "Invite-only scripts"',
+      'Search for <strong style="color:#ffffff;">SimplifyPro V7.0</strong> under "Invite-only scripts"',
     step4: "Add it to your chart and start trading!",
     trialNote: "Your 7-day free trial starts now. Enjoy exploring SimplifyPro!",
     help: "Need help? Reply to this email or contact our support team.",
@@ -23,13 +23,13 @@ const translations = {
     subject: "Votre acces TradingView est maintenant actif !",
     heading: "Votre acces TradingView est maintenant actif !",
     message: (username: string) =>
-      `Bonne nouvelle ! L'indicateur SimplifyPro V6.0 a ete active sur votre compte TradingView <strong style="color:#ffffff;">${username}</strong>.`,
+      `Bonne nouvelle ! L'indicateur SimplifyPro V7.0 a ete active sur votre compte TradingView <strong style="color:#ffffff;">${username}</strong>.`,
     howToStart: "Comment commencer :",
     step1:
       'Ouvrez <a href="https://www.tradingview.com" style="color:#22c55e;">TradingView</a>',
     step2: "Allez dans Indicateurs et Strategies",
     step3:
-      'Recherchez <strong style="color:#ffffff;">SimplifyPro V6.0</strong> dans &laquo; Scripts sur invitation &raquo;',
+      'Recherchez <strong style="color:#ffffff;">SimplifyPro V7.0</strong> dans &laquo; Scripts sur invitation &raquo;',
     step4: "Ajoutez-le a votre graphique et commencez a trader !",
     trialNote:
       "Votre essai gratuit de 7 jours commence maintenant. Profitez d'SimplifyPro !",

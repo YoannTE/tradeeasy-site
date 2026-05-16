@@ -1,3 +1,6 @@
+import { getYouTubeId } from "@/lib/videos/youtube";
+import { YouTubeEmbed } from "./youtube-embed";
+
 interface VideoCardProps {
   title: string;
   description: string;
@@ -13,22 +16,27 @@ export function VideoCard({
   youtubeUrl,
   watchLabel,
 }: VideoCardProps) {
+  const videoId = getYouTubeId(youtubeUrl);
+
   return (
     <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
+      {videoId && <YouTubeEmbed videoId={videoId} title={title} />}
       <div className="p-5">
         <span className="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-xs text-blue-400">
           {categoryLabel}
         </span>
         <h3 className="mt-3 font-semibold text-white">{title}</h3>
         <p className="mt-1 text-sm text-zinc-400">{description}</p>
-        <a
-          href={youtubeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 inline-block text-sm text-blue-400 transition-colors hover:text-blue-300"
-        >
-          {watchLabel}
-        </a>
+        {!videoId && (
+          <a
+            href={youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-block text-sm text-blue-400 transition-colors hover:text-blue-300"
+          >
+            {watchLabel}
+          </a>
+        )}
       </div>
     </div>
   );

@@ -281,7 +281,7 @@
       "note": "Carte bancaire requise. Résiliation à tout moment."
     },
     "features": {
-      "indicator": "Indicateur SimplifyPro V6.0",
+      "indicator": "Indicateur SimplifyPro V7.0",
       "allMarkets": "Tous les marchés (Indices, Forex, Crypto)",
       "allTimeframes": "Tous les timeframes",
       "signals": "Signaux d'achat et de vente",
@@ -358,21 +358,9 @@
       "tradingLive": "Trading en direct"
     },
     "items": {
-      "install": {
-        "title": "Comment installer SimplifyPro sur TradingView",
-        "description": "Guide étape par étape pour ajouter SimplifyPro V6.0 à votre graphique TradingView."
-      },
-      "signals": {
-        "title": "Comprendre les signaux d'achat et de vente",
-        "description": "Apprenez à lire et exploiter les signaux fléchés d'SimplifyPro."
-      },
-      "forex": {
-        "title": "Stratégie Forex avec SimplifyPro",
-        "description": "Une stratégie forex complète utilisant SimplifyPro sur EUR/USD."
-      },
-      "live": {
-        "title": "Session de trading en direct — Mars 2026",
-        "description": "Regardez une vraie session de trading avec les signaux SimplifyPro."
+      "presentation": {
+        "title": "SimplifyPro V7.0 — Présentation de l'indicateur",
+        "description": "Découvrez SimplifyPro V7.0 et voyez comment l'indicateur fonctionne sur TradingView."
       }
     }
   },
@@ -607,7 +595,7 @@
     "status": {
       "granted": "Accès accordé",
       "pending": "Accès en attente",
-      "grantedMessage": "Votre accès TradingView a été activé. Vous pouvez commencer à utiliser SimplifyPro V6.0 immédiatement.",
+      "grantedMessage": "Votre accès TradingView a été activé. Vous pouvez commencer à utiliser SimplifyPro V7.0 immédiatement.",
       "pendingMessage": "Votre accès TradingView est en cours de configuration. Cela prend généralement moins de 12 heures. En attendant, voici comment vous préparer."
     },
     "checklist": {
@@ -622,7 +610,7 @@
       },
       "watchTutorial": {
         "title": "Regarder le tutoriel d'installation",
-        "description": "Apprenez à ajouter SimplifyPro V6.0 à vos graphiques TradingView."
+        "description": "Apprenez à ajouter SimplifyPro V7.0 à vos graphiques TradingView."
       },
       "readGuides": {
         "title": "Parcourir les guides de trading",
@@ -630,7 +618,7 @@
       }
     },
     "video": {
-      "title": "Comment installer SimplifyPro V6.0",
+      "title": "Comment installer SimplifyPro V7.0",
       "placeholder": "Tutoriel vidéo bientôt disponible"
     }
   },
@@ -710,11 +698,11 @@
     "accessGranted": {
       "subject": "Votre accès TradingView est maintenant actif !",
       "heading": "Votre accès TradingView est maintenant actif !",
-      "message": "Bonne nouvelle ! L'indicateur SimplifyPro V6.0 a été activé sur votre compte TradingView {username}.",
+      "message": "Bonne nouvelle ! L'indicateur SimplifyPro V7.0 a été activé sur votre compte TradingView {username}.",
       "howToStart": "Comment commencer :",
       "step1": "Ouvrez TradingView",
       "step2": "Allez dans Indicateurs et Stratégies",
-      "step3": "Recherchez SimplifyPro V6.0 dans « Scripts sur invitation »",
+      "step3": "Recherchez SimplifyPro V7.0 dans « Scripts sur invitation »",
       "step4": "Ajoutez-le à votre graphique et commencez à trader !",
       "trialNote": "Votre essai gratuit de 7 jours commence maintenant. Profitez d'SimplifyPro !",
       "help": "Besoin d'aide ? Répondez à cet email ou contactez notre équipe support.",
@@ -882,7 +870,7 @@
     "placeholder": {
       "guide1": {
         "title": "Comment installer SimplifyPro sur TradingView",
-        "description": "Un guide complet étape par étape pour ajouter SimplifyPro V6.3 à vos graphiques TradingView en moins de 5 minutes.",
+        "description": "Un guide complet étape par étape pour ajouter SimplifyPro V7.0 à vos graphiques TradingView en moins de 5 minutes.",
         "steps": [
           {
             "title": "Ouvrir TradingView et accéder aux Supercharts",

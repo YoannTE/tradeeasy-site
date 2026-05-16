@@ -33,7 +33,7 @@ uniquement sur la psychologie et le money management.
 
 ### Abonne (client payant)
 
-- **Objectif** : utiliser l'indicateur SimplifyPro V6.0 sur TradingView pour trader
+- **Objectif** : utiliser l'indicateur SimplifyPro V7.0 sur TradingView pour trader
 - **Niveau technique** : sait utiliser TradingView (ou apprend via les tutos du site)
 - **Acces** : espace personnel (details abonnement + donnees bancaires),
   indicateur en invite-only sur TradingView (acces donne manuellement par l'admin,

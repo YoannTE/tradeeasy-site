@@ -281,7 +281,7 @@
       "note": "Kreditkarte erforderlich. Jederzeit kündbar."
     },
     "features": {
-      "indicator": "SimplifyPro V6.0 Indikator",
+      "indicator": "SimplifyPro V7.0 Indikator",
       "allMarkets": "Alle Märkte (Indizes, Forex, Krypto)",
       "allTimeframes": "Alle Zeitrahmen",
       "signals": "Kauf- und Verkaufssignale",
@@ -358,21 +358,9 @@
       "tradingLive": "Live-Trading"
     },
     "items": {
-      "install": {
-        "title": "SimplifyPro auf TradingView installieren",
-        "description": "Schritt-für-Schritt-Anleitung zum Hinzufügen von SimplifyPro V6.0 zu Ihrem TradingView-Chart."
-      },
-      "signals": {
-        "title": "Kauf- und Verkaufssignale verstehen",
-        "description": "Lernen Sie, wie Sie die Pfeilsignale von SimplifyPro lesen und darauf reagieren."
-      },
-      "forex": {
-        "title": "Forex-Trading-Strategie mit SimplifyPro",
-        "description": "Eine vollständige Forex-Strategie mit SimplifyPro auf EUR/USD."
-      },
-      "live": {
-        "title": "Live-Trading-Session — März 2026",
-        "description": "Sehen Sie eine echte Trading-Session mit SimplifyPro-Signalen."
+      "presentation": {
+        "title": "SimplifyPro V7.0 — Vorstellung des Indikators",
+        "description": "Entdecken Sie SimplifyPro V7.0 und sehen Sie, wie der Indikator auf TradingView funktioniert."
       }
     }
   },
@@ -607,7 +595,7 @@
     "status": {
       "granted": "Zugang gewährt",
       "pending": "Zugang ausstehend",
-      "grantedMessage": "Ihr TradingView-Zugang wurde aktiviert. Sie können SimplifyPro V6.0 sofort nutzen.",
+      "grantedMessage": "Ihr TradingView-Zugang wurde aktiviert. Sie können SimplifyPro V7.0 sofort nutzen.",
       "pendingMessage": "Ihr TradingView-Zugang wird eingerichtet. Dies dauert in der Regel weniger als 12 Stunden. In der Zwischenzeit können Sie sich wie folgt vorbereiten."
     },
     "checklist": {
@@ -622,7 +610,7 @@
       },
       "watchTutorial": {
         "title": "Installations-Tutorial ansehen",
-        "description": "Erfahren Sie, wie Sie SimplifyPro V6.0 zu Ihren TradingView-Charts hinzufügen."
+        "description": "Erfahren Sie, wie Sie SimplifyPro V7.0 zu Ihren TradingView-Charts hinzufügen."
       },
       "readGuides": {
         "title": "Trading-Anleitungen lesen",
@@ -630,7 +618,7 @@
       }
     },
     "video": {
-      "title": "SimplifyPro V6.0 installieren",
+      "title": "SimplifyPro V7.0 installieren",
       "placeholder": "Video-Tutorial folgt in Kürze"
     }
   },
@@ -709,11 +697,11 @@
     "accessGranted": {
       "subject": "Ihr TradingView-Zugang ist jetzt aktiv!",
       "heading": "Ihr TradingView-Zugang ist jetzt aktiv!",
-      "message": "Gute Neuigkeiten! Der SimplifyPro V6.0 Indikator wurde auf Ihrem TradingView-Konto {username} aktiviert.",
+      "message": "Gute Neuigkeiten! Der SimplifyPro V7.0 Indikator wurde auf Ihrem TradingView-Konto {username} aktiviert.",
       "howToStart": "So starten Sie:",
       "step1": "Öffnen Sie TradingView",
       "step2": "Gehen Sie zu Indikatoren & Strategien",
-      "step3": "Suchen Sie SimplifyPro V6.0 unter \"Nur auf Einladung\"",
+      "step3": "Suchen Sie SimplifyPro V7.0 unter \"Nur auf Einladung\"",
       "step4": "Fügen Sie es Ihrem Chart hinzu und beginnen Sie mit dem Traden!",
       "trialNote": "Ihre 7-tägige kostenlose Testphase beginnt jetzt. Viel Erfolg beim Erkunden von SimplifyPro!",
       "help": "Brauchen Sie Hilfe? Antworten Sie auf diese E-Mail oder kontaktieren Sie unser Support-Team.",
@@ -881,7 +869,7 @@
     "placeholder": {
       "guide1": {
         "title": "SimplifyPro auf TradingView installieren",
-        "description": "Eine vollständige Schritt-für-Schritt-Anleitung zum Hinzufügen von SimplifyPro V6.3 zu Ihren TradingView-Charts in unter 5 Minuten.",
+        "description": "Eine vollständige Schritt-für-Schritt-Anleitung zum Hinzufügen von SimplifyPro V7.0 zu Ihren TradingView-Charts in unter 5 Minuten.",
         "steps": [
           {
             "title": "TradingView öffnen und zu Supercharts gehen",

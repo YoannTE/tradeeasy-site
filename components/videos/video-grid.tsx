@@ -28,11 +28,19 @@ export function VideoGrid({ videos }: VideoGridProps) {
 
   return (
     <div>
-      <CategoryFilter
-        activeFilter={activeFilter}
-        onFilterChange={setActiveFilter}
-      />
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {videos.length > 1 && (
+        <CategoryFilter
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
+      )}
+      <div
+        className={
+          videos.length > 1
+            ? "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+            : "mx-auto max-w-2xl"
+        }
+      >
         {filteredVideos.map((video) => (
           <VideoCard
             key={video.id}

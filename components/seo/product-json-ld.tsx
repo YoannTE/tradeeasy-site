@@ -6,7 +6,7 @@ export async function ProductJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "SimplifyPro V6.0",
+    name: "SimplifyPro V7.0",
     description: t("description"),
     applicationCategory: "FinanceApplication",
     operatingSystem: "Web",

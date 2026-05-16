@@ -281,7 +281,7 @@
       "note": "Credit card required. Cancel anytime."
     },
     "features": {
-      "indicator": "SimplifyPro V6.0 Indicator",
+      "indicator": "SimplifyPro V7.0 Indicator",
       "allMarkets": "All Markets (Indices, Forex, Crypto)",
       "allTimeframes": "All Timeframes",
       "signals": "Buy & Sell Signals",
@@ -358,21 +358,9 @@
       "tradingLive": "Trading Live"
     },
     "items": {
-      "install": {
-        "title": "How to Install SimplifyPro on TradingView",
-        "description": "Step-by-step guide to add SimplifyPro V6.0 to your TradingView chart."
-      },
-      "signals": {
-        "title": "Understanding Buy & Sell Signals",
-        "description": "Learn how to read and act on SimplifyPro's arrow signals."
-      },
-      "forex": {
-        "title": "Forex Trading Strategy with SimplifyPro",
-        "description": "A complete forex strategy using SimplifyPro on EUR/USD."
-      },
-      "live": {
-        "title": "Live Trading Session — March 2026",
-        "description": "Watch a real trading session using SimplifyPro signals."
+      "presentation": {
+        "title": "SimplifyPro V7.0 — Indicator Presentation",
+        "description": "Discover SimplifyPro V7.0 and see how the indicator works on TradingView."
       }
     }
   },
@@ -607,7 +595,7 @@
     "status": {
       "granted": "Access Granted",
       "pending": "Access Pending",
-      "grantedMessage": "Your TradingView access has been activated. You can start using SimplifyPro V6.0 right away.",
+      "grantedMessage": "Your TradingView access has been activated. You can start using SimplifyPro V7.0 right away.",
       "pendingMessage": "Your TradingView access is being set up. This usually takes less than 12 hours. In the meantime, here's how to prepare."
     },
     "checklist": {
@@ -622,11 +610,11 @@
       },
       "watchTutorial": {
         "title": "Watch the installation tutorial",
-        "description": "Learn how to add SimplifyPro V6.0 to your TradingView charts."
+        "description": "Learn how to add SimplifyPro V7.0 to your TradingView charts."
       }
     },
     "video": {
-      "title": "How to Install SimplifyPro V6.0",
+      "title": "How to Install SimplifyPro V7.0",
       "placeholder": "Video tutorial coming soon"
     }
   },
@@ -705,11 +693,11 @@
     "accessGranted": {
       "subject": "Your TradingView Access is Now Active!",
       "heading": "Your TradingView access is now active!",
-      "message": "Great news! The SimplifyPro V6.0 indicator has been activated on your TradingView account {username}.",
+      "message": "Great news! The SimplifyPro V7.0 indicator has been activated on your TradingView account {username}.",
       "howToStart": "How to get started:",
       "step1": "Open TradingView",
       "step2": "Go to Indicators & Strategies",
-      "step3": "Search for SimplifyPro V6.0 under \"Invite-only scripts\"",
+      "step3": "Search for SimplifyPro V7.0 under \"Invite-only scripts\"",
       "step4": "Add it to your chart and start trading!",
       "trialNote": "Your 7-day free trial starts now. Enjoy exploring SimplifyPro!",
       "help": "Need help? Reply to this email or contact our support team.",
@@ -877,7 +865,7 @@
     "placeholder": {
       "guide1": {
         "title": "How to Install SimplifyPro on TradingView",
-        "description": "A complete step-by-step guide to adding SimplifyPro V6.3 to your TradingView charts in under 5 minutes.",
+        "description": "A complete step-by-step guide to adding SimplifyPro V7.0 to your TradingView charts in under 5 minutes.",
         "steps": [
           {
             "title": "Open TradingView and go to Supercharts",
