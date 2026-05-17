@@ -35,7 +35,7 @@ export default async function VideosPage() {
     title: t(video.titleKey),
     description: t(video.descriptionKey),
     category: video.category,
-    youtubeUrl: video.youtubeUrl,
+    youtubeUrl: t(video.youtubeUrlKey),
   }));
 
   return (

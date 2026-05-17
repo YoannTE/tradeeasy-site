@@ -10,7 +10,8 @@ export interface Video {
   descriptionKey: string;
   category: VideoCategory;
   categoryKey: string;
-  youtubeUrl: string;
+  /** Cle de traduction : l'URL YouTube change selon la langue du site. */
+  youtubeUrlKey: string;
 }
 
 export const categoryKeys = [
@@ -28,6 +29,6 @@ export const videos: Video[] = [
     descriptionKey: "items.presentation.description",
     category: "usage",
     categoryKey: "categories.usage",
-    youtubeUrl: "https://www.youtube.com/watch?v=oJwRWplrREE",
+    youtubeUrlKey: "items.presentation.youtubeUrl",
   },
 ];
